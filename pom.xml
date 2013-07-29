@@ -23,7 +23,7 @@
 	</properties>
 	
 	<scm>
-		<connection>scm:git:git://github.com/daverog/json-ld-tree.git</connection>
+		<connection>scm:git:https://github.com/daverog/json-ld-tree.git</connection>
 		<developerConnection>scm:git:git@github.com:daverog/json-ld-tree.git</developerConnection>
 		<url>http://github.com/daverog/json-ld-tree</url>
 	</scm>
