@@ -1,0 +1,293 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix result: <http://www.bbc.co.uk/ontologies/result/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix core: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix asset: <http://www.bbc.co.uk/ontologies/asset/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix tag: <http://www.bbc.co.uk/ontologies/tag/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo-pol: <http://www.bbc.co.uk/ontologies/geopolitical/> .
+@prefix geoname: <http://www.geonames.org/ontology#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+
+result:this result:listItem <http://www.bbc.co.uk/things/62e9c2ab-0a3e-43b3-8e41-12e033fc8e48#id> ;
+	result:sortOrder result:DescendingOrder ;
+	result:orderByPredicate cwork:dateModified .
+
+<http://www.bbc.co.uk/things/62e9c2ab-0a3e-43b3-8e41-12e033fc8e48#id> a cwork:CreativeWork ;
+	cwork:title "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos" ;
+	cwork:dateModified "2013-07-12T10:10:34+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork ;
+	cwork:shortTitle "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos" ;
+	cwork:description "Asher's group fight with fire extinguishers and Charlie's group ends up in the hospital." ;
+	cms:locator <urn:cs-tagging-tool:4b3193517e6e65aee7ceb826f4a80516> ;
+	cwork:about <http://www.bbc.co.uk/things/90d9a818-850b-b64f-9474-79e15a0355b8#id> .
+
+<http://www.bbc.co.uk/things/90d9a818-850b-b64f-9474-79e15a0355b8#id> rdfs:label "Manchester United"^^xsd:string ;
+	core:shortLabel "Man Utd"^^xsd:string ;
+	core:preferredLabel "Manchester United"^^xsd:string ;
+	rdfs:label "Man Utd"^^xsd:string .
+
+<http://www.bbc.co.uk/things/62e9c2ab-0a3e-43b3-8e41-12e033fc8e48#id> cwork:dateCreated "2013-07-12T10:10:34+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/iplayer/episode/b01brcs1/Sun_Sex_and_Suspicious_Parents_Series_2_Kavos/> .
+
+<http://www.bbc.co.uk/iplayer/episode/b01brcs1/Sun_Sex_and_Suspicious_Parents_Series_2_Kavos/> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/62e9c2ab-0a3e-43b3-8e41-12e033fc8e48#id> cwork:thumbnail <http://ichef.bbci.co.uk/programmeimages/episode/b01brcs1_120_68.jpg> .
+
+<http://ichef.bbci.co.uk/programmeimages/episode/b01brcs1_120_68.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/78ba039e-71e7-4452-9780-83700a6aaf3c#id> .
+
+<http://www.bbc.co.uk/things/78ba039e-71e7-4452-9780-83700a6aaf3c#id> a cwork:CreativeWork ;
+	cwork:title "BBC News - Greenpeace protesters climbing up The Shard in London" ;
+	cwork:dateModified "2013-07-11T10:40:47+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC News - Greenpeace protesters climbing up The Shard in London" ;
+	cwork:description "Six protesters from Greenpeace are attempting to scale the tallest building in western Europe, The Shard in London." ;
+	cms:locator <urn:cs-tagging-tool:1541f9aecdbe4e4b4afbc4204077ed41> ;
+	cwork:about <http://www.bbc.co.uk/things/3790f140-5444-224e-bf05-ce581dc49b17#id> .
+
+<http://www.bbc.co.uk/things/3790f140-5444-224e-bf05-ce581dc49b17#id> rdfs:label "Forest Green Rovers"^^xsd:string ;
+	core:shortLabel "Forest Green"^^xsd:string ;
+	core:preferredLabel "Forest Green Rovers"^^xsd:string ;
+	rdfs:label "Forest Green"^^xsd:string .
+
+<http://www.bbc.co.uk/things/78ba039e-71e7-4452-9780-83700a6aaf3c#id> cwork:dateCreated "2013-07-11T10:40:47+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-england-london-23266281> .
+
+<http://www.bbc.co.uk/news/uk-england-london-23266281> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/78ba039e-71e7-4452-9780-83700a6aaf3c#id> cwork:thumbnail <http://newsimg.bbc.co.uk/media/images/67373000/jpg/_67373987_09f1654a-e583-4b5f-bfc4-f05850c6d3ce.jpg> .
+
+<http://newsimg.bbc.co.uk/media/images/67373000/jpg/_67373987_09f1654a-e583-4b5f-bfc4-f05850c6d3ce.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC News - Egypt Muslim Brotherhood leader Mohammed Badie arrest ordered" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail ;
+	cwork:altText "BBC News - Greenpeace protesters climbing up The Shard in London" .
+
+result:this result:listItem <http://www.bbc.co.uk/things/78fb7a05-e11f-4216-9585-21e7b67363c3#id> .
+
+<http://www.bbc.co.uk/things/78fb7a05-e11f-4216-9585-21e7b67363c3#id> a cwork:CreativeWork ;
+	cwork:title "Logging | Heroku Dev Center" ;
+	cwork:dateModified "2013-07-10T16:10:08+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "Logging | Heroku Dev Center" ;
+	cwork:description "Logs are a stream of time-ordered events aggregated from the output streams of all your app’s running processes. Retrieve, filter, or use syslog drains." ;
+	cms:locator <urn:cs-tagging-tool:65c79d284eb89a67441f582db67da568> ;
+	cwork:dateCreated "2013-07-10T16:10:08+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <https://devcenter.heroku.com/articles/logging#writing-to-your-log> .
+
+<https://devcenter.heroku.com/articles/logging#writing-to-your-log> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/78fb7a05-e11f-4216-9585-21e7b67363c3#id> cwork:thumbnail <http://www.google.com> .
+
+<http://www.google.com> a cwork:Thumbnail ;
+	cwork:altText "Logging | Heroku Dev Center" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/d7c9eef7-8a03-4189-961f-9d3250410f06#id> .
+
+<http://www.bbc.co.uk/things/d7c9eef7-8a03-4189-961f-9d3250410f06#id> a cwork:CreativeWork ;
+	cwork:title "Southampton: Mauricio Pochettino confirms Victor Wanyama interest" ;
+	cwork:dateModified "2013-07-10T15:58:26+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "Southampton: Mauricio Pochettino confirms Victor Wanyama interest" ;
+	cwork:description "Southampton boss Mauricio Pochettino confirms the club's interest in Celtic midfielder Victor Wanyama." ;
+	cms:locator <urn:cs-tagging-tool:544ba5f72cabed72b49c6b6f0fe247e8> ;
+	cwork:about <http://www.bbc.co.uk/things/6780f83f-a17a-e641-8ec8-226c285a5dbb#id> .
+
+<http://www.bbc.co.uk/things/6780f83f-a17a-e641-8ec8-226c285a5dbb#id> rdfs:label "Southampton"^^xsd:string ;
+	core:shortLabel "Southampton"^^xsd:string ;
+	core:preferredLabel "Southampton"^^xsd:string .
+
+<http://www.bbc.co.uk/things/d7c9eef7-8a03-4189-961f-9d3250410f06#id> cwork:dateCreated "2013-07-10T15:58:26+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/football/23194995> .
+
+<http://www.bbc.co.uk/sport/0/football/23194995> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/d7c9eef7-8a03-4189-961f-9d3250410f06#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/67387000/jpg/_67387026_mauriciopochettino.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/67387000/jpg/_67387026_mauriciopochettino.jpg> a cwork:Thumbnail ;
+	cwork:altText "Southampton: Mauricio Pochettino confirms Victor Wanyama interest" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/f0a5edea-5f1f-4513-85e8-4c7afb2aaeaa#id> .
+
+<http://www.bbc.co.uk/things/f0a5edea-5f1f-4513-85e8-4c7afb2aaeaa#id> a cwork:CreativeWork ;
+	cwork:title "BBC Sport - Oscar Garcia named new head coach of Brighton & Hove Albion" ;
+	cwork:dateModified "2013-07-10T15:37:57+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC Sport - Oscar Garcia named new head coach of Brighton & Hove Albion" ;
+	cwork:description "Brighton & Hove Albion name former Barcelona midfielder Oscar Garcia as their new boss after Gus Poyet's dismissal." ;
+	cms:locator <urn:cs-tagging-tool:d62d9174d91ce20996045a23c992cb71> ;
+	cwork:about <http://www.bbc.co.uk/things/3d814d88-1f22-d042-a9a6-87fd9216a50a#id> .
+
+<http://www.bbc.co.uk/things/3d814d88-1f22-d042-a9a6-87fd9216a50a#id> rdfs:label "Brighton & Hove Albion"^^xsd:string ;
+	core:shortLabel "Brighton"^^xsd:string ;
+	core:preferredLabel "Brighton & Hove Albion"^^xsd:string ;
+	rdfs:label "Brighton"^^xsd:string .
+
+<http://www.bbc.co.uk/things/f0a5edea-5f1f-4513-85e8-4c7afb2aaeaa#id> cwork:dateCreated "2013-07-10T15:37:57+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/football/23074868> .
+
+<http://www.bbc.co.uk/sport/0/football/23074868> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/f0a5edea-5f1f-4513-85e8-4c7afb2aaeaa#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/68401000/jpg/_68401924_os-getty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/68401000/jpg/_68401924_os-getty.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC Sport - Oscar Garcia named new head coach of Brighton & Hove Albion" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/b6ce99bf-9799-478d-8f92-99df37ba5f1c#id> .
+
+<http://www.bbc.co.uk/things/b6ce99bf-9799-478d-8f92-99df37ba5f1c#id> a cwork:CreativeWork ;
+	cwork:title "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender" ;
+	cwork:dateModified "2013-07-10T15:30:39+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender" ;
+	cwork:description "Brighton and Hove Albion sign former Stoke and England centre-back Matthew Upson on a free transfer." ;
+	cms:locator <urn:cs-tagging-tool:6028c511def9054638b66b81f6fc53b5> ;
+	cwork:about <http://www.bbc.co.uk/things/6780f83f-a17a-e641-8ec8-226c285a5dbb#id> .
+
+<http://www.bbc.co.uk/things/6780f83f-a17a-e641-8ec8-226c285a5dbb#id> rdfs:label "Southampton"^^xsd:string ;
+	core:shortLabel "Southampton"^^xsd:string ;
+	core:preferredLabel "Southampton"^^xsd:string .
+
+<http://www.bbc.co.uk/things/b6ce99bf-9799-478d-8f92-99df37ba5f1c#id> cwork:dateCreated "2013-07-10T15:30:39+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/football/23256243> .
+
+<http://www.bbc.co.uk/sport/0/football/23256243> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/b6ce99bf-9799-478d-8f92-99df37ba5f1c#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/68649000/jpg/_68649148_matthewupsongetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/68649000/jpg/_68649148_matthewupsongetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/c248a082-dade-44fa-a1c5-1178601b0f54#id> .
+
+<http://www.bbc.co.uk/things/c248a082-dade-44fa-a1c5-1178601b0f54#id> a cwork:CreativeWork ;
+	cwork:title "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes" ;
+	cwork:dateModified "2013-07-10T15:28:13+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes" ;
+	cwork:description "BBC Sport speaks to former England captain Andrew Flintoff about his expectations and predictions for the Ashes series." ;
+	cms:locator <urn:cs-tagging-tool:6db2e325e6b70a176c52d377d3bd8be3> ;
+	cwork:dateCreated "2013-07-10T15:28:13+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/cricket/23241293> .
+
+<http://www.bbc.co.uk/sport/0/cricket/23241293> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/c248a082-dade-44fa-a1c5-1178601b0f54#id> cwork:thumbnail <http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg> .
+
+<http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC Sport - Luis Suarez: Liverpool striker says 'two or three clubs' want to buy him" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail ;
+	cwork:altText "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes" .
+
+result:this result:listItem <http://www.bbc.co.uk/things/643f77ae-8bf5-4e63-9a3c-8b24b82e991c#id> .
+
+<http://www.bbc.co.uk/things/643f77ae-8bf5-4e63-9a3c-8b24b82e991c#id> a cwork:CreativeWork ;
+	cwork:title "BBC Sport - Manchester City: Manuel Pellegrini to change playing style" ;
+	cwork:dateModified "2013-07-10T15:15:25+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC Sport - Manchester City: Manuel Pellegrini to change playing style" ;
+	cwork:description "Manchester City manager Manuel Pellegrini promises an attractive style of football after replacing Roberto Mancini." ;
+	cms:locator <urn:cs-tagging-tool:fa5fb05a8647c252de03a06e666944e0> ;
+	cwork:about <http://www.bbc.co.uk/things/4bdbf21d-d1ad-7147-ab08-612cd0dc20b4#id> .
+
+<http://www.bbc.co.uk/things/4bdbf21d-d1ad-7147-ab08-612cd0dc20b4#id> rdfs:label "Manchester City"^^xsd:string ;
+	core:shortLabel "Man City"^^xsd:string ;
+	core:preferredLabel "Manchester City"^^xsd:string ;
+	rdfs:label "Man City"^^xsd:string .
+
+<http://www.bbc.co.uk/things/643f77ae-8bf5-4e63-9a3c-8b24b82e991c#id> cwork:dateCreated "2013-07-10T15:15:25+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/football/23251657> .
+
+<http://www.bbc.co.uk/sport/0/football/23251657> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/643f77ae-8bf5-4e63-9a3c-8b24b82e991c#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/68644000/jpg/_68644668_manuel_pellegrini-getty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/68644000/jpg/_68644668_manuel_pellegrini-getty.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC Sport - Manchester City: Manuel Pellegrini to change playing style" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/c0ba0ce9-5151-4014-8e94-bf7ed32428d6#id> .
+
+<http://www.bbc.co.uk/things/c0ba0ce9-5151-4014-8e94-bf7ed32428d6#id> a cwork:CreativeWork ;
+	cwork:title "BBC Sport - Luis Suarez: Liverpool striker says 'two or three clubs' want to buy him" ;
+	cwork:dateModified "2013-07-10T15:08:06+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC Sport - Luis Suarez: Liverpool striker says 'two or three clubs' want to buy him" ;
+	cwork:description "Liverpool striker Luis Suarez tells a Uruguayan radio station that \"two or three clubs\" want to buy him." ;
+	cms:locator <urn:cs-tagging-tool:eee8f221c83ae7f15eb9e93ff6e006ed> ;
+	cwork:about <http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id> .
+
+<http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id> rdfs:label "Premier League"^^xsd:string ;
+	core:shortLabel "Premier Lge"^^xsd:string ;
+	core:preferredLabel "Premier League"^^xsd:string ;
+	rdfs:label "Barclays Premier League"^^xsd:string .
+
+<http://www.bbc.co.uk/things/c0ba0ce9-5151-4014-8e94-bf7ed32428d6#id> cwork:about <http://www.bbc.co.uk/things/8df31a76-4c22-5b40-9f0d-78b34dfb26fa#id> .
+
+<http://www.bbc.co.uk/things/8df31a76-4c22-5b40-9f0d-78b34dfb26fa#id> rdfs:label "Liverpool"^^xsd:string ;
+	core:shortLabel "Liverpool"^^xsd:string ;
+	core:preferredLabel "Liverpool"^^xsd:string .
+
+<http://www.bbc.co.uk/things/c0ba0ce9-5151-4014-8e94-bf7ed32428d6#id> cwork:dateCreated "2013-07-10T15:08:06+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/football/23248815> .
+
+<http://www.bbc.co.uk/sport/0/football/23248815> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/c0ba0ce9-5151-4014-8e94-bf7ed32428d6#id> cwork:thumbnail <http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg> .
+
+<http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC Sport - Luis Suarez: Liverpool striker says 'two or three clubs' want to buy him" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail ;
+	cwork:altText "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes" .
+
+result:this result:listItem <http://www.bbc.co.uk/things/d1a7f7d9-bc1f-48fb-b23c-eff9e42f77d3#id> .
+
+<http://www.bbc.co.uk/things/d1a7f7d9-bc1f-48fb-b23c-eff9e42f77d3#id> a cwork:CreativeWork ;
+	cwork:title "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win" ;
+	cwork:dateModified "2013-07-10T15:07:53+00:00"^^xsd:dateTime ;
+	a cwork:NewsArticle , cwork:CreativeWork ;
+	cwork:shortTitle "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win" ;
+	cwork:description "Sussex batsman Chris Nash believes the side are capable of maintaining their push for the County Championship title." ;
+	cms:locator <urn:cs-tagging-tool:20588e53d5a3557728e2e0e4ba9928d3> ;
+	cwork:about <http://www.bbc.co.uk/things/b86ca75b-7f26-4221-9791-37ddc01660dc#id> .
+
+<http://www.bbc.co.uk/things/b86ca75b-7f26-4221-9791-37ddc01660dc#id> rdfs:label "Sussex"^^xsd:string ;
+	core:shortLabel "Sussex"^^xsd:string ;
+	core:preferredLabel "Sussex County Cricket Club"^^xsd:string ;
+	rdfs:label "Sussex County Cricket Club"^^xsd:string .
+
+<http://www.bbc.co.uk/things/d1a7f7d9-bc1f-48fb-b23c-eff9e42f77d3#id> cwork:dateCreated "2013-07-10T15:07:53+00:00"^^xsd:dateTime ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/sport/0/cricket/23258458> .
+
+<http://www.bbc.co.uk/sport/0/cricket/23258458> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/d1a7f7d9-bc1f-48fb-b23c-eff9e42f77d3#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/68654000/jpg/_68654714_nashbats.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/68654000/jpg/_68654714_nashbats.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+
+
+

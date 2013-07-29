@@ -1,0 +1,25 @@
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creative-work/> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix system: <http://www.bbc.co.uk/ontologies/system/> .
+@prefix result:  <http://www.bbc.co.uk/ontologies/result/> .
+
+result:this result:item _:creativeWork .	
+
+_:creativeWork a cwork:CreativeWork ;
+  cwork:title "Title" ;
+  cwork:shortTitle "Short one" ;
+  cwork:about <http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id> ;
+  system:locator <urn:cps:396535> .
+  
+<http://www.bbc.co.uk/news/article/xyz> bbc:primaryContent _:creativeWork ;
+   bbc:webDocumentType <http://www.bbc.co.uk/ontologies/bbc/HighWeb> .
+
+<http://www.bbc.co.uk/news/article/xyz> bbc:primaryContent _:creativeWork ;
+   bbc:webDocumentType <http://www.bbc.co.uk/ontologies/bbc/Mobile> .
+   
+<cps:396535> system:locatorType <http://www.bbc.co.uk/things/guid-for-locator-type#id> .
+   
+
+
+

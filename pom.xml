@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.daverog</groupId>
+	<artifactId>json-ld-tree</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<name>JSON-LD Tree</name>
+	<description>Developer-friendly serialisation of RDF into a structurally-stable JSON-LD representation.</description>
+
+	<properties>
+		<jena.version>2.6.3</jena.version>
+		<jena.arq.version>2.8.8</jena.arq.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<gson.version>2.2.2</gson.version>
+		<apache.commons.io.version>1.4</apache.commons.io.version>
+		<apache.commons.lang.version>2.5</apache.commons.lang.version>
+		<jodatime.version>2.0</jodatime.version>
+		<guava.version>11.0-rc1</guava.version>
+		<junit.version>4.10</junit.version>
+		<hamcrest.version>1.1</hamcrest.version>
+		<mockito.version>1.9.0</mockito.version>
+	</properties>
+
+	<dependencies>
+		<!--  Jena -->
+		<dependency>
+			<groupId>com.hp.hpl.jena</groupId>
+			<artifactId>jena</artifactId>
+			<version>${jena.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hp.hpl.jena</groupId>
+			<artifactId>arq</artifactId>
+			<version>${jena.arq.version}</version>
+		</dependency>
+		
+		<!-- JSON -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- XML -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>${dom4j.version}</version>
+		</dependency>
+		
+		<!-- Apache commons -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${apache.commons.io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${apache.commons.lang.version}</version>
+		</dependency>
+
+		<!-- Joda time -->
+		<dependency>
+		    <groupId>joda-time</groupId>
+		    <artifactId>joda-time</artifactId>
+		    <version>${jodatime.version}</version>
+		</dependency>
+
+		<!-- Google Guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		
+		<!-- Test libraries -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>

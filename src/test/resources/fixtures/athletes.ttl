@@ -1,0 +1,83 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix par: <http://purl.org/vocab/participation/schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix oly: <http://www.bbc.co.uk/ontologies/2012olympics/> .
+@prefix geo-pol: <http://www.bbc.co.uk/ontologies/geopolitical/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix result:  <http://www.bbc.co.uk/ontologies/result/> .
+
+result:this result:next <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> .
+<http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> result:next <http://www.bbc.co.uk/things/f2798806-4e54-47ff-a1ec-32beefde2058#id> .
+<http://www.bbc.co.uk/things/f2798806-4e54-47ff-a1ec-32beefde2058#id> result:next <http://www.bbc.co.uk/things/82f5db84-0591-49ee-b6f4-a1d26e9381fb#id> .
+
+
+<http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> a sport:Person ;
+	oly:isMedallistFor <http://www.bbc.co.uk/things/3143ecc6-ffa4-4446-9d13-ee60801c4881#id> ;
+	domain:name "Ben Ainslie"^^xsd:string ;
+	domain:canonicalName "Ben Ainslie"^^xsd:string ;
+	foaf:givenName "Ben"^^xsd:string ;
+	foaf:familyName "Ainslie"^^xsd:string ;
+	oly:gender "M"^^xsd:string ;
+	sport:discipline <http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id> ;
+	domain:document <http://www.bbc.co.uk/sport/olympics/2012/athletes/4e40ce40-b632-4a42-98d7-cf97067f7bf9> .
+
+<http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id> a sport:SportsDiscipline ;
+  domain:name "Sailing"^^xsd:string ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/sports/sailing> .
+
+_:node166n6c6vlx37 a sport:CompetesForRole ;
+	par:holder <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> ;
+	par:role_at <http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id> .
+
+<http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id> a sport:CompetitiveSportingOrganisation ;
+  domain:name "Team GB"^^xsd:string ;
+  domain:shortName "Great Britain & N. Ireland"^^xsd:string ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/countries/great-britain> .
+
+<http://www.bbc.co.uk/things/8d6ae957-d338-442b-99d7-190f20b78dd4#id> oly:oneToWatch <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> .
+
+<http://www.bbc.co.uk/things/82f5db84-0591-49ee-b6f4-a1d26e9381fb#id> a sport:Person ;
+  domain:name "Usain Bolt"^^xsd:string ;
+  domain:canonicalName "Usain Bolt"^^xsd:string ;
+	foaf:givenName "Usain"^^xsd:string ;
+	foaf:familyName "Bolt"^^xsd:string ;
+  oly:gender "M"^^xsd:string ;
+  oly:worldOlympicDream "true"^^xsd:boolean ;
+  sport:discipline <http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id> ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/athletes/82f5db84-0591-49ee-b6f4-a1d26e9381fb> .
+
+<http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id> a sport:SportsDiscipline ;
+	domain:name "Athletics"^^xsd:string ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/sports/athletics> .
+
+_:node166n6c6vlx113 a sport:CompetesForRole ;
+	par:holder <http://www.bbc.co.uk/things/82f5db84-0591-49ee-b6f4-a1d26e9381fb#id> ;
+	par:role_at <http://www.bbc.co.uk/things/76369f3b-65a0-4e69-8c52-859adfdefa49#id> .
+
+<http://www.bbc.co.uk/things/76369f3b-65a0-4e69-8c52-859adfdefa49#id> a sport:CompetitiveSportingOrganisation ;
+	domain:name "Jamaica"^^xsd:string ;
+  domain:shortName "Jamaica"^^xsd:string ;
+  domain:externalId <urn:ioc2012:jam> ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/countries/jamaica> .
+
+<http://www.bbc.co.uk/things/f2798806-4e54-47ff-a1ec-32beefde2058#id> a sport:Person ;
+  oly:isMedallistFor <http://www.bbc.co.uk/things/3143ecc6-ffa4-4446-9d13-ee60801c4881#id> ;
+  domain:name "Majlinda Kelmendi"^^xsd:string ;
+  domain:canonicalName "Majlinda Kelmendi"^^xsd:string ;
+	foaf:givenName "Majlinda"^^xsd:string ;
+	foaf:familyName "Kelmendi"^^xsd:string ;
+  oly:gender "W"^^xsd:string ;
+  sport:discipline <http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id> ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/athletes/f2798806-4e54-47ff-a1ec-32beefde2058> .
+
+<http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id> a sport:SportsDiscipline ;
+	domain:name "Judo"^^xsd:string ;
+  domain:document <http://www.bbc.co.uk/sport/olympics/2012/sports/judo> .
+
+_:node166n6c6vlx445 a sport:CompetesForRole ;
+	par:holder <http://www.bbc.co.uk/things/f2798806-4e54-47ff-a1ec-32beefde2058#id> ;
+	par:role_at <http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id> .

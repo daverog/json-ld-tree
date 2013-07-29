@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix result: <http://www.bbc.co.uk/ontologies/result/> .
+
+result:this result:item <http://sws.geonames.org/2635167/> .
+
+<http://sws.geonames.org/2635167/> rdfs:label 
+"Ujedinjeno Kraljevstvo"@sh , 
+"Ujedinjeno Kraljevstvo"@hr , 
+"Ujedinjeno Kraljevstvo"@bs ,
+"U.K."@en , 
+"United Kingdom"@en , 
+"Det Forenede Kongerige Storbritannien og Nordirland"@da , 
+"Verenigd Koninkrijk"@nl , 
+"Bretland"@is , 
+"Rouantelezh Unanet Breizh-Veur ha Norzhiwerzhon"@br , 
+"Reino Unido"@pt , 
+"Reino Unido"@es , 
+"Grande-Bretagne"@fr , 
+"Wielka Brytania"@pl , 
+"Marea Britanie"@ro , 
+"England"@de , 
+"Britanniarum Regnum"@la , 
+"Regno Unite"@ia , 
+"Yhdistynyt kuningaskunta"@fi , 
+"Rywvaneth Unys"@gv , 
+"Rywvaneth Unys"@kw , 
+"Vereineg Keuninkriek"@li , 
+"Regnu Unitu"@scn , 
+"Regnu Unitu"@co .

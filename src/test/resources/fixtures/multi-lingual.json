@@ -1,0 +1,10 @@
+{
+  "@id": "http://sws.geonames.org/2635167/",
+  "label": [
+    "United Kingdom",
+    "U.K."
+  ],
+  "@context": {
+    "label": "http://www.w3.org/2000/01/rdf-schema#label"
+  }
+}

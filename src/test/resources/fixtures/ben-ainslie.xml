@@ -1,0 +1,61 @@
+<Person id="http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id">
+  <dateOfBirth>1976-10-24</dateOfBirth>
+  <familyName>Ainslie</familyName>
+  <gender>M</gender>
+  <givenName>Ben</givenName>
+  <height>172.0</height>
+  <name>Ben Ainslie</name>
+  <weight>72.0</weight>
+  <competesIn>
+    <MedalCompetition id="http://www.bbc.co.uk/things/2012/sam002#id">
+      <name>Sailing - Men's Finn</name>
+      <shortName>Men's Finn</shortName>
+      <document id="http://www.bbc.co.uk/sport/olympics/2012/sports/sailing/events/mens-finn"/>
+      <externalId id="urn:ioc2012:SAM002000"/>
+    </MedalCompetition>
+  </competesIn>
+  <competesIn>
+    <MedalCompetition id="http://www.bbc.co.uk/things/2012/sam005#id">
+      <name>Sailing - Men's 470</name>
+      <shortName>Men's 470</shortName>
+      <document id="http://www.bbc.co.uk/sport/olympics/2012/sports/sailing/events/mens-470"/>
+      <externalId id="urn:ioc2012:SAM005000"/>
+    </MedalCompetition>
+  </competesIn>
+  <discipline>
+    <SportsDiscipline id="http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id">
+      <name>Sailing</name>
+      <document id="http://www.bbc.co.uk/sport/olympics/2012/sports/sailing"/>
+    </SportsDiscipline>
+  </discipline>
+  <document>
+    <Document id="http://www.bbc.co.uk/sport/olympics/2012/athletes/4e40ce40-b632-4a42-98d7-cf97067f7bf9">
+      <documentType id="http://www.bbc.co.uk/things/document-types/bbc-document"/>
+      <domain id="http://www.bbc.co.uk/things/domains/olympics2012"/>
+    </Document>
+  </document>
+  <document>
+    <Document id="http://www.facebook.com/pages/Ben-Ainslie/108182689201922">
+      <documentType id="http://www.bbc.co.uk/things/document-types/external"/>
+      <documentType id="http://www.bbc.co.uk/things/document-types/facebook"/>
+    </Document>
+  </document>
+  <role_at>
+    <CompetitiveSportingOrganisation id="http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id">
+      <name>Team GB</name>
+      <shortName>Great Britain &amp; N. Ireland</shortName>
+      <document id="http://www.bbc.co.uk/sport/olympics/2012/countries/great-britain"/>
+      <territory>
+        <Territory id="http://www.bbc.co.uk/things/territories/gb#id">
+          <name>the United Kingdom of Great Britain and Northern Ireland</name>
+          <isInGroup>
+            <Group id="http://www.bbc.co.uk/things/81b14df8-f9d2-4dff-a676-43a1a9a5c0a5#id">
+              <name>Europe</name>
+              <groupType id="http://www.bbc.co.uk/things/group-types/bbc-news-geo-regions"/>
+            </Group>
+          </isInGroup>
+        </Territory>
+      </territory>
+    </CompetitiveSportingOrganisation>
+  </role_at>
+</Person>

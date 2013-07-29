@@ -1,0 +1,145 @@
+{
+  "results": [
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/football/19816138#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-12-06T12:45:32Z",
+      "dateModified": "2012-12-06T12:45:32Z",
+      "description": "Southampton manager Nigel Adkins says speculation over his future at St Mary\u0027s does not affect him.",
+      "title": [
+        "Adkins not worried by speculation",
+        "Southampton boss Nigel Adkins shrugs off speculation on his future"
+      ],
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://wwwpreview.int.newsonline.tc.nca.bbc.co.uk/sport/0/football/19697353#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-10-01T21:35:32Z",
+      "dateModified": "2012-11-30T10:13:50Z",
+      "description": "West Ham defeat Queens Park Rangers as their win keeps Mark Hughes\u0027 side bottom of the Premier League table. ..",
+      "title": "QPR 1-2 West Ham",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/news/business-19815284#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-29T16:39:51Z",
+      "dateModified": "2012-11-29T16:39:51Z",
+      "description": "test live event page",
+      "title": "test live event page",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/cricket/19814362#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-27T09:52:23Z",
+      "dateModified": "2012-11-27T14:16:27Z",
+      "description": "England have a lead item",
+      "title": "England have a lead item",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/rugby-union/19814236#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-26T11:23:42Z",
+      "dateModified": "2012-11-26T11:23:42Z",
+      "description": "Glamorgan Media Asset",
+      "title": "Glamorgan Media Asset",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/rugby-union/19814234#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-26T11:13:52Z",
+      "dateModified": "2012-11-26T11:13:52Z",
+      "description": "Leicester Lead Item",
+      "title": "Leicester Lead Item",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/cricket/19809221#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-06T14:55:13Z",
+      "dateModified": "2012-11-26T10:52:22Z",
+      "description": "Another lead item for england cricket team.",
+      "title": "Another England Cricket Item",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/cricket/19814216#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-26T10:46:41Z",
+      "dateModified": "2012-11-26T10:46:41Z",
+      "description": "More Info about Glamorgan",
+      "title": "More Info about Glamorgan",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/cricket/19814215#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-26T10:37:18Z",
+      "dateModified": "2012-11-26T10:37:18Z",
+      "description": "Another Gallery",
+      "title": "Another Gallery",
+      "primaryFormat": "textualFormat"
+    },
+    {
+      "@id": "http://www.bbc.co.uk/sport/0/cricket/19814214#asset",
+      "@type": [
+        "CreativeWork"
+      ],
+      "dateCreated": "2012-11-26T10:24:48Z",
+      "dateModified": "2012-11-26T10:24:48Z",
+      "description": "Gallery",
+      "title": "Gallery",
+      "primaryFormat": "textualFormat"
+    }
+  ],
+  "@context": {
+    "CreativeWork": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/CreativeWork"
+    },
+    "dateCreated": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/dateCreated"
+    },
+    "dateModified": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/dateModified"
+    },
+    "description": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/description"
+    },
+    "primaryFormat": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/primaryFormat",
+      "@type": "@vocab"
+    },
+    "textualFormat": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/textualFormat"
+    },
+    "title": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/title"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "results": [
+    {
+      "@id": "http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id",
+      "@type": [
+        "Person"
+      ],
+      "canonicalName": "Ben Ainslie",
+      "familyName": "Ainslie",
+      "gender": "M",
+      "givenName": "Ben",
+      "name": "Ben Ainslie",
+      "document": "http://www.bbc.co.uk/sport/olympics/2012/athletes/4e40ce40-b632-4a42-98d7-cf97067f7bf9",
+      "isMedallistFor": "http://www.bbc.co.uk/things/3143ecc6-ffa4-4446-9d13-ee60801c4881#id",
+      "discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id",
+          "@type": [
+            "SportsDiscipline"
+          ],
+          "name": "Sailing",
+          "document": "http://www.bbc.co.uk/sport/olympics/2012/sports/sailing"
+        }
+      ],
+      "@reverse": {
+        "holder": [
+          {
+            "@type": [
+              "CompetesForRole"
+            ],
+            "role_at": [
+              {
+                "@id": "http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id",
+                "@type": [
+                  "CompetitiveSportingOrganisation"
+                ],
+                "name": "Team GB",
+                "shortName": "Great Britain \u0026 N. Ireland",
+                "document": "http://www.bbc.co.uk/sport/olympics/2012/countries/great-britain"
+              }
+            ]
+          }
+        ],
+        "oneToWatch": "http://www.bbc.co.uk/things/8d6ae957-d338-442b-99d7-190f20b78dd4#id"
+      }
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/f2798806-4e54-47ff-a1ec-32beefde2058#id",
+      "@type": [
+        "Person"
+      ],
+      "canonicalName": "Majlinda Kelmendi",
+      "familyName": "Kelmendi",
+      "gender": "W",
+      "givenName": "Majlinda",
+      "name": "Majlinda Kelmendi",
+      "document": "http://www.bbc.co.uk/sport/olympics/2012/athletes/f2798806-4e54-47ff-a1ec-32beefde2058",
+      "isMedallistFor": "http://www.bbc.co.uk/things/3143ecc6-ffa4-4446-9d13-ee60801c4881#id",
+      "discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+          "@type": [
+            "SportsDiscipline"
+          ],
+          "name": "Judo",
+          "document": "http://www.bbc.co.uk/sport/olympics/2012/sports/judo"
+        }
+      ],
+      "@reverse": {
+        "holder": [
+          {
+            "@type": [
+              "CompetesForRole"
+            ],
+            "role_at": [
+              {
+                "@id": "http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id",
+                "@type": [
+                  "CompetitiveSportingOrganisation"
+                ],
+                "name": "Team GB",
+                "shortName": "Great Britain \u0026 N. Ireland",
+                "document": "http://www.bbc.co.uk/sport/olympics/2012/countries/great-britain"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/82f5db84-0591-49ee-b6f4-a1d26e9381fb#id",
+      "@type": [
+        "Person"
+      ],
+      "canonicalName": "Usain Bolt",
+      "familyName": "Bolt",
+      "gender": "M",
+      "givenName": "Usain",
+      "name": "Usain Bolt",
+      "worldOlympicDream": "true",
+      "document": "http://www.bbc.co.uk/sport/olympics/2012/athletes/82f5db84-0591-49ee-b6f4-a1d26e9381fb",
+      "discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id",
+          "@type": [
+            "SportsDiscipline"
+          ],
+          "name": "Athletics",
+          "document": "http://www.bbc.co.uk/sport/olympics/2012/sports/athletics"
+        }
+      ],
+      "@reverse": {
+        "holder": [
+          {
+            "@type": [
+              "CompetesForRole"
+            ],
+            "role_at": [
+              {
+                "@id": "http://www.bbc.co.uk/things/76369f3b-65a0-4e69-8c52-859adfdefa49#id",
+                "@type": [
+                  "CompetitiveSportingOrganisation"
+                ],
+                "name": "Jamaica",
+                "shortName": "Jamaica",
+                "document": "http://www.bbc.co.uk/sport/olympics/2012/countries/jamaica",
+                "externalId": "urn:ioc2012:jam"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "@context": {
+    "CompetesForRole": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/CompetesForRole"
+    },
+    "CompetitiveSportingOrganisation": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/CompetitiveSportingOrganisation"
+    },
+    "Person": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/Person"
+    },
+    "SportsDiscipline": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/SportsDiscipline"
+    },
+    "canonicalName": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/canonicalName"
+    },
+    "discipline": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/discipline",
+      "@type": "@id"
+    },
+    "document": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/document",
+      "@type": "@id"
+    },
+    "externalId": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/externalId",
+      "@type": "@id"
+    },
+    "familyName": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName"
+    },
+    "gender": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/gender"
+    },
+    "givenName": {
+      "@id": "http://xmlns.com/foaf/0.1/givenName"
+    },
+    "holder": {
+      "@id": "http://purl.org/vocab/participation/schema#holder",
+      "@type": "@id"
+    },
+    "isMedallistFor": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/isMedallistFor",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/name"
+    },
+    "oneToWatch": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/oneToWatch",
+      "@type": "@id"
+    },
+    "role_at": {
+      "@id": "http://purl.org/vocab/participation/schema#role_at",
+      "@type": "@id"
+    },
+    "shortName": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/shortName"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
+    },
+    "worldOlympicDream": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/worldOlympicDream"
+    }
+  }
+}

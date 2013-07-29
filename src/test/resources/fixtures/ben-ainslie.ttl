@@ -1,0 +1,63 @@
+@prefix par:     <http://purl.org/vocab/participation/schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo:     <http://www.bbc.co.uk/ontologies/geopolitical/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix domain:  <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix oly:     <http://www.bbc.co.uk/ontologies/2012olympics/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix result:  <http://www.bbc.co.uk/ontologies/result/> .
+
+result:this result:item <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> .
+
+<http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id> a sport:CompetitiveSportingOrganisation ;
+      oly:territory <http://www.bbc.co.uk/things/territories/gb#id> ;
+      domain:document <http://www.bbc.co.uk/sport/olympics/2012/countries/great-britain> ;
+  	  domain:shortName "Great Britain & N. Ireland"^^xsd:string ;
+      domain:name "Team GB"^^xsd:string .
+
+<http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> a sport:Person ;
+      par:role_at <http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id> ;
+	  oly:dateOfBirth "1976-10-24"^^xsd:date ;
+      oly:gender "M"^^xsd:string ;
+      oly:height "172.0"^^xsd:float ;
+      oly:weight "72.0"^^xsd:float ;
+      domain:name "Ben Ainslie"^^xsd:string ;
+      sport:competesIn <http://www.bbc.co.uk/things/2012/sam002#id>, <http://www.bbc.co.uk/things/2012/sam005#id> ;
+      sport:discipline <http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id> ;
+	  domain:document <http://www.bbc.co.uk/sport/olympics/2012/athletes/4e40ce40-b632-4a42-98d7-cf97067f7bf9>, <http://www.facebook.com/pages/Ben-Ainslie/108182689201922> ;
+      foaf:familyName "Ainslie"^^xsd:string ;
+      foaf:givenName "Ben"^^xsd:string .
+      
+<http://www.facebook.com/pages/Ben-Ainslie/108182689201922> a domain:Document ; 
+   domain:documentType <http://www.bbc.co.uk/things/document-types/external> , <http://www.bbc.co.uk/things/document-types/facebook> .
+   
+<http://www.bbc.co.uk/sport/olympics/2012/athletes/4e40ce40-b632-4a42-98d7-cf97067f7bf9> a domain:Document ;
+   domain:domain <http://www.bbc.co.uk/things/domains/olympics2012> ;
+   domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document> .
+
+<http://www.bbc.co.uk/things/2012/sam002#id> a sport:MedalCompetition ;
+  	  domain:name "Sailing - Men's Finn"^^xsd:string ;
+  	  domain:shortName "Men's Finn"^^xsd:string ;
+      domain:externalId <urn:ioc2012:SAM002000> ;
+      domain:document <http://www.bbc.co.uk/sport/olympics/2012/sports/sailing/events/mens-finn> .
+
+<http://www.bbc.co.uk/things/2012/sam005#id> a sport:MedalCompetition ;
+      domain:name "Sailing - Men's 470"^^xsd:string ;
+  	  domain:shortName "Men's 470"^^xsd:string ;
+      domain:externalId <urn:ioc2012:SAM005000> ;
+  	  domain:document <http://www.bbc.co.uk/sport/olympics/2012/sports/sailing/events/mens-470> .
+
+<http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id> a sport:SportsDiscipline ;
+      domain:document <http://www.bbc.co.uk/sport/olympics/2012/sports/sailing> ;
+      domain:name "Sailing"^^xsd:string .
+
+<http://www.bbc.co.uk/things/territories/gb#id> a geo:Territory ;
+      domain:name "the United Kingdom of Great Britain and Northern Ireland"^^xsd:string ;
+      geo:isInGroup <http://www.bbc.co.uk/things/81b14df8-f9d2-4dff-a676-43a1a9a5c0a5#id> .
+
+<http://www.bbc.co.uk/things/81b14df8-f9d2-4dff-a676-43a1a9a5c0a5#id> a geo:Group ;
+      domain:name "Europe"^^xsd:string ;
+      geo:groupType <http://www.bbc.co.uk/things/group-types/bbc-news-geo-regions> .

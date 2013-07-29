@@ -1,0 +1,188 @@
+{
+  "@id": "http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id",
+  "@type": [
+    "CompetitiveSportingOrganisation"
+  ],
+  "name": "Team GB",
+  "shortName": "Great Britain \u0026 N. Ireland",
+  "document": "http://www.bbc.co.uk/sport/olympics/2012/countries/great-britain",
+  "territory": [
+    {
+      "@id": "http://www.bbc.co.uk/things/territories/gb#id",
+      "@type": [
+        "Territory"
+      ],
+      "name": "the United Kingdom of Great Britain and Northern Ireland",
+      "isInGroup": [
+        {
+          "@id": "http://www.bbc.co.uk/things/81b14df8-f9d2-4dff-a676-43a1a9a5c0a5#id",
+          "@type": [
+            "Group"
+          ],
+          "name": "Europe",
+          "groupType": "http://www.bbc.co.uk/things/group-types/bbc-news-geo-regions"
+        }
+      ]
+    }
+  ],
+  "@reverse": {
+    "role_at": [
+      {
+        "@id": "http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id",
+        "@type": [
+          "Person"
+        ],
+        "dateOfBirth": "1976-10-24",
+        "familyName": "Ainslie",
+        "gender": "M",
+        "givenName": "Ben",
+        "height": 172.0,
+        "name": "Ben Ainslie",
+        "weight": 72.0,
+        "competesIn": [
+          {
+            "@id": "http://www.bbc.co.uk/things/2012/sam002#id",
+            "@type": [
+              "MedalCompetition"
+            ],
+            "name": "Sailing - Men\u0027s Finn",
+            "shortName": "Men\u0027s Finn",
+            "document": "http://www.bbc.co.uk/sport/olympics/2012/sports/sailing/events/mens-finn",
+            "externalId": "urn:ioc2012:SAM002000"
+          },
+          {
+            "@id": "http://www.bbc.co.uk/things/2012/sam005#id",
+            "@type": [
+              "MedalCompetition"
+            ],
+            "name": "Sailing - Men\u0027s 470",
+            "shortName": "Men\u0027s 470",
+            "document": "http://www.bbc.co.uk/sport/olympics/2012/sports/sailing/events/mens-470",
+            "externalId": "urn:ioc2012:SAM005000"
+          }
+        ],
+        "discipline": [
+          {
+            "@id": "http://www.bbc.co.uk/things/d65c5dce-f5e4-4340-931b-16ca1848d092#id",
+            "@type": [
+              "SportsDiscipline"
+            ],
+            "name": "Sailing",
+            "document": "http://www.bbc.co.uk/sport/olympics/2012/sports/sailing"
+          }
+        ],
+        "document": [
+          {
+            "@id": "http://www.bbc.co.uk/sport/olympics/2012/athletes/4e40ce40-b632-4a42-98d7-cf97067f7bf9",
+            "@type": [
+              "Document"
+            ],
+            "documentType": "http://www.bbc.co.uk/things/document-types/bbc-document",
+            "domain": "http://www.bbc.co.uk/things/domains/olympics2012"
+          },
+          {
+            "@id": "http://www.facebook.com/pages/Ben-Ainslie/108182689201922",
+            "@type": [
+              "Document"
+            ],
+            "documentType": [
+              "http://www.bbc.co.uk/things/document-types/external",
+              "http://www.bbc.co.uk/things/document-types/facebook"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "@context": {
+    "CompetitiveSportingOrganisation": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/CompetitiveSportingOrganisation"
+    },
+    "Document": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/Document"
+    },
+    "Group": {
+      "@id": "http://www.bbc.co.uk/ontologies/geopolitical/Group"
+    },
+    "MedalCompetition": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/MedalCompetition"
+    },
+    "Person": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/Person"
+    },
+    "SportsDiscipline": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/SportsDiscipline"
+    },
+    "Territory": {
+      "@id": "http://www.bbc.co.uk/ontologies/geopolitical/Territory"
+    },
+    "competesIn": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/competesIn",
+      "@type": "@id"
+    },
+    "dateOfBirth": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/dateOfBirth"
+    },
+    "discipline": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/discipline",
+      "@type": "@id"
+    },
+    "document": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/document",
+      "@type": "@id"
+    },
+    "documentType": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/documentType",
+      "@type": "@id"
+    },
+    "domain": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/domain",
+      "@type": "@id"
+    },
+    "externalId": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/externalId",
+      "@type": "@id"
+    },
+    "familyName": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName"
+    },
+    "gender": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/gender"
+    },
+    "givenName": {
+      "@id": "http://xmlns.com/foaf/0.1/givenName"
+    },
+    "groupType": {
+      "@id": "http://www.bbc.co.uk/ontologies/geopolitical/groupType",
+      "@type": "@id"
+    },
+    "height": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/height"
+    },
+    "isInGroup": {
+      "@id": "http://www.bbc.co.uk/ontologies/geopolitical/isInGroup",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/name"
+    },
+    "role_at": {
+      "@id": "http://purl.org/vocab/participation/schema#role_at",
+      "@type": "@id"
+    },
+    "shortName": {
+      "@id": "http://www.bbc.co.uk/ontologies/domain/shortName"
+    },
+    "territory": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/territory",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
+    },
+    "weight": {
+      "@id": "http://www.bbc.co.uk/ontologies/2012olympics/weight"
+    }
+  }
+}

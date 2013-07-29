@@ -1,0 +1,116 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo-pol: <http://www.bbc.co.uk/ontologies/geopolitical/> .
+@prefix geoname: <http://www.geonames.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix exif: <http://www.w3.org/2003/12/exif/ns#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix asset: <http://www.bbc.co.uk/ontologies/asset/> .
+@prefix tag: <http://www.bbc.co.uk/ontologies/tag/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owlim: <http://www.ontotext.com/> .
+@prefix oly: <http://www.bbc.co.uk/ontologies/2012olympics/> .
+@prefix par: <http://purl.org/vocab/participation/schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix result: <http://www.bbc.co.uk/ontologies/result/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+
+
+result:this result:next <http://www.bbc.co.uk/sport/0/football/19816138#asset> .
+
+<http://www.bbc.co.uk/sport/0/football/19816138#asset> result:next <http://wwwpreview.int.newsonline.tc.nca.bbc.co.uk/sport/0/football/19697353#asset> .
+
+<http://wwwpreview.int.newsonline.tc.nca.bbc.co.uk/sport/0/football/19697353#asset> result:next <http://www.bbc.co.uk/news/business-19815284#asset> .
+
+<http://www.bbc.co.uk/news/business-19815284#asset> result:next <http://www.bbc.co.uk/sport/0/cricket/19814362#asset> .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814362#asset> result:next <http://www.bbc.co.uk/sport/0/rugby-union/19814236#asset> .
+
+<http://www.bbc.co.uk/sport/0/rugby-union/19814236#asset> result:next <http://www.bbc.co.uk/sport/0/rugby-union/19814234#asset> .
+
+<http://www.bbc.co.uk/sport/0/rugby-union/19814234#asset> result:next <http://www.bbc.co.uk/sport/0/cricket/19809221#asset> .
+
+<http://www.bbc.co.uk/sport/0/cricket/19809221#asset> result:next <http://www.bbc.co.uk/sport/0/cricket/19814216#asset> .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814216#asset> result:next <http://www.bbc.co.uk/sport/0/cricket/19814215#asset> .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814215#asset> result:next <http://www.bbc.co.uk/sport/0/cricket/19814214#asset> .
+
+<http://www.bbc.co.uk/sport/0/football/19816138#asset> a cwork:CreativeWork ;
+	cwork:title "Adkins not worried by speculation"^^xsd:string ;
+	cwork:dateCreated "2012-12-06T12:45:32Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-12-06T12:45:32Z"^^xsd:dateTime ;
+	cwork:description "Southampton manager Nigel Adkins says speculation over his future at St Mary's does not affect him."^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat ;
+	cwork:title "Southampton boss Nigel Adkins shrugs off speculation on his future"^^xsd:string , "Adkins not worried by speculation"^^xsd:string , "Southampton boss Nigel Adkins shrugs off speculation on his future"^^xsd:string , "Adkins not worried by speculation"^^xsd:string , "Southampton boss Nigel Adkins shrugs off speculation on his future"^^xsd:string , "Adkins not worried by speculation"^^xsd:string , "Southampton boss Nigel Adkins shrugs off speculation on his future"^^xsd:string , "Adkins not worried by speculation"^^xsd:string , "Southampton boss Nigel Adkins shrugs off speculation on his future"^^xsd:string .
+
+<http://wwwpreview.int.newsonline.tc.nca.bbc.co.uk/sport/0/football/19697353#asset> a cwork:CreativeWork ;
+	cwork:title "QPR 1-2 West Ham"^^xsd:string ;
+	cwork:dateCreated "2012-10-01T21:35:32Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-30T10:13:50Z"^^xsd:dateTime ;
+	cwork:description "West Ham defeat Queens Park Rangers as their win keeps Mark Hughes' side bottom of the Premier League table. .."^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/news/business-19815284#asset> a cwork:CreativeWork ;
+	cwork:title "test live event page"^^xsd:string ;
+	cwork:dateCreated "2012-11-29T16:39:51Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-29T16:39:51Z"^^xsd:dateTime ;
+	cwork:description "test live event page"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814362#asset> a cwork:CreativeWork ;
+	cwork:title "England have a lead item"^^xsd:string ;
+	cwork:dateCreated "2012-11-27T09:52:23Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-27T14:16:27Z"^^xsd:dateTime ;
+	cwork:description "England have a lead item"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/rugby-union/19814236#asset> a cwork:CreativeWork ;
+	cwork:title "Glamorgan Media Asset"^^xsd:string ;
+	cwork:dateCreated "2012-11-26T11:23:42Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-26T11:23:42Z"^^xsd:dateTime ;
+	cwork:description "Glamorgan Media Asset"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/rugby-union/19814234#asset> a cwork:CreativeWork ;
+	cwork:title "Leicester Lead Item"^^xsd:string ;
+	cwork:dateCreated "2012-11-26T11:13:52Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-26T11:13:52Z"^^xsd:dateTime ;
+	cwork:description "Leicester Lead Item"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/cricket/19809221#asset> a cwork:CreativeWork ;
+	cwork:title "Another England Cricket Item"^^xsd:string ;
+	cwork:dateCreated "2012-11-06T14:55:13Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-26T10:52:22Z"^^xsd:dateTime ;
+	cwork:description "Another lead item for england cricket team."^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814216#asset> a cwork:CreativeWork ;
+	cwork:title "More Info about Glamorgan"^^xsd:string ;
+	cwork:dateCreated "2012-11-26T10:46:41Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-26T10:46:41Z"^^xsd:dateTime ;
+	cwork:description "More Info about Glamorgan"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814215#asset> a cwork:CreativeWork ;
+	cwork:title "Another Gallery"^^xsd:string ;
+	cwork:dateCreated "2012-11-26T10:37:18Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-26T10:37:18Z"^^xsd:dateTime ;
+	cwork:description "Another Gallery"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
+
+<http://www.bbc.co.uk/sport/0/cricket/19814214#asset> a cwork:CreativeWork ;
+	cwork:title "Gallery"^^xsd:string ;
+	cwork:dateCreated "2012-11-26T10:24:48Z"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-26T10:24:48Z"^^xsd:dateTime ;
+	cwork:description "Gallery"^^xsd:string ;
+	cwork:primaryFormat cwork:textualFormat .
