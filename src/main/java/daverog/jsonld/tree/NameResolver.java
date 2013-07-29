@@ -47,22 +47,35 @@ public class NameResolver {
 
 	private void registerResource(TypedResource resource) {
 		if (resource.getResource().getNameSpace() != null && !resource.getResource().getNameSpace().equals(rdfResultOntologyPrefix)) {
-			String namespace = resource.getResource().getNameSpace();
-			String prefix = model.getNsURIPrefix(namespace);
-			if (prefix != null && namespace != null) {
-				TypedResource currentResource = mappedResources.get(resource.getResource().getLocalName());
-				if (currentResource == null) {
+			String currentNamespace = resource.getResource().getNameSpace();
+			String prefix = model.getNsURIPrefix(currentNamespace);
+			if (prefix != null && currentNamespace != null) {
+				TypedResource existingResource = mappedResources.get(resource.getResource().getLocalName());
+				if (existingResource == null) {
 					mappedResources.put(resource.getResource().getLocalName(), resource);
 				} else {
-					if (!resource.getResource().equals(currentResource.getResource())) {
-						if(prioritisedNamespaces.indexOf(currentResource.getResource().getNameSpace()) == -1 ||
-							prioritisedNamespaces.indexOf(namespace) <
-						    prioritisedNamespaces.indexOf(currentResource.getResource().getNameSpace())) {
-							String currentPrefix = model.getNsURIPrefix(currentResource.getResource().getNameSpace());
-							mappedResources.put(currentPrefix + "_" + currentResource.getResource().getLocalName(), currentResource);
-							mappedResources.put(resource.getResource().getLocalName(), resource);
+					if (!resource.getResource().equals(existingResource.getResource())) {
+						boolean existingIsHigherPriorityThanCurrent= false;
+						String existingNamespace = existingResource.getResource().getNameSpace();
+						int priorityOfExistingResource = prioritisedNamespaces.indexOf(existingNamespace);
+						int priorityOfCurrentResource = prioritisedNamespaces.indexOf(currentNamespace);
+						
+						if (priorityOfExistingResource == -1 && priorityOfCurrentResource == -1) {
+							existingIsHigherPriorityThanCurrent = existingNamespace.compareTo(currentNamespace) < 0;
+						} else if (priorityOfExistingResource == -1 && priorityOfCurrentResource != -1) {
+							existingIsHigherPriorityThanCurrent = false;
+						} else if (priorityOfExistingResource != -1 && priorityOfCurrentResource == -1) {
+							existingIsHigherPriorityThanCurrent = true;
 						} else {
+							existingIsHigherPriorityThanCurrent = priorityOfExistingResource < priorityOfCurrentResource;
+						}
+						
+						if(existingIsHigherPriorityThanCurrent) {
 							mappedResources.put(prefix + "_" + resource.getResource().getLocalName(), resource);
+						} else {
+							String currentPrefix = model.getNsURIPrefix(existingNamespace);
+							mappedResources.put(currentPrefix + "_" + existingResource.getResource().getLocalName(), existingResource);
+							mappedResources.put(resource.getResource().getLocalName(), resource);
 						}
 					}
 				}

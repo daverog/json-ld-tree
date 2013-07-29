@@ -209,6 +209,34 @@ public class RdfTreeGeneratorTest {
 			"}", 
 			rdfTree.asJson());
 	}
+	@Test
+	public void aCurieWithUnderscoreIsUsedIfALocalnameAppearsMoreThanOnceAndUriPrecedenceIsAlphabetical() throws RdfTreeException {
+		Model model = ModelUtils.createJenaModel(
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+			"@prefix ns: <http://purl.org/ns/> ." +
+			"@prefix ns2: <http://purl.org/ns2/> ." +
+			"result:this result:item <uri:a> . \n" +
+			"<uri:a> ns2:prop <uri:c> .\n" +
+			"<uri:a> ns:prop <uri:c> .");
+		RdfTree rdfTree = generator.generateRdfTree(model);
+		assertEquals(
+			"{\n" + 
+			"  \"@id\": \"uri:a\",\n" + 
+			"  \"ns2_prop\": \"uri:c\",\n" + 
+			"  \"prop\": \"uri:c\",\n" + 
+			"  \"@context\": {\n" + 
+			"    \"ns2_prop\": {\n" + 
+			"      \"@id\": \"http://purl.org/ns2/prop\",\n" + 
+			"      \"@type\": \"@id\"\n" + 
+			"    },\n" + 
+			"    \"prop\": {\n" + 
+			"      \"@id\": \"http://purl.org/ns/prop\",\n" + 
+			"      \"@type\": \"@id\"\n" + 
+			"    }\n" + 
+			"  }\n" + 
+			"}", 
+			rdfTree.asJson());
+	}
 	
 	@Test
 	public void aDataTypesAreRenderedAsCorrectTypesInJSON() throws RdfTreeException {
