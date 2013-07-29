@@ -46,7 +46,7 @@ public class RdfTreeGeneratorTest {
 	public void ifMoreThanOneResultThisIsPresentAnErrorIsThrown() {
 		try {
 			Model model = ModelUtils.createJenaModel(
-					"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+					"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 					"result:this result:item <uri:a> . \n" +
 					"result:this result:item <uri:c> . \n" +
 					"<uri:a> <uri:b> <uri:c> .");
@@ -60,7 +60,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void resourceTripleIsRenderedInTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> <uri:c> .");
 		assertEquals(
@@ -73,7 +73,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void literalWithNonXmlCharactersTripleIsRenderedInXmlTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> \"'string & - string'\" .");
 		assertEquals(
@@ -86,7 +86,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void literalWithDatatypeStringIsIgnored() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-				"@prefix result: <http://www.bbc.co.uk/ontologies/result/> .\n" +
+				"@prefix result: <http://purl.org/ontology/rdf-result/> .\n" +
 				"@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n" +
 				"result:this result:item <uri:a> . \n" +
 				"<uri:a> <uri:b> \"string\"^^xsd:string .\n" + 
@@ -114,7 +114,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void loopTripleIsRenderedInTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> <uri:a> .");
 		assertEquals(
@@ -127,7 +127,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void typeIsNotFollowedAsAnInverseProperty() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> a <uri:Thingy> ." +
 			"<uri:b> a <uri:Thingy> .");
@@ -139,7 +139,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void orphanedGraphsAreNotIncluded() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> <uri:c> ." +
 			"<uri:orphanA> <uri:orphanB> <uri:orphanC> .");
@@ -153,7 +153,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void resourceTripleOverInversePropertyIsRenderedInTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:c> . \n" +
 			"<uri:a> <uri:b> <uri:c> .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
@@ -167,7 +167,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void resourceTripleOverInversePropertyIsRenderedInJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:c> . \n" +
 			"<uri:a> <uri:b> <uri:c> .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
@@ -184,7 +184,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void aCurieWithUnderscoreIsUsedIfALocalnameAppearsMoreThanOnce() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"@prefix ns: <http://purl.org/ns/> ." +
 			"@prefix ns2: <http://purl.org/ns2/> ." +
 			"result:this result:item <uri:a> . \n" +
@@ -213,7 +213,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void aDataTypesAreRenderedAsCorrectTypesInJSON() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> \"1982-02-25\"^^xsd:date .\n" +
@@ -233,7 +233,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void multipleValuesForOnePredicateResultInAListInJson() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> \"Val1\" .\n" +
 			"<uri:a> <uri:b> \"Val2\" .");
@@ -251,7 +251,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void depthOfRootIsZero() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> \"Val1\" .");
 		assertEquals(0, 
@@ -261,7 +261,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void depthOfChildIsOne() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> \"Val1\" ." +
 			"<uri:a> <uri:b> <uri:c> .");
@@ -272,7 +272,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void depthOfGrandchildChildIsTwo() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> <uri:b> \"Val1\" ." +
 			"<uri:a> <uri:b> <uri:c> ." +
@@ -284,7 +284,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void listsAreShownAsJsonArrays() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:next <uri:a> . \n" +
 			"<uri:a> result:next <uri:b> . \n" +
 			"<uri:a> <uri:p> \"value1\" . \n" +
@@ -309,7 +309,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void referencesToListItemsCauseTheTreeToStopNestingOverInverseProperties() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:next <uri:a> . \n" +
 			"<uri:a> result:next <uri:b> . \n" +
 			"<uri:a> <uri:p> <uri:b> . \n" +
@@ -339,7 +339,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void referencesToChildrenOfItemsThatAreHigherInTheHierachyCauseTheTreeToStopNestingOverInverseProperties() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:next <uri:a> . \n" +
 			"<uri:a> result:next <uri:b> . \n" +
 			"<uri:a> <uri:p> <uri:ref> . \n" +
@@ -370,7 +370,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void referencesToChildrenOfItemsThatAreHigherInTheHierachyCauseTheTreeToStopNestingOverInversePropertiesDespiteListOrder() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:next <uri:b> . \n" +
 			"<uri:b> result:next <uri:a> . \n" +
 			"<uri:a> <uri:p> <uri:ref> . \n" +
@@ -401,7 +401,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void listsAreShownAsXmlLists() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:next <uri:a> . \n" +
 			"<uri:a> result:next <uri:b> . \n" +
 			"<uri:a> <uri:p> \"value1\" . \n" +
@@ -421,7 +421,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void predicateAreInAPredictableOrderWhichIsAlphabeticalExceptNonSingularPredicatesAndInversePredicates() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"@prefix ns: <http://purl.org/ns/> ." +
 			"result:this result:item <uri:a> . \n" +
 			"<uri:a> ns:bbLiteralGroup \"valA\" . \n" +
@@ -478,7 +478,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void blankNodesAsObjectAreHandledCorrectly() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> .\n" + 
+			"@prefix result: <http://purl.org/ontology/rdf-result/> .\n" + 
 			"result:this result:item <urn:a> .\n" + 
 			"<urn:a> a _:blankNode .");
 		assertEquals(
@@ -494,7 +494,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void blankNodesAsSubjectsAreHandledCorrectly() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> .\n" + 
+			"@prefix result: <http://purl.org/ontology/rdf-result/> .\n" + 
 					"result:this result:item _:blankNode .\n" + 
 			"_:blankNode a <urn:a>  .");
 		assertEquals(
@@ -582,7 +582,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void aListDescribedAsASetOfItemsWithAnOrderByPredicateIsRenderedAsAJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:listItem <uri:a> . \n" +
 			"result:this result:listItem <uri:b> . \n" +
 			"result:this result:listItem <uri:c> . \n" +
@@ -619,7 +619,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void aListDescribedAsASetOfItemsWithAnOrderByPredicateAndDesendingSortOrderIsRenderedAsAJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:listItem <uri:a> . \n" +
 			"result:this result:listItem <uri:b> . \n" +
 			"result:this result:listItem <uri:c> . \n" +
@@ -656,7 +656,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void aListOfDatesDescribedAsASetOfItemsWithAnOrderByPredicateIsRenderedAsAJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"@prefix xsd: <http://www.w3.org/2001/XMLSchema#> ." +
 			"result:this result:listItem <uri:a> . \n" +
 			"result:this result:listItem <uri:b> . \n" +
@@ -684,7 +684,7 @@ public class RdfTreeGeneratorTest {
 	@Test
 	public void aListDescribedAsASetOfItemsWithNoOrderByPredicateIsOrderedByAnyAvailableStringFollowedByLiteralsAndThenResourcesAndIsRenderedAsAJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
-				"@prefix result: <http://www.bbc.co.uk/ontologies/result/> ." +
+				"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 				"@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n" +
 				"result:this result:listItem <uri:a> . \n" +
 				"result:this result:listItem <uri:b> . \n" +

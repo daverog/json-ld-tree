@@ -15,9 +15,11 @@ public class NameResolver {
 	private final Model model;
 	private final SortedMap<String, TypedResource> mappedResources;
 	private final List<String> prioritisedNamespaces;
+	private final String rdfResultOntologyPrefix;
 
-	public NameResolver(Model model, List<String> prioritisedNamespaces) {
+	public NameResolver(Model model, List<String> prioritisedNamespaces, String rdfResultOntologyPrefix) {
 		this.model = model;
+		this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
 		this.prioritisedNamespaces = Lists.newArrayList(RdfTree.RDF_PREFIX, RdfTree.OWL_PREFIX);
 		this.prioritisedNamespaces.addAll(prioritisedNamespaces);
 		mappedResources = Maps.newTreeMap();
@@ -44,7 +46,7 @@ public class NameResolver {
 	}
 
 	private void registerResource(TypedResource resource) {
-		if (resource.getResource().getNameSpace() != null && !resource.getResource().getNameSpace().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX)) {
+		if (resource.getResource().getNameSpace() != null && !resource.getResource().getNameSpace().equals(rdfResultOntologyPrefix)) {
 			String namespace = resource.getResource().getNameSpace();
 			String prefix = model.getNsURIPrefix(namespace);
 			if (prefix != null && namespace != null) {

@@ -1,5 +1,5 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix result: <http://www.bbc.co.uk/ontologies/result/> .
+@prefix result: <http://purl.org/ontology/rdf-result/> .
 
 result:this result:item <http://sws.geonames.org/2635167/> .
 

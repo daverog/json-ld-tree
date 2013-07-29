@@ -16,6 +16,16 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 public class RdfTreeGenerator {
 	
+	private final String rdfResultOntologyPrefix;
+	
+	public RdfTreeGenerator() {
+		rdfResultOntologyPrefix = RdfTree.DEFAULT_RESULT_ONTOLOGY_URI_PREFIX;
+	}
+	
+	public RdfTreeGenerator(String rdfResultOntologyPrefix) {
+		this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
+	}
+	
 	enum TreeType {
 		UNKNOWN,
 		ITEM,
@@ -28,7 +38,7 @@ public class RdfTreeGenerator {
 	}
 	
 	public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces) throws RdfTreeException {
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces);
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, rdfResultOntologyPrefix);
 
 		TreeType treeType = TreeType.UNKNOWN;
 		
@@ -36,7 +46,7 @@ public class RdfTreeGenerator {
 			return new RdfTree(model, nameResolver, null);
 		
 		List<Statement> results =  getSomeStatements(model, new SimpleSelector(
-				model.getResource(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "this"), 
+				model.getResource(rdfResultOntologyPrefix + "this"), 
 				null,
 				(RDFNode)null),
 				"result:this is not present as the subject of a statement, so an RDF tree cannot be generated");
@@ -49,35 +59,35 @@ public class RdfTreeGenerator {
 		for (Statement result: results) {
 			if (!result.getObject().isResource()) 
 				throw new RdfTreeException("result:this statement contained a non-resource object");
-			if (result.getPredicate().getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "item")) {
+			if (result.getPredicate().getURI().equals(rdfResultOntologyPrefix + "item")) {
 				if (results.size() != 1) throw new RdfTreeException("More than one result:this subject was found for a single item result");
 				if (treeType == TreeType.UNKNOWN) treeType = TreeType.ITEM;
 				else throw new RdfTreeException("Tree type " + treeType + " was identified alongside conflicting predicate result:item");
 			}
-			if (result.getPredicate().getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "next")) {
+			if (result.getPredicate().getURI().equals(rdfResultOntologyPrefix + "next")) {
 				if (results.size() != 1) throw new RdfTreeException("More than one starting point was found for a list described by result:next");
 				if (treeType == TreeType.UNKNOWN) treeType = TreeType.LIST;
 				else throw new RdfTreeException("Tree type " + treeType + " was identified alongside conflicting predicate result:next");
 			}
-			if (result.getPredicate().getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "listItem")) {
+			if (result.getPredicate().getURI().equals(rdfResultOntologyPrefix + "listItem")) {
 				if (treeType == TreeType.UNKNOWN || treeType == TreeType.LIST_WITH_ORDER_BY_PREDICATE) treeType = TreeType.LIST_WITH_ORDER_BY_PREDICATE;
 				else throw new RdfTreeException("Tree type " + treeType + " was identified alongside conflicting predicate result:listItem");
 				listItems.add(result.getObject().asResource());
 			}
 		} 
 		for (Statement result: results) {
-			if (result.getPredicate().getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "orderByPredicate")) {
+			if (result.getPredicate().getURI().equals(rdfResultOntologyPrefix + "orderByPredicate")) {
 				if (orderingPredicate != null) throw new RdfTreeException("More than one ordering predicate was supplied.");
 				if (treeType != TreeType.LIST_WITH_ORDER_BY_PREDICATE) throw new RdfTreeException("An ordering predicate was supplied for tree type " + treeType);
 				orderingPredicate = result.getObject().asResource();
 			}
-			if (result.getPredicate().getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "sortOrder")) {
+			if (result.getPredicate().getURI().equals(rdfResultOntologyPrefix + "sortOrder")) {
 				if (treeType != TreeType.LIST_WITH_ORDER_BY_PREDICATE) throw new RdfTreeException("An sort order was supplied for tree type " + treeType);
 				if (!result.getObject().isResource()) throw new RdfTreeException("An sort order was not a resource");
 				Resource sortOrder = result.getObject().asResource();
-				if (sortOrder.getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "AscendingOrder")) {
+				if (sortOrder.getURI().equals(rdfResultOntologyPrefix + "AscendingOrder")) {
 					sortAscending = true;
-				} else if (sortOrder.getURI().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "DescendingOrder")) {
+				} else if (sortOrder.getURI().equals(rdfResultOntologyPrefix + "DescendingOrder")) {
 					sortAscending = false;
 				} else {
 					throw new RdfTreeException("Unknown sort order: " + result.getObject().asResource().getURI());
@@ -162,7 +172,7 @@ public class RdfTreeGenerator {
 	private List<Resource> generateListItemsUsingResultNext(Model model, Resource firstItem) throws RdfTreeException {
 		Statement next = getNoneOrSingleStatement(model, new SimpleSelector(
 				firstItem, 
-				model.getProperty(RdfTree.RESULT_ONTOLOGY_URI_PREFIX + "next"),
+				model.getProperty(rdfResultOntologyPrefix + "next"),
 				(RDFNode)null), "too many result:next predicates assigned to " + firstItem.toString());
 	
 		if (next != null) {
@@ -243,7 +253,7 @@ public class RdfTreeGenerator {
 	private void handleStatements(Model model, RdfTree current, List<Statement> statements,
 			boolean inverse) {
 		for(Statement statement: statements) {
-			if(!statement.getPredicate().getNameSpace().equals(RdfTree.RESULT_ONTOLOGY_URI_PREFIX)) {
+			if(!statement.getPredicate().getNameSpace().equals(rdfResultOntologyPrefix)) {
 				current.addChild(statement);
 			}
 		}

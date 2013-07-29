@@ -2,7 +2,7 @@
 @prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix system: <http://www.bbc.co.uk/ontologies/system/> .
-@prefix result:  <http://www.bbc.co.uk/ontologies/result/> .
+@prefix result:  <http://purl.org/ontology/rdf-result/> .
 
 result:this result:item _:creativeWork .	
 

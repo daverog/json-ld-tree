@@ -8,7 +8,7 @@
 @prefix oly: <http://www.bbc.co.uk/ontologies/2012olympics/> .
 @prefix geo-pol: <http://www.bbc.co.uk/ontologies/geopolitical/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix result:  <http://www.bbc.co.uk/ontologies/result/> .
+@prefix result:  <http://purl.org/ontology/rdf-result/> .
 
 result:this result:next <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> .
 <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> result:next <http://www.bbc.co.uk/things/f2798806-4e54-47ff-a1ec-32beefde2058#id> .

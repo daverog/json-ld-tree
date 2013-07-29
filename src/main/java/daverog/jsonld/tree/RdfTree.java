@@ -13,7 +13,7 @@ import com.hp.hpl.jena.rdf.model.Statement;
 
 public class RdfTree implements Comparable<RdfTree> {
 	
-	public static final String RESULT_ONTOLOGY_URI_PREFIX = "http://www.bbc.co.uk/ontologies/result/";
+	public static final String DEFAULT_RESULT_ONTOLOGY_URI_PREFIX = "http://purl.org/ontology/rdf-result/";
 	public static final String RDF_PREFIX = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 	public static final String RDF_TYPE = RDF_PREFIX + "type";
 	public static final String OWL_PREFIX = "http://www.w3.org/2002/07/owl#";

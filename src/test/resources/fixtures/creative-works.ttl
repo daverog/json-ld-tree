@@ -19,7 +19,7 @@
 @prefix oly: <http://www.bbc.co.uk/ontologies/2012olympics/> .
 @prefix par: <http://purl.org/vocab/participation/schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix result: <http://www.bbc.co.uk/ontologies/result/> .
+@prefix result: <http://purl.org/ontology/rdf-result/> .
 @prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
 @prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
 

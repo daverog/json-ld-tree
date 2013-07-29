@@ -8,7 +8,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
-@prefix result:  <http://www.bbc.co.uk/ontologies/result/> .
+@prefix result:  <http://purl.org/ontology/rdf-result/> .
 
 result:this result:item <http://www.bbc.co.uk/things/4e40ce40-b632-4a42-98d7-cf97067f7bf9#id> .
 

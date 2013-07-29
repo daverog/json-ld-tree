@@ -22,7 +22,7 @@ public class NameResolverTest {
 	public void a_name_for_a_resource_is_the_full_uri_if_a_prefix_is_not_provided() {
 		Model model = ModelUtils.createJenaModel(
 				"<uri:a> <uri:b> <uri:c> .");
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces );
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, "");
 		
 		assertEquals("uri:full", nameResolver.getName(
 				model.createResource("uri:full")));
@@ -34,7 +34,7 @@ public class NameResolverTest {
 		Model model = ModelUtils.createJenaModel(
 				"@prefix prfx: <http://prefix.com/> .\n" +
 				"<uri:a> prfx:localName <uri:c> .");
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces);
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, "");
 		
 		assertEquals("localName", nameResolver.getName(
 				model.getResource("http://prefix.com/localName")));
@@ -47,7 +47,7 @@ public class NameResolverTest {
 				"@prefix prfx: <http://prefix.com/> .\n" +
 				"<uri:a> prfx:localName <uri:c> .\n" +
 				"<uri:a> prfx:localName <uri:d> .");
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces);
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, "");
 		
 		assertEquals(1, nameResolver.getMappedResources().size());
 	}
@@ -59,7 +59,7 @@ public class NameResolverTest {
 				"@prefix prfx2: <http://prefix2.com/> .\n" +
 				"<uri:a> prfx:localName <uri:c> .\n" +
 				"<uri:a> prfx2:localName <uri:c> .");
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces);
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, "");
 		
 		assertEquals("prfx2_localName", nameResolver.getName(
 				model.getResource("http://prefix2.com/localName")));
@@ -73,7 +73,7 @@ public class NameResolverTest {
 				"@prefix prfx3: <http://prefix3.com/> .\n" +
 				"<uri:a> prfx:localName <uri:c> .\n" +
 				"<uri:a> prfx3:localName <uri:c> .");
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces);
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, "");
 		
 		assertEquals("prfx3_localName", nameResolver.getName(
 				model.getResource("http://prefix3.com/localName")));
