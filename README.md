@@ -19,12 +19,12 @@ The RDF model must contain RDF Result ontology statements to indicate how the gr
 Lists to be ordered by a predicate value:
 
 ```text
-"@prefix result: <http://purl.org/ontology/rdf-result/>
+@prefix result: <http://purl.org/ontology/rdf-result/> .
 
-result:this result:listItem <urn:a> 
-result:this result:listItem <urn:b>
-result:this result:listItem <urn:c> 
-result:this result:orderByPredicate <urn:p> 
+result:this result:listItem <urn:a> .
+result:this result:listItem <urn:b> .
+result:this result:listItem <urn:c> .
+result:this result:orderByPredicate <urn:p> .
 
 <urn:a> <urn:p> \"a\" . 
 <urn:b> <urn:p> \"b\" . 
@@ -32,11 +32,13 @@ result:this result:orderByPredicate <urn:p>
 ```
 
 Linked Lists:
-"@prefix result: <http://purl.org/ontology/rdf-result/>
 
-result:this result:next <urn:a> 
-<urn:a> result:next <urn:b>
-<urn:b> result:next <urn:c> 
+```text
+@prefix result: <http://purl.org/ontology/rdf-result/> .
+
+result:this result:next <urn:a> .
+<urn:a> result:next <urn:b> .
+<urn:b> result:next <urn:c> .
 
 <urn:a> <urn:p> \"a\" . 
 <urn:b> <urn:p> \"b\" . 
@@ -44,9 +46,11 @@ result:this result:next <urn:a>
 ```
 
 Single items:
-"@prefix result: <http://purl.org/ontology/rdf-result/>
 
-result:this result:item <urn:a> 
+```text
+@prefix result: <http://purl.org/ontology/rdf-result/> . s
+
+result:this result:item <urn:a> .
 
 <urn:a> <urn:p> \"a\" . 
 ```
