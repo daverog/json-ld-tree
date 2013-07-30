@@ -27,6 +27,27 @@
 		<developerConnection>scm:git:git@github.com:daverog/json-ld-tree.git</developerConnection>
 		<url>http://github.com/daverog/json-ld-tree</url>
 	</scm>
+	
+	<licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+	
+	<developers>
+        <developer>
+            <id>daverog</id>
+            <name>David Rogers</name>
+            <email>d.p.rogers@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>0</timezone>
+        </developer>
+    </developers>
 
 	<build>
 		<plugins>
