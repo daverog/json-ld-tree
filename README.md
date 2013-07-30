@@ -26,9 +26,9 @@ result:this result:listItem <urn:b> .
 result:this result:listItem <urn:c> .
 result:this result:orderByPredicate <urn:p> .
 
-<urn:a> <urn:p> \"a\" . 
-<urn:b> <urn:p> \"b\" . 
-<urn:c> <urn:p> \"c\" .
+<urn:a> <urn:p> "a" . 
+<urn:b> <urn:p> "b" . 
+<urn:c> <urn:p> "c" .
 ```
 
 Linked Lists:
@@ -40,9 +40,9 @@ result:this result:next <urn:a> .
 <urn:a> result:next <urn:b> .
 <urn:b> result:next <urn:c> .
 
-<urn:a> <urn:p> \"a\" . 
-<urn:b> <urn:p> \"b\" . 
-<urn:c> <urn:p> \"c\" .
+<urn:a> <urn:p> "a" . 
+<urn:b> <urn:p> "b" . 
+<urn:c> <urn:p> "c" .
 ```
 
 Single items:
@@ -52,5 +52,5 @@ Single items:
 
 result:this result:item <urn:a> .
 
-<urn:a> <urn:p> \"a\" . 
+<urn:a> <urn:p> "a" . 
 ```
