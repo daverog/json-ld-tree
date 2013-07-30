@@ -80,13 +80,8 @@ public class RdfTreeJsonWriter {
 					} else if (firstChildTree.getNode().isResource()) {
 						LinkedHashMap<String, Object> child = Maps.newLinkedHashMap();
 						populateJsonObject(firstChildTree, child);
-						if (firstChildTree.isChildlessResource()) {
-							addPredicateValue(json, tree, firstChildTree, child);
-						} else {
-							ArrayList<Object> array = Lists.newArrayList();
-							array.add(child);
-							addPredicateValue(json, tree, firstChildTree, array);
-						}
+						ArrayList<Object> array = Lists.newArrayList((Object)child);
+						addPredicateValue(json, tree, firstChildTree, array);
 					} else {
 						addPredicateValue(json, tree, firstChildTree, convertToJsonLiteral(firstChildTree.getNode().asLiteral()));
 					}
@@ -97,8 +92,8 @@ public class RdfTreeJsonWriter {
 							array.add(getName(tree, childTree.getNode().asResource()));
 						} else if (childTree.getNode().isResource()) {
 							LinkedHashMap<String, Object> child = Maps.newLinkedHashMap();
-							array.add(child);
 							populateJsonObject(childTree, child);
+							array.add(child);
 						} else {
 							array.add(convertToJsonLiteral(childTree.getNode().asLiteral()));
 						}

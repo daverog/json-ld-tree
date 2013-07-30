@@ -263,8 +263,8 @@ public class RdfTreeGeneratorTest {
 		Model model = ModelUtils.createJenaModel(
 			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
 			"result:this result:item <uri:a> . \n" +
-			"<uri:a> <uri:b> \"Val1\" .\n" +
-			"<uri:a> <uri:b> \"Val2\" .");
+			"<uri:a> <uri:b> \"Val2\" .\n" +
+			"<uri:a> <uri:b> \"Val1\" .");
 		assertEquals(
 				"{\n" +
 				"  \"@id\": \"uri:a\",\n" +
@@ -726,27 +726,27 @@ public class RdfTreeGeneratorTest {
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
 				"{\n" + 
-						"  \"results\": [\n" + 
-						"    {\n" + 
-						"      \"@id\": \"uri:c\",\n" + 
-						"      \"uri:p\": \"aaa\"\n" + 
-						"    },\n" + 
-						"    {\n" + 
-						"      \"@id\": \"uri:b\",\n" + 
-						"      \"uri:p\": [\n" +
-						"        2,\n" + 
-						"        \"bbb\",\n" + 
-						"        \"zzz\",\n" + 
-						"        \"a:a\"\n" +
-						"      ]\n" + 
-						"    },\n" + 
-						"    {\n" + 
-						"      \"@id\": \"uri:a\",\n" + 
-						"      \"uri:p\": \"ccc\"\n" + 
-						"    }\n" + 
-						"  ]\n" + 
-						"}", 
-						rdfTree.asJson());
+				"  \"results\": [\n" + 
+				"    {\n" + 
+				"      \"@id\": \"uri:c\",\n" + 
+				"      \"uri:p\": \"aaa\"\n" + 
+				"    },\n" + 
+				"    {\n" + 
+				"      \"@id\": \"uri:b\",\n" + 
+				"      \"uri:p\": [\n" +
+				"        2,\n" + 
+				"        \"bbb\",\n" + 
+				"        \"zzz\",\n" + 
+				"        \"a:a\"\n" +
+				"      ]\n" + 
+				"    },\n" + 
+				"    {\n" + 
+				"      \"@id\": \"uri:a\",\n" + 
+				"      \"uri:p\": \"ccc\"\n" + 
+				"    }\n" + 
+				"  ]\n" + 
+				"}", 
+				rdfTree.asJson());
 	}
 	
 	@Test
