@@ -7,6 +7,7 @@
 	<packaging>jar</packaging>
 	<name>JSON-LD Tree</name>
 	<description>Developer-friendly serialisation of RDF into a structurally-stable JSON-LD representation.</description>
+    <url>https://github.com/daverog/json-ld-tree</url>
 
 	<properties>
 		<jena.version>2.6.3</jena.version>
@@ -34,7 +35,7 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
             <comments>A business-friendly OSS license</comments>
-        </license>
+        </license>	
     </licenses>
 	
 	<developers>
