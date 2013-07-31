@@ -84,7 +84,6 @@ public class RdfTree implements Comparable<RdfTree> {
 		if (parent != null && getPredicate() != null && getPredicate().equals(statement.getPredicate()) && 
 				isInverse() != inverse && hasListRootWithNode(childNode)) return;
 		
-		
 		//Rule 5: Do not follow inverse properties if they lead to nodes that are
 		//        closer to the root (but not necessarily a parent)
 		//This prevents 'reference data' from forming join-points in RDF lists

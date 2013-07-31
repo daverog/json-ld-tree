@@ -80,7 +80,7 @@ public class ModelUtils {
 		return subjects;
 	}
 
-	public static String getObjectValueFromSubjectByPredicate(Model model , Resource subject,String predicatePrefix ,String predicateName) {
+	public static String getObjectValueFromSubjectByPredicate(Model model, Resource subject, String predicatePrefix, String predicateName) {
 		String value = "";
 		Property p = model.createProperty(predicatePrefix, predicateName);
 		Statement statement = subject.getProperty(p);

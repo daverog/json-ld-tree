@@ -144,5 +144,4 @@ public class NameResolver {
 		VOCAB,
 		ID
 	}
-	
 }
