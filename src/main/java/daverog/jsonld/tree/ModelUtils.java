@@ -49,14 +49,14 @@ public class ModelUtils {
 		return model;
 	}
 
-	public static List<Resource> getSubjectsByPredicateAndObject(Model model,String predicatePrefix, String predicateValue,String objectPrefix, String objectValue) {
+	public static List<Resource> getSubjectsByPredicateAndObject(Model model, String predicatePrefix, String predicateValue,String objectPrefix, String objectValue) {
 		Property predicate = model.createProperty(predicatePrefix,predicateValue);
-		Property object= model.createProperty(objectPrefix, objectValue );
+		Property object= model.createProperty(objectPrefix, objectValue);
 
 		return getSubjectsByPredicateAndObject(model, predicate, object);
 	}
 
-	public static Resource getSubjectByPredicateAndObject(Model model,String predicatePrefix, String predicateValue, String objectValue) {
+	public static Resource getSubjectByPredicateAndObject(Model model, String predicatePrefix, String predicateValue, String objectValue) {
 		Property predicate = model.createProperty(predicatePrefix,predicateValue);
 		Property object= model.createProperty( objectValue );
 		List<Resource> subjects = getSubjectsByPredicateAndObject(model, predicate, object);
@@ -66,7 +66,7 @@ public class ModelUtils {
 		return null;
 	}
 
-	private static List<Resource> getSubjectsByPredicateAndObject(final Model model,final Property predicate,final Property object) {
+	private static List<Resource> getSubjectsByPredicateAndObject(final Model model, final Property predicate, final Property object) {
 		List<Resource> subjects = new ArrayList<Resource>();
 
 		Selector selector = new SimpleSelector(null, predicate, object);
@@ -79,7 +79,6 @@ public class ModelUtils {
 		}
 		return subjects;
 	}
-
 
 	public static String getObjectValueFromSubjectByPredicate(Model model , Resource subject,String predicatePrefix ,String predicateName) {
 		String value = "";
