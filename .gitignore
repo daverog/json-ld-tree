@@ -1,5 +1,10 @@
+# Standard Java ignores
 *.class
 .classpath
 .project
 .settings
 target
+
+# Maven Release
+pom.xml.releaseBackup
+release.properties
