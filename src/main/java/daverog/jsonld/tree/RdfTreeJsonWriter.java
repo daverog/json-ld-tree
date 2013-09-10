@@ -169,9 +169,8 @@ public class RdfTreeJsonWriter {
         SortedMap<String, TypedResource> prefixedNameUriMap = new TreeMap<String, TypedResource>();
         for(Map.Entry<String, TypedResource> entry: tree.getNameResolver().getMappedResources().entrySet()) {
             Resource resource = entry.getValue().getResource();
-            String prefix = tree.getNameResolver().getPrefixForResourceUri(resource);
-            String localname = resource.getLocalName();
-            prefixedNameUriMap.put(prefix + ":" + localname, entry.getValue());
+            String name = tree.getNameResolver().getPrefixedName(resource);
+            prefixedNameUriMap.put(name, entry.getValue());
         }
 
         return Maps.transformValues(prefixedNameUriMap,

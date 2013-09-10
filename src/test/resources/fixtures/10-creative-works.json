@@ -451,15 +451,15 @@
     "cwork:title": {
       "@id": "http://www.bbc.co.uk/ontologies/creativework/title"
     },
-    "rdf:type": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-      "@type": "@vocab"
-    },
     "rdfs:label": {
       "@id": "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "results": {
       "@id": "@graph"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
     }
   }
 }

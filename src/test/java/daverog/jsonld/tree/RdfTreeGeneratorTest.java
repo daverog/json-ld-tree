@@ -3,6 +3,7 @@ package daverog.jsonld.tree;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import com.google.common.collect.ImmutableMap;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -798,5 +799,25 @@ public class RdfTreeGeneratorTest {
 				TestResourceLoader.loadClasspathResourceAsString("fixtures/10-creative-works.json"), 
 				rdfTree.asJson());
 	}
+
+    @Test
+    public void name_overrides_take_precedence_over_normal_prefixed_names() throws RdfTreeException {
+        Model model = ModelUtils.createJenaModel(
+            "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+            "@prefix ns: <http://purl.org/ns/> ." +
+            "result:this result:item <uri:a> . \n" +
+            "<uri:a> ns:b \"Val1\" .");
+        RdfTree rdfTree = generator.generateRdfTree(model, ImmutableMap.of("http://purl.org/ns/b", "b"));
+        assertEquals(
+            "{\n" +
+            "  \"@id\": \"uri:a\",\n" +
+            "  \"b\": \"Val1\",\n" +
+            "  \"@context\": {\n" +
+            "    \"b\": {\n" +
+            "      \"@id\": \"http://purl.org/ns/b\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}", rdfTree.asJson());
+    }
 
 }

@@ -3,9 +3,12 @@ package daverog.jsonld.tree;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 import com.google.common.base.Function;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
@@ -25,8 +28,10 @@ public class RdfTreeGenerator {
 	public RdfTreeGenerator(String rdfResultOntologyPrefix) {
 		this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
 	}
-	
-	enum TreeType {
+
+
+
+    enum TreeType {
 		UNKNOWN,
 		ITEM,
 		LIST,
@@ -34,11 +39,19 @@ public class RdfTreeGenerator {
 	}
 	
 	public RdfTree generateRdfTree(Model model) throws RdfTreeException {
-		return generateRdfTree(model,  Lists.<String>newArrayList());
+		return generateRdfTree(model,  Lists.<String>newArrayList(), Maps.<String, String>newHashMap());
 	}
+
+    public RdfTree generateRdfTree(Model model, Map<String, String> nameOverrides) throws RdfTreeException {
+        return generateRdfTree(model, Lists.<String>newArrayList(), nameOverrides);
+    }
+
+    public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces) throws RdfTreeException {
+        return generateRdfTree(model, prioritisedNamespaces, Maps.<String, String>newHashMap());
+    }
 	
-	public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces) throws RdfTreeException {
-		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, rdfResultOntologyPrefix);
+	public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces, Map<String, String> nameOverrides) throws RdfTreeException {
+		NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, nameOverrides, rdfResultOntologyPrefix);
 
 		TreeType treeType = TreeType.UNKNOWN;
 		

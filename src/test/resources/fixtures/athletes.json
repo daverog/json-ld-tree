@@ -178,10 +178,6 @@
       "@id": "http://purl.org/vocab/participation/schema#role_at",
       "@type": "@id"
     },
-    "rdf:type": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-      "@type": "@vocab"
-    },
     "results": {
       "@id": "@graph"
     },
@@ -200,6 +196,10 @@
     "sport:discipline": {
       "@id": "http://www.bbc.co.uk/ontologies/sport/discipline",
       "@type": "@id"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
     }
   }
 }

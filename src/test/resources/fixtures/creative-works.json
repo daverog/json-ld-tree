@@ -137,12 +137,12 @@
     "cwork:title": {
       "@id": "http://www.bbc.co.uk/ontologies/creativework/title"
     },
-    "rdf:type": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-      "@type": "@vocab"
-    },
     "results": {
       "@id": "@graph"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
     }
   }
 }

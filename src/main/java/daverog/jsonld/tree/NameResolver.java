@@ -1,6 +1,7 @@
 package daverog.jsonld.tree;
 
 import java.util.List;
+import java.util.Map;
 import java.util.SortedMap;
 
 import com.google.common.collect.Lists;
@@ -15,13 +16,16 @@ public class NameResolver {
 	private final Model model;
 	private final SortedMap<String, TypedResource> mappedResources;
 	private final List<String> prioritisedNamespaces;
-	private final String rdfResultOntologyPrefix;
+    private Map<String, String> nameOverrides;
+    private final String rdfResultOntologyPrefix;
 
-	public NameResolver(Model model, List<String> prioritisedNamespaces, String rdfResultOntologyPrefix) {
+	public NameResolver(Model model, List<String> prioritisedNamespaces, Map<String,String> nameOverrides, String rdfResultOntologyPrefix) {
 		this.model = model;
-		this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
+        this.nameOverrides = nameOverrides;
+        this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
 		this.prioritisedNamespaces = Lists.newArrayList(RdfTree.RDF_PREFIX, RdfTree.OWL_PREFIX);
 		this.prioritisedNamespaces.addAll(prioritisedNamespaces);
+
 		mappedResources = Maps.newTreeMap();
 		
 		StmtIterator statements = model.listStatements();
@@ -45,7 +49,8 @@ public class NameResolver {
 		}
 	}
 
-	private void registerResource(TypedResource resource) {
+
+    private void registerResource(TypedResource resource) {
 		if (resource.getResource().getNameSpace() != null && !resource.getResource().getNameSpace().equals(rdfResultOntologyPrefix)) {
 			String currentNamespace = resource.getResource().getNameSpace();
 			String prefix = model.getNsURIPrefix(currentNamespace);
@@ -103,6 +108,7 @@ public class NameResolver {
     public String getPrefixedName(Resource resource) {
         if (resource.isAnon()) return "@blank";
         if (resource.getURI().equals(RdfTree.RDF_TYPE)) return "type";
+        if (nameOverrides.containsKey(resource.getURI())) return nameOverrides.get(resource.getURI());
 
         String prefix = getPrefixForResourceUri(resource);
         if (prefix != null) {
@@ -115,6 +121,7 @@ public class NameResolver {
 	public String getPrefixForResourceUri(Resource resource) {
 		if (resource.getNameSpace().equals(RdfTree.RDF_PREFIX)) return "rdf";
 		if (resource.getNameSpace().equals(RdfTree.OWL_PREFIX)) return "owl";
+        if (nameOverrides.containsKey(resource.getURI())) return null;
 
 		return model.getNsURIPrefix(resource.getNameSpace());
 	}
