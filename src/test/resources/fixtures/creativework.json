@@ -1,57 +1,57 @@
 {
   "@type": [
-    "CreativeWork"
+    "cwork:CreativeWork"
   ],
-  "shortTitle": "Short one",
-  "title": "Title",
-  "about": "http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id",
-  "locator": "urn:cps:396535",
+  "cwork:shortTitle": "Short one",
+  "cwork:title": "Title",
+  "cwork:about": "http://www.bbc.co.uk/things/7ef7ffdf-f101-4470-adc0-38a5abac9122#id",
+  "system:locator": "urn:cps:396535",
   "@reverse": {
-    "primaryContent": [
+    "bbc:primaryContent": [
       {
         "@id": "http://www.bbc.co.uk/news/article/xyz",
-        "webDocumentType": [
-          "HighWeb",
-          "Mobile"
+        "bbc:webDocumentType": [
+          "bbc:HighWeb",
+          "bbc:Mobile"
         ]
       }
     ]
   },
   "@context": {
-    "CreativeWork": {
-      "@id": "http://www.bbc.co.uk/ontologies/creative-work/CreativeWork"
-    },
-    "HighWeb": {
+    "bbc:HighWeb": {
       "@id": "http://www.bbc.co.uk/ontologies/bbc/HighWeb"
     },
-    "Mobile": {
+    "bbc:Mobile": {
       "@id": "http://www.bbc.co.uk/ontologies/bbc/Mobile"
     },
-    "about": {
-      "@id": "http://www.bbc.co.uk/ontologies/creative-work/about",
-      "@type": "@id"
-    },
-    "locator": {
-      "@id": "http://www.bbc.co.uk/ontologies/system/locator",
-      "@type": "@id"
-    },
-    "locatorType": {
-      "@id": "http://www.bbc.co.uk/ontologies/system/locatorType",
-      "@type": "@id"
-    },
-    "primaryContent": {
+    "bbc:primaryContent": {
       "@id": "http://www.bbc.co.uk/ontologies/bbc/primaryContent",
       "@type": "@id"
     },
-    "shortTitle": {
-      "@id": "http://www.bbc.co.uk/ontologies/creative-work/shortTitle"
-    },
-    "title": {
-      "@id": "http://www.bbc.co.uk/ontologies/creative-work/title"
-    },
-    "webDocumentType": {
+    "bbc:webDocumentType": {
       "@id": "http://www.bbc.co.uk/ontologies/bbc/webDocumentType",
       "@type": "@vocab"
+    },
+    "cwork:CreativeWork": {
+      "@id": "http://www.bbc.co.uk/ontologies/creative-work/CreativeWork"
+    },
+    "cwork:about": {
+      "@id": "http://www.bbc.co.uk/ontologies/creative-work/about",
+      "@type": "@id"
+    },
+    "cwork:shortTitle": {
+      "@id": "http://www.bbc.co.uk/ontologies/creative-work/shortTitle"
+    },
+    "cwork:title": {
+      "@id": "http://www.bbc.co.uk/ontologies/creative-work/title"
+    },
+    "system:locator": {
+      "@id": "http://www.bbc.co.uk/ontologies/system/locator",
+      "@type": "@id"
+    },
+    "system:locatorType": {
+      "@id": "http://www.bbc.co.uk/ontologies/system/locatorType",
+      "@type": "@id"
     }
   }
 }

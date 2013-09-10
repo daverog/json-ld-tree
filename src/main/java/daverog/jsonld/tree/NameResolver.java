@@ -59,7 +59,7 @@ public class NameResolver {
 						String existingNamespace = existingResource.getResource().getNameSpace();
 						int priorityOfExistingResource = prioritisedNamespaces.indexOf(existingNamespace);
 						int priorityOfCurrentResource = prioritisedNamespaces.indexOf(currentNamespace);
-						
+
 						if (priorityOfExistingResource == -1 && priorityOfCurrentResource == -1) {
 							existingIsHigherPriorityThanCurrent = existingNamespace.compareTo(currentNamespace) < 0;
 						} else if (priorityOfExistingResource == -1 && priorityOfCurrentResource != -1) {
@@ -69,7 +69,7 @@ public class NameResolver {
 						} else {
 							existingIsHigherPriorityThanCurrent = priorityOfExistingResource < priorityOfCurrentResource;
 						}
-						
+
 						if(existingIsHigherPriorityThanCurrent) {
 							mappedResources.put(prefix + "_" + resource.getResource().getLocalName(), resource);
 						} else {
@@ -86,7 +86,7 @@ public class NameResolver {
 	public String getName(Resource resource) {
 		if (resource.isAnon()) return "@blank";
 		if (resource.getURI().equals(RdfTree.RDF_TYPE)) return "type";
-		
+
 		TypedResource mappedResource = mappedResources.get(resource.getLocalName());
 		if (mappedResource != null && mappedResource.getResource().equals(resource)) {
 			return resource.getLocalName();
@@ -100,20 +100,32 @@ public class NameResolver {
 		}
 	}
 
-	private String getPrefixForResourceUri(Resource resource) {
+    public String getPrefixedName(Resource resource) {
+        if (resource.isAnon()) return "@blank";
+        if (resource.getURI().equals(RdfTree.RDF_TYPE)) return "type";
+
+        String prefix = getPrefixForResourceUri(resource);
+        if (prefix != null) {
+            return prefix + ":" + resource.getLocalName();
+        } else {
+            return resource.getURI();
+        }
+    }
+
+	public String getPrefixForResourceUri(Resource resource) {
 		if (resource.getNameSpace().equals(RdfTree.RDF_PREFIX)) return "rdf";
 		if (resource.getNameSpace().equals(RdfTree.OWL_PREFIX)) return "owl";
-		
+
 		return model.getNsURIPrefix(resource.getNameSpace());
 	}
 
 	public int compareNames(Resource resource, Resource otherResource) {
 		TypedResource mappedResource = mappedResources.get(resource.getLocalName());
 		TypedResource otherMappedResource = mappedResources.get(otherResource.getLocalName());
-		
+
 		if (mappedResource == null && otherMappedResource != null) return -1;
 		if (mappedResource != null && otherMappedResource == null) return 1;
-		
+
 		return getName(resource).compareTo(getName(otherResource));
 	}
 
@@ -121,7 +133,7 @@ public class NameResolver {
 		return mappedResources;
 	}
 
-	protected class TypedResource {
+    protected class TypedResource {
 		private final Resource resource;
 		private final ResourceType type;
 

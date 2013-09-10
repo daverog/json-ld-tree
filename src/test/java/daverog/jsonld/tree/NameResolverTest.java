@@ -40,6 +40,16 @@ public class NameResolverTest {
 				model.getResource("http://prefix.com/localName")));
 		assertEquals("http://prefix.com/localName", nameResolver.getMappedResources().get("localName").getResource().getURI());
 	}
+
+    @Test
+    public void a_prefixed_name_for_a_resource_is_the_prefixed_local_name_if_a_prefix_is_provided() {
+        Model model = ModelUtils.createJenaModel(
+                "@prefix prfx: <http://prefix.com/> .\n" +
+                        "<uri:a> prfx:localName <uri:c> .");
+        NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, "");
+
+        assertEquals("prfx:localName", nameResolver.getPrefixedName(model.getResource("http://prefix.com/localName")));
+    }
 	
 	@Test
 	public void the_namespace_URI_map_is_the_same_size_as_the_number_of_prefixed_URIs() {

@@ -192,21 +192,21 @@ public class RdfTreeGeneratorTest {
 			"<uri:a> ns2:prop <uri:c> .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"@id\": \"uri:a\",\n" + 
-			"  \"ns2_prop\": \"uri:c\",\n" + 
-			"  \"prop\": \"uri:c\",\n" + 
-			"  \"@context\": {\n" + 
-			"    \"ns2_prop\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns2/prop\",\n" + 
-			"      \"@type\": \"@id\"\n" + 
-			"    },\n" + 
-			"    \"prop\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/prop\",\n" + 
-			"      \"@type\": \"@id\"\n" + 
-			"    }\n" + 
-			"  }\n" + 
-			"}", 
+			"{\n" +
+            "  \"@id\": \"uri:a\",\n" +
+            "  \"ns2:prop\": \"uri:c\",\n" +
+            "  \"ns:prop\": \"uri:c\",\n" +
+            "  \"@context\": {\n" +
+            "    \"ns2:prop\": {\n" +
+            "      \"@id\": \"http://purl.org/ns2/prop\",\n" +
+            "      \"@type\": \"@id\"\n" +
+            "    },\n" +
+            "    \"ns:prop\": {\n" +
+            "      \"@id\": \"http://purl.org/ns/prop\",\n" +
+            "      \"@type\": \"@id\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	@Test
@@ -220,21 +220,21 @@ public class RdfTreeGeneratorTest {
 			"<uri:a> ns:prop <uri:c> .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"@id\": \"uri:a\",\n" + 
-			"  \"ns2_prop\": \"uri:c\",\n" + 
-			"  \"prop\": \"uri:c\",\n" + 
-			"  \"@context\": {\n" + 
-			"    \"ns2_prop\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns2/prop\",\n" + 
-			"      \"@type\": \"@id\"\n" + 
-			"    },\n" + 
-			"    \"prop\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/prop\",\n" + 
-			"      \"@type\": \"@id\"\n" + 
-			"    }\n" + 
-			"  }\n" + 
-			"}", 
+			"{\n" +
+            "  \"@id\": \"uri:a\",\n" +
+            "  \"ns2:prop\": \"uri:c\",\n" +
+            "  \"ns:prop\": \"uri:c\",\n" +
+            "  \"@context\": {\n" +
+            "    \"ns2:prop\": {\n" +
+            "      \"@id\": \"http://purl.org/ns2/prop\",\n" +
+            "      \"@type\": \"@id\"\n" +
+            "    },\n" +
+            "    \"ns:prop\": {\n" +
+            "      \"@id\": \"http://purl.org/ns/prop\",\n" +
+            "      \"@type\": \"@id\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -320,17 +320,22 @@ public class RdfTreeGeneratorTest {
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
 				"{\n" +
-				"  \"results\": [\n" +
-				"    {\n" +
-				"      \"@id\": \"uri:a\",\n" +
-				"      \"uri:p\": \"value1\"\n" +
-				"    },\n"+ 
-				"    {\n" +
-				"      \"@id\": \"uri:b\",\n" +
-				"      \"uri:p\": \"value2\"\n" +
-				"    }\n"+ 
-				"  ]\n" +
-				"}", 
+                "  \"results\": [\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:a\",\n" +
+                "      \"uri:p\": \"value1\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:b\",\n" +
+                "      \"uri:p\": \"value2\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"@context\": {\n" +
+                "    \"results\": {\n" +
+                "      \"@id\": \"@graph\"\n" +
+                "    }\n" +
+                "  }\n" +
+                "}",
 			rdfTree.asJson());
 	}
 	
@@ -345,22 +350,27 @@ public class RdfTreeGeneratorTest {
 			"<uri:b> <uri:v> \"value2\" .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"results\": [\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:a\",\n" + 
-			"      \"uri:v\": \"value1\",\n" + 
-			"      \"uri:p\": \"uri:b\"\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:b\",\n" + 
-			"      \"uri:v\": \"value2\",\n" + 
-			"      \"@reverse\": {\n" +
-			"        \"uri:p\": \"uri:a\"\n" +
-			"      }\n" +
-			"    }\n" + 
-			"  ]\n" + 
-			"}", 
+			"{\n" +
+            "  \"results\": [\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:a\",\n" +
+            "      \"uri:v\": \"value1\",\n" +
+            "      \"uri:p\": \"uri:b\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:b\",\n" +
+            "      \"uri:v\": \"value2\",\n" +
+            "      \"@reverse\": {\n" +
+            "        \"uri:p\": \"uri:a\"\n" +
+            "      }\n" +
+            "    }\n" +
+            "  ],\n" +
+            "  \"@context\": {\n" +
+            "    \"results\": {\n" +
+            "      \"@id\": \"@graph\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -375,23 +385,28 @@ public class RdfTreeGeneratorTest {
 			"<uri:bb> <uri:pp> <uri:ref> .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"results\": [\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:a\",\n" + 
-			"      \"uri:p\": \"uri:ref\"\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:b\",\n" + 
-			"      \"uri:p\": [\n" +
-			"        {\n" +
-			"          \"@id\": \"uri:bb\",\n" + 
-			"          \"uri:pp\": \"uri:ref\"\n" + 
-			"        }\n" + 
-			"      ]\n" + 
-			"    }\n" + 
-			"  ]\n" + 
-			"}", 
+			"{\n" +
+            "  \"results\": [\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:a\",\n" +
+            "      \"uri:p\": \"uri:ref\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:b\",\n" +
+            "      \"uri:p\": [\n" +
+            "        {\n" +
+            "          \"@id\": \"uri:bb\",\n" +
+            "          \"uri:pp\": \"uri:ref\"\n" +
+            "        }\n" +
+            "      ]\n" +
+            "    }\n" +
+            "  ],\n" +
+            "  \"@context\": {\n" +
+            "    \"results\": {\n" +
+            "      \"@id\": \"@graph\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -406,23 +421,28 @@ public class RdfTreeGeneratorTest {
 			"<uri:bb> <uri:pp> <uri:ref> .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"results\": [\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:b\",\n" + 
-			"      \"uri:p\": [\n" +
-			"        {\n" + 
-			"          \"@id\": \"uri:bb\",\n" + 
-			"          \"uri:pp\": \"uri:ref\"\n" + 
-			"        }\n" + 
-			"      ]\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:a\",\n" + 
-			"      \"uri:p\": \"uri:ref\"\n" + 
-			"    }\n" + 
-			"  ]\n" + 
-			"}", 
+			"{\n" +
+            "  \"results\": [\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:b\",\n" +
+            "      \"uri:p\": [\n" +
+            "        {\n" +
+            "          \"@id\": \"uri:bb\",\n" +
+            "          \"uri:pp\": \"uri:ref\"\n" +
+            "        }\n" +
+            "      ]\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:a\",\n" +
+            "      \"uri:p\": \"uri:ref\"\n" +
+            "    }\n" +
+            "  ],\n" +
+            "  \"@context\": {\n" +
+            "    \"results\": {\n" +
+            "      \"@id\": \"@graph\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -462,44 +482,44 @@ public class RdfTreeGeneratorTest {
 			"<uri:a> ns:bbLiteralGroup \"valB\" . ");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"@id\": \"uri:a\",\n" + 
-			"  \"@type\": [\n" +
-			"    \"Thing\"\n" +
-			"  ],\n" + 
-			"  \"aFirst\": \"val\",\n" + 
-			"  \"bSecond\": \"val\",\n" + 
-			"  \"bbLiteralGroup\": [\n" + 
-			"    \"valA\",\n" + 
-			"    \"valB\"\n" + 
-			"  ],\n" + 
-			"  \"aaResourceGroup\": \"uri:c\",\n" + 
-			"  \"@reverse\": {\n" + 
-			"    \"aaaInverse\": \"uri:z\"\n" + 
-			"  },\n" + 
-			"  \"@context\": {\n" + 
-			"    \"Thing\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/Thing\"\n" + 
-			"    },\n" + 
-			"    \"aFirst\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/aFirst\"\n" + 
-			"    },\n" + 
-			"    \"aaResourceGroup\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/aaResourceGroup\",\n" + 
-			"      \"@type\": \"@id\"\n" + 
-			"    },\n" + 
-			"    \"aaaInverse\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/aaaInverse\",\n" + 
-			"      \"@type\": \"@id\"\n" + 
-			"    },\n" + 
-			"    \"bSecond\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/bSecond\"\n" + 
-			"    },\n" + 
-			"    \"bbLiteralGroup\": {\n" + 
-			"      \"@id\": \"http://purl.org/ns/bbLiteralGroup\"\n" + 
-			"    }\n" + 
-			"  }\n" + 
-			"}",
+			"{\n" +
+                    "  \"@id\": \"uri:a\",\n" +
+                    "  \"@type\": [\n" +
+                    "    \"ns:Thing\"\n" +
+                    "  ],\n" +
+                    "  \"ns:aFirst\": \"val\",\n" +
+                    "  \"ns:bSecond\": \"val\",\n" +
+                    "  \"ns:bbLiteralGroup\": [\n" +
+                    "    \"valA\",\n" +
+                    "    \"valB\"\n" +
+                    "  ],\n" +
+                    "  \"ns:aaResourceGroup\": \"uri:c\",\n" +
+                    "  \"@reverse\": {\n" +
+                    "    \"ns:aaaInverse\": \"uri:z\"\n" +
+                    "  },\n" +
+                    "  \"@context\": {\n" +
+                    "    \"ns:Thing\": {\n" +
+                    "      \"@id\": \"http://purl.org/ns/Thing\"\n" +
+                    "    },\n" +
+                    "    \"ns:aFirst\": {\n" +
+                    "      \"@id\": \"http://purl.org/ns/aFirst\"\n" +
+                    "    },\n" +
+                    "    \"ns:aaResourceGroup\": {\n" +
+                    "      \"@id\": \"http://purl.org/ns/aaResourceGroup\",\n" +
+                    "      \"@type\": \"@id\"\n" +
+                    "    },\n" +
+                    "    \"ns:aaaInverse\": {\n" +
+                    "      \"@id\": \"http://purl.org/ns/aaaInverse\",\n" +
+                    "      \"@type\": \"@id\"\n" +
+                    "    },\n" +
+                    "    \"ns:bSecond\": {\n" +
+                    "      \"@id\": \"http://purl.org/ns/bSecond\"\n" +
+                    "    },\n" +
+                    "    \"ns:bbLiteralGroup\": {\n" +
+                    "      \"@id\": \"http://purl.org/ns/bbLiteralGroup\"\n" +
+                    "    }\n" +
+                    "  }\n" +
+                    "}",
 			rdfTree.asJson());
 	}
 
@@ -567,7 +587,7 @@ public class RdfTreeGeneratorTest {
 	}
 	
 	@Test
-	public void anSportTeamIsRenderedAsAJsonTree() throws RdfTreeException {
+	public void aSportTeamIsRenderedAsAJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
 				TestResourceLoader.loadClasspathResourceAsString("fixtures/ben-ainslie-different-tree-start.ttl"));
 		RdfTree rdfTree = generator.generateRdfTree(model);
@@ -577,7 +597,7 @@ public class RdfTreeGeneratorTest {
 	}	
 	
 	@Test
-	public void anCreativeWorkIsRenderedAsAJsonTree() throws RdfTreeException {
+	public void aCreativeWorkIsRenderedAsAJsonTree() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
 				TestResourceLoader.loadClasspathResourceAsString("fixtures/creativework.ttl"));
 		RdfTree rdfTree = generator.generateRdfTree(model);
@@ -621,25 +641,30 @@ public class RdfTreeGeneratorTest {
 			"<uri:c> <uri:p> \"aaa\" ."); // Note how the value order is reverse to the uri letter
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"results\": [\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:c\",\n" + 
-			"      \"uri:p\": \"aaa\"\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:b\",\n" + 
-			"      \"uri:p\": [\n" +
-			"        \"bbb\",\n" + 
-			"        \"zzz\"\n" +
-			"      ]\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:a\",\n" + 
-			"      \"uri:p\": \"ccc\"\n" + 
-			"    }\n" + 
-			"  ]\n" + 
-			"}", 
+			"{\n" +
+            "  \"results\": [\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:c\",\n" +
+            "      \"uri:p\": \"aaa\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:b\",\n" +
+            "      \"uri:p\": [\n" +
+            "        \"bbb\",\n" +
+            "        \"zzz\"\n" +
+            "      ]\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:a\",\n" +
+            "      \"uri:p\": \"ccc\"\n" +
+            "    }\n" +
+            "  ],\n" +
+            "  \"@context\": {\n" +
+            "    \"results\": {\n" +
+            "      \"@id\": \"@graph\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -659,25 +684,30 @@ public class RdfTreeGeneratorTest {
 			"<uri:c> <uri:p> \"aaa\" ."); 
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"results\": [\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:a\",\n" + 
-			"      \"uri:p\": \"ccc\"\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:b\",\n" + 
-			"      \"uri:p\": [\n" +
-			"        \"bbb\",\n" + 
-			"        \"zzz\"\n" +
-			"      ]\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:c\",\n" + 
-			"      \"uri:p\": \"aaa\"\n" + 
-			"    }\n" + 
-			"  ]\n" + 
-			"}", 
+			"{\n" +
+            "  \"results\": [\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:a\",\n" +
+            "      \"uri:p\": \"ccc\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:b\",\n" +
+            "      \"uri:p\": [\n" +
+            "        \"bbb\",\n" +
+            "        \"zzz\"\n" +
+            "      ]\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:c\",\n" +
+            "      \"uri:p\": \"aaa\"\n" +
+            "    }\n" +
+            "  ],\n" +
+            "  \"@context\": {\n" +
+            "    \"results\": {\n" +
+            "      \"@id\": \"@graph\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -694,18 +724,23 @@ public class RdfTreeGeneratorTest {
 			"<uri:b> <uri:p> \"2013-07-10T15:07:53+00:00\"^^xsd:datetime .");
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-			"{\n" + 
-			"  \"results\": [\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:b\",\n" + 
-			"      \"uri:p\": \"2013-07-10T15:07:53+00:00\"\n" + 
-			"    },\n" + 
-			"    {\n" + 
-			"      \"@id\": \"uri:a\",\n" + 
-			"      \"uri:p\": \"2013-07-12T10:10:34+00:00\"\n" + 
-			"    }\n" + 
-			"  ]\n" + 
-			"}", 
+			"{\n" +
+            "  \"results\": [\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:b\",\n" +
+            "      \"uri:p\": \"2013-07-10T15:07:53+00:00\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"@id\": \"uri:a\",\n" +
+            "      \"uri:p\": \"2013-07-12T10:10:34+00:00\"\n" +
+            "    }\n" +
+            "  ],\n" +
+            "  \"@context\": {\n" +
+            "    \"results\": {\n" +
+            "      \"@id\": \"@graph\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}",
 			rdfTree.asJson());
 	}
 	
@@ -725,27 +760,32 @@ public class RdfTreeGeneratorTest {
 				"<uri:c> <uri:p> \"aaa\" ."); // Note how the value order is reverse to the uri letter
 		RdfTree rdfTree = generator.generateRdfTree(model);
 		assertEquals(
-				"{\n" + 
-				"  \"results\": [\n" + 
-				"    {\n" + 
-				"      \"@id\": \"uri:c\",\n" + 
-				"      \"uri:p\": \"aaa\"\n" + 
-				"    },\n" + 
-				"    {\n" + 
-				"      \"@id\": \"uri:b\",\n" + 
-				"      \"uri:p\": [\n" +
-				"        2,\n" + 
-				"        \"bbb\",\n" + 
-				"        \"zzz\",\n" + 
-				"        \"a:a\"\n" +
-				"      ]\n" + 
-				"    },\n" + 
-				"    {\n" + 
-				"      \"@id\": \"uri:a\",\n" + 
-				"      \"uri:p\": \"ccc\"\n" + 
-				"    }\n" + 
-				"  ]\n" + 
-				"}", 
+				"{\n" +
+                "  \"results\": [\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:c\",\n" +
+                "      \"uri:p\": \"aaa\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:b\",\n" +
+                "      \"uri:p\": [\n" +
+                "        2,\n" +
+                "        \"bbb\",\n" +
+                "        \"zzz\",\n" +
+                "        \"a:a\"\n" +
+                "      ]\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:a\",\n" +
+                "      \"uri:p\": \"ccc\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"@context\": {\n" +
+                "    \"results\": {\n" +
+                "      \"@id\": \"@graph\"\n" +
+                "    }\n" +
+                "  }\n" +
+                "}",
 				rdfTree.asJson());
 	}
 	

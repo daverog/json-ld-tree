@@ -1,13 +1,10 @@
 package daverog.jsonld.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.SortedMap;
+import java.util.*;
 
 
 import com.google.common.base.Function;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.gson.Gson;
@@ -16,6 +13,8 @@ import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import daverog.jsonld.tree.NameResolver.TypedResource;
+
+import javax.annotation.Nullable;
 
 
 public class RdfTreeJsonWriter {
@@ -32,10 +31,10 @@ public class RdfTreeJsonWriter {
 			populateJsonArray(tree, list);
 			json.put("results", list);
 			
-			SortedMap<String, SortedMap<String, String>> nameUriMap = getNameUriMap(tree);
-			if (!nameUriMap.isEmpty()) {
-				json.put("@context", nameUriMap);
-			}
+            SortedMap<String, SortedMap<String, String>> nameUriMap = Maps.newTreeMap(getPrefixedNameUriMap(tree));
+            nameUriMap.put("results", new TreeMap(ImmutableMap.of("@id", "@graph")));
+
+			json.put("@context", nameUriMap);
 			
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			return gson.toJson(json);
@@ -60,6 +59,7 @@ public class RdfTreeJsonWriter {
 	private String getName(RdfTree tree, Resource resource) {
 		String name = tree.getNameResolver().getName(resource);
 		if (name.equals("type")) name = "@type";
+        else name = tree.getNameResolver().getPrefixedName(resource);
 		return name;
 	}
 
@@ -103,7 +103,7 @@ public class RdfTreeJsonWriter {
 			}
 		}
 		
-		SortedMap<String, SortedMap<String, String>> nameUriMap = getNameUriMap(tree);
+		SortedMap<String, SortedMap<String, String>> nameUriMap = getPrefixedNameUriMap(tree);
 		if (tree.isRoot() && !nameUriMap.isEmpty()) {
 			json.put("@context", nameUriMap);
 		}
@@ -147,18 +147,49 @@ public class RdfTreeJsonWriter {
 	}
 	
 	public SortedMap<String, SortedMap<String, String>> getNameUriMap(RdfTree tree) {
-		return Maps.transformValues(tree.getNameResolver().getMappedResources(), 
-				new Function<TypedResource, SortedMap<String, String>>(){
-			public SortedMap<String, String> apply(TypedResource resource) {
-				SortedMap<String, String> uriData = Maps.newTreeMap();
-				uriData.put("@id", resource.getResource().getURI());
-				switch (resource.getType()) {
-				  case VOCAB: uriData.put("@type", "@vocab"); break;
-				  case ID:    uriData.put("@type", "@id"); break;
-				}
-				return uriData;
-			}
-		});
+		return Maps.transformValues(tree.getNameResolver().getMappedResources(),
+                new Function<TypedResource, SortedMap<String, String>>() {
+                    public SortedMap<String, String> apply(TypedResource resource) {
+                        SortedMap<String, String> uriData = Maps.newTreeMap();
+                        uriData.put("@id", resource.getResource().getNameSpace());
+                        switch (resource.getType()) {
+                            case VOCAB:
+                                uriData.put("@type", "@vocab");
+                                break;
+                            case ID:
+                                uriData.put("@type", "@id");
+                                break;
+                        }
+                        return uriData;
+                    }
+                });
 	}
+
+    public SortedMap<String, SortedMap<String, String>> getPrefixedNameUriMap(RdfTree tree) {
+        SortedMap<String, TypedResource> prefixedNameUriMap = new TreeMap<String, TypedResource>();
+        for(Map.Entry<String, TypedResource> entry: tree.getNameResolver().getMappedResources().entrySet()) {
+            Resource resource = entry.getValue().getResource();
+            String prefix = tree.getNameResolver().getPrefixForResourceUri(resource);
+            String localname = resource.getLocalName();
+            prefixedNameUriMap.put(prefix + ":" + localname, entry.getValue());
+        }
+
+        return Maps.transformValues(prefixedNameUriMap,
+                new Function<TypedResource, SortedMap<String, String>>() {
+                    public SortedMap<String, String> apply(TypedResource resource) {
+                        SortedMap<String, String> uriData = Maps.newTreeMap();
+                        uriData.put("@id", resource.getResource().getURI());
+                        switch (resource.getType()) {
+                            case VOCAB:
+                                uriData.put("@type", "@vocab");
+                                break;
+                            case ID:
+                                uriData.put("@type", "@id");
+                                break;
+                        }
+                        return uriData;
+                    }
+                });
+    }
 
 }

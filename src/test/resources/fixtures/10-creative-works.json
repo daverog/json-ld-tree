@@ -3,460 +3,463 @@
     {
       "@id": "http://www.bbc.co.uk/things/62e9c2ab-0a3e-43b3-8e41-12e033fc8e48#id",
       "@type": [
-        "CreativeWork"
+        "cwork:CreativeWork"
       ],
-      "dateCreated": "2013-07-12T10:10:34+00:00",
-      "dateModified": "2013-07-12T10:10:34+00:00",
-      "description": "Asher\u0027s group fight with fire extinguishers and Charlie\u0027s group ends up in the hospital.",
-      "shortTitle": "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos",
-      "title": "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos",
-      "locator": "urn:cs-tagging-tool:4b3193517e6e65aee7ceb826f4a80516",
-      "about": [
+      "cwork:dateCreated": "2013-07-12T10:10:34+00:00",
+      "cwork:dateModified": "2013-07-12T10:10:34+00:00",
+      "cwork:description": "Asher\u0027s group fight with fire extinguishers and Charlie\u0027s group ends up in the hospital.",
+      "cwork:shortTitle": "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos",
+      "cwork:title": "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos",
+      "cms:locator": "urn:cs-tagging-tool:4b3193517e6e65aee7ceb826f4a80516",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/90d9a818-850b-b64f-9474-79e15a0355b8#id",
-          "label": [
+          "rdfs:label": [
             "Man Utd",
             "Manchester United"
           ],
-          "preferredLabel": "Manchester United",
-          "shortLabel": "Man Utd"
+          "core:preferredLabel": "Manchester United",
+          "core:shortLabel": "Man Utd"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/iplayer/episode/b01brcs1/Sun_Sex_and_Suspicious_Parents_Series_2_Kavos/",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://ichef.bbci.co.uk/programmeimages/episode/b01brcs1_120_68.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "BBC iPlayer - Sun, Sex and Suspicious Parents: Series 2: Kavos",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/78ba039e-71e7-4452-9780-83700a6aaf3c#id",
       "@type": [
-        "NewsArticle",
-        "CreativeWork"
+        "cwork:NewsArticle",
+        "cwork:CreativeWork"
       ],
-      "dateCreated": "2013-07-11T10:40:47+00:00",
-      "dateModified": "2013-07-11T10:40:47+00:00",
-      "description": "Six protesters from Greenpeace are attempting to scale the tallest building in western Europe, The Shard in London.",
-      "shortTitle": "BBC News - Greenpeace protesters climbing up The Shard in London",
-      "title": "BBC News - Greenpeace protesters climbing up The Shard in London",
-      "locator": "urn:cs-tagging-tool:1541f9aecdbe4e4b4afbc4204077ed41",
-      "about": [
+      "cwork:dateCreated": "2013-07-11T10:40:47+00:00",
+      "cwork:dateModified": "2013-07-11T10:40:47+00:00",
+      "cwork:description": "Six protesters from Greenpeace are attempting to scale the tallest building in western Europe, The Shard in London.",
+      "cwork:shortTitle": "BBC News - Greenpeace protesters climbing up The Shard in London",
+      "cwork:title": "BBC News - Greenpeace protesters climbing up The Shard in London",
+      "cms:locator": "urn:cs-tagging-tool:1541f9aecdbe4e4b4afbc4204077ed41",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/3790f140-5444-224e-bf05-ce581dc49b17#id",
-          "label": [
+          "rdfs:label": [
             "Forest Green",
             "Forest Green Rovers"
           ],
-          "preferredLabel": "Forest Green Rovers",
-          "shortLabel": "Forest Green"
+          "core:preferredLabel": "Forest Green Rovers",
+          "core:shortLabel": "Forest Green"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/news/uk-england-london-23266281",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://newsimg.bbc.co.uk/media/images/67373000/jpg/_67373987_09f1654a-e583-4b5f-bfc4-f05850c6d3ce.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": [
+          "cwork:altText": [
             "BBC News - Egypt Muslim Brotherhood leader Mohammed Badie arrest ordered",
             "BBC News - Greenpeace protesters climbing up The Shard in London"
           ],
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/78fb7a05-e11f-4216-9585-21e7b67363c3#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T16:10:08+00:00",
-      "dateModified": "2013-07-10T16:10:08+00:00",
-      "description": "Logs are a stream of time-ordered events aggregated from the output streams of all your app�s running processes. Retrieve, filter, or use syslog drains.",
-      "shortTitle": "Logging | Heroku Dev Center",
-      "title": "Logging | Heroku Dev Center",
-      "locator": "urn:cs-tagging-tool:65c79d284eb89a67441f582db67da568",
-      "primaryContentOf": [
+      "cwork:dateCreated": "2013-07-10T16:10:08+00:00",
+      "cwork:dateModified": "2013-07-10T16:10:08+00:00",
+      "cwork:description": "Logs are a stream of time-ordered events aggregated from the output streams of all your app�s running processes. Retrieve, filter, or use syslog drains.",
+      "cwork:shortTitle": "Logging | Heroku Dev Center",
+      "cwork:title": "Logging | Heroku Dev Center",
+      "cms:locator": "urn:cs-tagging-tool:65c79d284eb89a67441f582db67da568",
+      "bbc:primaryContentOf": [
         {
           "@id": "https://devcenter.heroku.com/articles/logging#writing-to-your-log",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://www.google.com",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "Logging | Heroku Dev Center",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "Logging | Heroku Dev Center",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/d7c9eef7-8a03-4189-961f-9d3250410f06#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T15:58:26+00:00",
-      "dateModified": "2013-07-10T15:58:26+00:00",
-      "description": "Southampton boss Mauricio Pochettino confirms the club\u0027s interest in Celtic midfielder Victor Wanyama.",
-      "shortTitle": "Southampton: Mauricio Pochettino confirms Victor Wanyama interest",
-      "title": "Southampton: Mauricio Pochettino confirms Victor Wanyama interest",
-      "locator": "urn:cs-tagging-tool:544ba5f72cabed72b49c6b6f0fe247e8",
-      "about": [
+      "cwork:dateCreated": "2013-07-10T15:58:26+00:00",
+      "cwork:dateModified": "2013-07-10T15:58:26+00:00",
+      "cwork:description": "Southampton boss Mauricio Pochettino confirms the club\u0027s interest in Celtic midfielder Victor Wanyama.",
+      "cwork:shortTitle": "Southampton: Mauricio Pochettino confirms Victor Wanyama interest",
+      "cwork:title": "Southampton: Mauricio Pochettino confirms Victor Wanyama interest",
+      "cms:locator": "urn:cs-tagging-tool:544ba5f72cabed72b49c6b6f0fe247e8",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/6780f83f-a17a-e641-8ec8-226c285a5dbb#id",
-          "label": "Southampton",
-          "preferredLabel": "Southampton",
-          "shortLabel": "Southampton"
+          "rdfs:label": "Southampton",
+          "core:preferredLabel": "Southampton",
+          "core:shortLabel": "Southampton"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/football/23194995",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://news.bbcimg.co.uk/media/images/67387000/jpg/_67387026_mauriciopochettino.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "Southampton: Mauricio Pochettino confirms Victor Wanyama interest",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "Southampton: Mauricio Pochettino confirms Victor Wanyama interest",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/f0a5edea-5f1f-4513-85e8-4c7afb2aaeaa#id",
       "@type": [
-        "NewsArticle",
-        "CreativeWork"
+        "cwork:NewsArticle",
+        "cwork:CreativeWork"
       ],
-      "dateCreated": "2013-07-10T15:37:57+00:00",
-      "dateModified": "2013-07-10T15:37:57+00:00",
-      "description": "Brighton \u0026 Hove Albion name former Barcelona midfielder Oscar Garcia as their new boss after Gus Poyet\u0027s dismissal.",
-      "shortTitle": "BBC Sport - Oscar Garcia named new head coach of Brighton \u0026 Hove Albion",
-      "title": "BBC Sport - Oscar Garcia named new head coach of Brighton \u0026 Hove Albion",
-      "locator": "urn:cs-tagging-tool:d62d9174d91ce20996045a23c992cb71",
-      "about": [
+      "cwork:dateCreated": "2013-07-10T15:37:57+00:00",
+      "cwork:dateModified": "2013-07-10T15:37:57+00:00",
+      "cwork:description": "Brighton \u0026 Hove Albion name former Barcelona midfielder Oscar Garcia as their new boss after Gus Poyet\u0027s dismissal.",
+      "cwork:shortTitle": "BBC Sport - Oscar Garcia named new head coach of Brighton \u0026 Hove Albion",
+      "cwork:title": "BBC Sport - Oscar Garcia named new head coach of Brighton \u0026 Hove Albion",
+      "cms:locator": "urn:cs-tagging-tool:d62d9174d91ce20996045a23c992cb71",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/3d814d88-1f22-d042-a9a6-87fd9216a50a#id",
-          "label": [
+          "rdfs:label": [
             "Brighton",
             "Brighton \u0026 Hove Albion"
           ],
-          "preferredLabel": "Brighton \u0026 Hove Albion",
-          "shortLabel": "Brighton"
+          "core:preferredLabel": "Brighton \u0026 Hove Albion",
+          "core:shortLabel": "Brighton"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/football/23074868",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://news.bbcimg.co.uk/media/images/68401000/jpg/_68401924_os-getty.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "BBC Sport - Oscar Garcia named new head coach of Brighton \u0026 Hove Albion",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "BBC Sport - Oscar Garcia named new head coach of Brighton \u0026 Hove Albion",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/b6ce99bf-9799-478d-8f92-99df37ba5f1c#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T15:30:39+00:00",
-      "dateModified": "2013-07-10T15:30:39+00:00",
-      "description": "Brighton and Hove Albion sign former Stoke and England centre-back Matthew Upson on a free transfer.",
-      "shortTitle": "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender",
-      "title": "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender",
-      "locator": "urn:cs-tagging-tool:6028c511def9054638b66b81f6fc53b5",
-      "about": [
+      "cwork:dateCreated": "2013-07-10T15:30:39+00:00",
+      "cwork:dateModified": "2013-07-10T15:30:39+00:00",
+      "cwork:description": "Brighton and Hove Albion sign former Stoke and England centre-back Matthew Upson on a free transfer.",
+      "cwork:shortTitle": "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender",
+      "cwork:title": "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender",
+      "cms:locator": "urn:cs-tagging-tool:6028c511def9054638b66b81f6fc53b5",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/6780f83f-a17a-e641-8ec8-226c285a5dbb#id",
-          "label": "Southampton",
-          "preferredLabel": "Southampton",
-          "shortLabel": "Southampton"
+          "rdfs:label": "Southampton",
+          "core:preferredLabel": "Southampton",
+          "core:shortLabel": "Southampton"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/football/23256243",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://news.bbcimg.co.uk/media/images/68649000/jpg/_68649148_matthewupsongetty.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "BBC Sport - Matthew Upson: Brighton and Hove Albion sign former Stoke defender",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/c248a082-dade-44fa-a1c5-1178601b0f54#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T15:28:13+00:00",
-      "dateModified": "2013-07-10T15:28:13+00:00",
-      "description": "BBC Sport speaks to former England captain Andrew Flintoff about his expectations and predictions for the Ashes series.",
-      "shortTitle": "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes",
-      "title": "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes",
-      "locator": "urn:cs-tagging-tool:6db2e325e6b70a176c52d377d3bd8be3",
-      "primaryContentOf": [
+      "cwork:dateCreated": "2013-07-10T15:28:13+00:00",
+      "cwork:dateModified": "2013-07-10T15:28:13+00:00",
+      "cwork:description": "BBC Sport speaks to former England captain Andrew Flintoff about his expectations and predictions for the Ashes series.",
+      "cwork:shortTitle": "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes",
+      "cwork:title": "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes",
+      "cms:locator": "urn:cs-tagging-tool:6db2e325e6b70a176c52d377d3bd8be3",
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/cricket/23241293",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": [
+          "cwork:altText": [
             "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes",
             "BBC Sport - Luis Suarez: Liverpool striker says \u0027two or three clubs\u0027 want to buy him"
           ],
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/643f77ae-8bf5-4e63-9a3c-8b24b82e991c#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T15:15:25+00:00",
-      "dateModified": "2013-07-10T15:15:25+00:00",
-      "description": "Manchester City manager Manuel Pellegrini promises an attractive style of football after replacing Roberto Mancini.",
-      "shortTitle": "BBC Sport - Manchester City: Manuel Pellegrini to change playing style",
-      "title": "BBC Sport - Manchester City: Manuel Pellegrini to change playing style",
-      "locator": "urn:cs-tagging-tool:fa5fb05a8647c252de03a06e666944e0",
-      "about": [
+      "cwork:dateCreated": "2013-07-10T15:15:25+00:00",
+      "cwork:dateModified": "2013-07-10T15:15:25+00:00",
+      "cwork:description": "Manchester City manager Manuel Pellegrini promises an attractive style of football after replacing Roberto Mancini.",
+      "cwork:shortTitle": "BBC Sport - Manchester City: Manuel Pellegrini to change playing style",
+      "cwork:title": "BBC Sport - Manchester City: Manuel Pellegrini to change playing style",
+      "cms:locator": "urn:cs-tagging-tool:fa5fb05a8647c252de03a06e666944e0",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/4bdbf21d-d1ad-7147-ab08-612cd0dc20b4#id",
-          "label": [
+          "rdfs:label": [
             "Man City",
             "Manchester City"
           ],
-          "preferredLabel": "Manchester City",
-          "shortLabel": "Man City"
+          "core:preferredLabel": "Manchester City",
+          "core:shortLabel": "Man City"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/football/23251657",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://news.bbcimg.co.uk/media/images/68644000/jpg/_68644668_manuel_pellegrini-getty.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "BBC Sport - Manchester City: Manuel Pellegrini to change playing style",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "BBC Sport - Manchester City: Manuel Pellegrini to change playing style",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/c0ba0ce9-5151-4014-8e94-bf7ed32428d6#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T15:08:06+00:00",
-      "dateModified": "2013-07-10T15:08:06+00:00",
-      "description": "Liverpool striker Luis Suarez tells a Uruguayan radio station that \"two or three clubs\" want to buy him.",
-      "shortTitle": "BBC Sport - Luis Suarez: Liverpool striker says \u0027two or three clubs\u0027 want to buy him",
-      "title": "BBC Sport - Luis Suarez: Liverpool striker says \u0027two or three clubs\u0027 want to buy him",
-      "locator": "urn:cs-tagging-tool:eee8f221c83ae7f15eb9e93ff6e006ed",
-      "about": [
+      "cwork:dateCreated": "2013-07-10T15:08:06+00:00",
+      "cwork:dateModified": "2013-07-10T15:08:06+00:00",
+      "cwork:description": "Liverpool striker Luis Suarez tells a Uruguayan radio station that \"two or three clubs\" want to buy him.",
+      "cwork:shortTitle": "BBC Sport - Luis Suarez: Liverpool striker says \u0027two or three clubs\u0027 want to buy him",
+      "cwork:title": "BBC Sport - Luis Suarez: Liverpool striker says \u0027two or three clubs\u0027 want to buy him",
+      "cms:locator": "urn:cs-tagging-tool:eee8f221c83ae7f15eb9e93ff6e006ed",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id",
-          "label": [
+          "rdfs:label": [
             "Barclays Premier League",
             "Premier League"
           ],
-          "preferredLabel": "Premier League",
-          "shortLabel": "Premier Lge"
+          "core:preferredLabel": "Premier League",
+          "core:shortLabel": "Premier Lge"
         },
         {
           "@id": "http://www.bbc.co.uk/things/8df31a76-4c22-5b40-9f0d-78b34dfb26fa#id",
-          "label": "Liverpool",
-          "preferredLabel": "Liverpool",
-          "shortLabel": "Liverpool"
+          "rdfs:label": "Liverpool",
+          "core:preferredLabel": "Liverpool",
+          "core:shortLabel": "Liverpool"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/football/23248815",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": [
+          "cwork:altText": [
             "BBC Sport - Ashes 2013: Andrew Flintoff gives his predictions for the Ashes",
             "BBC Sport - Luis Suarez: Liverpool striker says \u0027two or three clubs\u0027 want to buy him"
           ],
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     },
     {
       "@id": "http://www.bbc.co.uk/things/d1a7f7d9-bc1f-48fb-b23c-eff9e42f77d3#id",
       "@type": [
-        "CreativeWork",
-        "NewsArticle"
+        "cwork:CreativeWork",
+        "cwork:NewsArticle"
       ],
-      "dateCreated": "2013-07-10T15:07:53+00:00",
-      "dateModified": "2013-07-10T15:07:53+00:00",
-      "description": "Sussex batsman Chris Nash believes the side are capable of maintaining their push for the County Championship title.",
-      "shortTitle": "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win",
-      "title": "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win",
-      "locator": "urn:cs-tagging-tool:20588e53d5a3557728e2e0e4ba9928d3",
-      "about": [
+      "cwork:dateCreated": "2013-07-10T15:07:53+00:00",
+      "cwork:dateModified": "2013-07-10T15:07:53+00:00",
+      "cwork:description": "Sussex batsman Chris Nash believes the side are capable of maintaining their push for the County Championship title.",
+      "cwork:shortTitle": "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win",
+      "cwork:title": "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win",
+      "cms:locator": "urn:cs-tagging-tool:20588e53d5a3557728e2e0e4ba9928d3",
+      "cwork:about": [
         {
           "@id": "http://www.bbc.co.uk/things/b86ca75b-7f26-4221-9791-37ddc01660dc#id",
-          "label": [
+          "rdfs:label": [
             "Sussex",
             "Sussex County Cricket Club"
           ],
-          "preferredLabel": "Sussex County Cricket Club",
-          "shortLabel": "Sussex"
+          "core:preferredLabel": "Sussex County Cricket Club",
+          "core:shortLabel": "Sussex"
         }
       ],
-      "primaryContentOf": [
+      "bbc:primaryContentOf": [
         {
           "@id": "http://www.bbc.co.uk/sport/0/cricket/23258458",
-          "webDocumentType": "HighWeb"
+          "bbc:webDocumentType": "bbc:HighWeb"
         }
       ],
-      "thumbnail": [
+      "cwork:thumbnail": [
         {
           "@id": "http://news.bbcimg.co.uk/media/images/68654000/jpg/_68654714_nashbats.jpg",
           "@type": [
-            "Thumbnail"
+            "cwork:Thumbnail"
           ],
-          "altText": "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win",
-          "thumbnailType": "CloseUpThumbnail"
+          "cwork:altText": "BBC Sport - Chris Nash eyes Sussex title challenge after Somerset win",
+          "cwork:thumbnailType": "cwork:CloseUpThumbnail"
         }
       ]
     }
   ],
   "@context": {
-    "CloseUpThumbnail": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/CloseUpThumbnail"
-    },
-    "CreativeWork": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/CreativeWork"
-    },
-    "HighWeb": {
+    "bbc:HighWeb": {
       "@id": "http://www.bbc.co.uk/ontologies/bbc/HighWeb"
     },
-    "NewsArticle": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/NewsArticle"
-    },
-    "Thumbnail": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/Thumbnail"
-    },
-    "about": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/about",
-      "@type": "@id"
-    },
-    "altText": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/altText"
-    },
-    "dateCreated": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/dateCreated"
-    },
-    "dateModified": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/dateModified"
-    },
-    "description": {
-      "@id": "http://www.bbc.co.uk/ontologies/creativework/description"
-    },
-    "label": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "locator": {
-      "@id": "http://www.bbc.co.uk/ontologies/cms/locator",
-      "@type": "@id"
-    },
-    "preferredLabel": {
-      "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/preferredLabel"
-    },
-    "primaryContentOf": {
+    "bbc:primaryContentOf": {
       "@id": "http://www.bbc.co.uk/ontologies/bbc/primaryContentOf",
       "@type": "@id"
     },
-    "shortLabel": {
+    "bbc:webDocumentType": {
+      "@id": "http://www.bbc.co.uk/ontologies/bbc/webDocumentType",
+      "@type": "@vocab"
+    },
+    "cms:locator": {
+      "@id": "http://www.bbc.co.uk/ontologies/cms/locator",
+      "@type": "@id"
+    },
+    "core:preferredLabel": {
+      "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/preferredLabel"
+    },
+    "core:shortLabel": {
       "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/shortLabel"
     },
-    "shortTitle": {
+    "cwork:CloseUpThumbnail": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/CloseUpThumbnail"
+    },
+    "cwork:CreativeWork": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/CreativeWork"
+    },
+    "cwork:NewsArticle": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/NewsArticle"
+    },
+    "cwork:Thumbnail": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/Thumbnail"
+    },
+    "cwork:about": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/about",
+      "@type": "@id"
+    },
+    "cwork:altText": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/altText"
+    },
+    "cwork:dateCreated": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/dateCreated"
+    },
+    "cwork:dateModified": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/dateModified"
+    },
+    "cwork:description": {
+      "@id": "http://www.bbc.co.uk/ontologies/creativework/description"
+    },
+    "cwork:shortTitle": {
       "@id": "http://www.bbc.co.uk/ontologies/creativework/shortTitle"
     },
-    "thumbnail": {
+    "cwork:thumbnail": {
       "@id": "http://www.bbc.co.uk/ontologies/creativework/thumbnail",
       "@type": "@id"
     },
-    "thumbnailType": {
+    "cwork:thumbnailType": {
       "@id": "http://www.bbc.co.uk/ontologies/creativework/thumbnailType",
       "@type": "@vocab"
     },
-    "title": {
+    "cwork:title": {
       "@id": "http://www.bbc.co.uk/ontologies/creativework/title"
     },
-    "type": {
+    "rdf:type": {
       "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
       "@type": "@vocab"
     },
-    "webDocumentType": {
-      "@id": "http://www.bbc.co.uk/ontologies/bbc/webDocumentType",
-      "@type": "@vocab"
+    "rdfs:label": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "results": {
+      "@id": "@graph"
     }
   }
 }

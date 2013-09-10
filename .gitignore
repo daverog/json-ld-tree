@@ -4,6 +4,8 @@
 .project
 .settings
 target
+.idea
+*.iml
 
 # Maven Release
 pom.xml.releaseBackup
