@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daverog</groupId>
 	<artifactId>json-ld-tree</artifactId>
-	<version>1.0.6-SNAPSHOT</version>
+	<version>1.0.6</version>
 	<packaging>jar</packaging>
 	<name>JSON-LD Tree</name>
 	<description>Developer-friendly serialisation of RDF into a structurally-stable JSON-LD representation.</description>
@@ -90,6 +90,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
+            <version>1.4</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
