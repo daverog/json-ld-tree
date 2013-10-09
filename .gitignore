@@ -10,3 +10,6 @@ target
 # Maven Release
 pom.xml.releaseBackup
 release.properties
+
+# Mac Files
+.DS_Store
