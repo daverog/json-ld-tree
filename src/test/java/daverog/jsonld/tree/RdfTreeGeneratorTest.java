@@ -4,8 +4,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import com.google.common.collect.ImmutableMap;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.rules.ExpectedException;
+import org.junit.*;
 
 import daverog.jsonld.tree.ModelUtils;
 import daverog.jsonld.tree.TestResourceLoader;
@@ -818,6 +819,15 @@ public class RdfTreeGeneratorTest {
             "    }\n" +
             "  }\n" +
             "}", rdfTree.asJson());
+    }
+
+    @Rule public ExpectedException exception = ExpectedException.none(); 
+    @Test
+    public void disallow_two_uris_from_having_the_same_alias() throws RdfTreeException { 
+        Model model = ModelUtils.createJenaModel("<uri:a> <uri:b> <uri:c> .");
+        exception.expect(IllegalArgumentException.class);
+        exception.expectMessage("An alias cannnot have multiple URI's. The values are: [http://purl.org/ns/b, http://purl.org/ns/a]");
+        generator.generateRdfTree(model, ImmutableMap.of("http://purl.org/ns/a", "a", "http://purl.org/ns/b", "a", "http://purl.org/ns/c", "c")); 
     }
 
 }
