@@ -1,26 +1,22 @@
 package daverog.jsonld.tree;
 
 import com.google.common.base.Function;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 import com.hp.hpl.jena.rdf.model.*;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class RdfTreeGenerator {
 
     private final String rdfResultOntologyPrefix;
+
 
     enum TreeType {
         UNKNOWN,
         ITEM,
         LIST,
         LIST_WITH_ORDER_BY_PREDICATE
-    }
-
+    } 
     public RdfTreeGenerator() {
         rdfResultOntologyPrefix = RdfTree.DEFAULT_RESULT_ONTOLOGY_URI_PREFIX;
     }
@@ -34,6 +30,8 @@ public class RdfTreeGenerator {
     }
 
     public RdfTree generateRdfTree(Model model, Map<String, String> nameOverrides) throws RdfTreeException {
+	RdfTreeValidator rdfTreeValidator = new RdfTreeValidator();
+        rdfTreeValidator.KeysCannotHaveSameValue(nameOverrides); 
         return generateRdfTree(model, Lists.<String>newArrayList(), nameOverrides);
     }
 
