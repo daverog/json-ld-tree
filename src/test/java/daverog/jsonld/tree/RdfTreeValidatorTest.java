@@ -14,6 +14,6 @@ public class RdfTreeValidatorTest {
 	RdfTreeValidator rdfTreeValidator = new RdfTreeValidator();
         exception.expect(IllegalArgumentException.class);
         exception.expectMessage("An alias cannnot have multiple URI's. The values are: [http://purl.org/ns/b, http://purl.org/ns/a]");
-        rdfTreeValidator.KeysCannotHaveSameValue(ImmutableMap.of("http://purl.org/ns/a", "a", "http://purl.org/ns/b", "a", "http://purl.org/ns/c", "c")); 
+        rdfTreeValidator.keysCannotHaveSameValue(ImmutableMap.of("http://purl.org/ns/a", "a", "http://purl.org/ns/b", "a", "http://purl.org/ns/c", "c")); 
     }
 }
