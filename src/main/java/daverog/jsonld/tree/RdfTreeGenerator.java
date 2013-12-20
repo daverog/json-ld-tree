@@ -9,7 +9,6 @@ import java.util.*;
 public class RdfTreeGenerator {
 
     private final String rdfResultOntologyPrefix;
-		private final RdfTreeValidator rdfTreeValidator = new RdfTreeValidator();
 
     enum TreeType {
         UNKNOWN,
@@ -30,7 +29,6 @@ public class RdfTreeGenerator {
     }
 
     public RdfTree generateRdfTree(Model model, Map<String, String> nameOverrides) throws RdfTreeException {
-        rdfTreeValidator.keysCannotHaveSameValue(nameOverrides); 
         return generateRdfTree(model, Lists.<String>newArrayList(), nameOverrides);
     }
 
@@ -39,7 +37,6 @@ public class RdfTreeGenerator {
     }
 
     public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces, Map<String, String> nameOverrides) throws RdfTreeException {
-        rdfTreeValidator.keysCannotHaveSameValue(nameOverrides);
 
         NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, nameOverrides, rdfResultOntologyPrefix);
 
