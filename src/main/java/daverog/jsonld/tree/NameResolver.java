@@ -1,15 +1,15 @@
 package daverog.jsonld.tree;
 
-import java.util.List;
-import java.util.Map;
-import java.util.SortedMap;
-
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.SortedMap;
 
 public class NameResolver {
 	
@@ -20,6 +20,9 @@ public class NameResolver {
     private final String rdfResultOntologyPrefix;
 
 	public NameResolver(Model model, List<String> prioritisedNamespaces, Map<String,String> nameOverrides, String rdfResultOntologyPrefix) {
+
+		checkDuplicateNameOverrides(nameOverrides);
+
 		this.model = model;
         this.nameOverrides = nameOverrides;
         this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
@@ -49,6 +52,13 @@ public class NameResolver {
 		}
 	}
 
+	private void checkDuplicateNameOverrides(Map<String, String> nameOverrides) {
+		Map<String, Collection<String>> inverse = Multimaps.invertFrom(Multimaps.forMap(nameOverrides), HashMultimap.<String, String>create()).asMap();
+		for (Collection collection : inverse.values()) {
+			if (collection.size() > 1)
+				throw new IllegalArgumentException("A name override cannot map to multiple URIs: " + collection);
+		}
+	}
 
     private void registerResource(TypedResource resource) {
 		if (resource.getResource().getNameSpace() != null && !resource.getResource().getNameSpace().equals(rdfResultOntologyPrefix)) {
