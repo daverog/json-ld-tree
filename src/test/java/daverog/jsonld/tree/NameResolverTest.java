@@ -1,26 +1,23 @@
 package daverog.jsonld.tree;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.hp.hpl.jena.rdf.model.Model;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import java.util.List;
 import java.util.Map;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
-import org.junit.Test;
-
-import daverog.jsonld.tree.ModelUtils;
-
-import com.google.common.collect.Lists;
-import com.hp.hpl.jena.rdf.model.Model;
-
-import daverog.jsonld.tree.NameResolver;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class NameResolverTest {
 	
 	private List<String> prioritisedNamespaces = Lists.newArrayList("http://prefix.com/", "http://prefix2.com/");
-    private Map<String, String> nameOverrides = Maps.<String, String>newHashMap();
+    private Map<String, String> nameOverrides = Maps.newHashMap();
 
 	@Test
 	public void a_name_for_a_resource_is_the_full_uri_if_a_prefix_is_not_provided() {
@@ -106,4 +103,14 @@ public class NameResolverTest {
         assertEquals("badgers", nameResolver.getPrefixedName(model.getResource("http://badgers.com/localName")));
     }
 
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
+    @Test
+    public void disallow_two_uris_from_having_the_same_alias() throws RdfTreeException {
+        Model model = ModelUtils.createJenaModel("<uri:a> <uri:b> <uri:c> .");
+        exception.expect(IllegalArgumentException.class);
+        exception.expectMessage("A name override cannot map to multiple URIs: [http://purl.org/ns/b, http://purl.org/ns/a]");
+        Map<String, String> overrides = ImmutableMap.of("http://purl.org/ns/a", "a", "http://purl.org/ns/b", "a", "http://purl.org/ns/c", "c");
+        new NameResolver(model, prioritisedNamespaces, overrides, "");
+    }
 }
