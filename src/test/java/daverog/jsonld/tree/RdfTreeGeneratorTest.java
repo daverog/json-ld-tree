@@ -712,6 +712,96 @@ public class RdfTreeGeneratorTest {
             "}",
 			rdfTree.asJson());
 	}
+
+    @Test
+    public void aListDescribedAsASetOfItemsWithAnOptionalOrderByPredicateIsRenderedAsAJsonTree() throws RdfTreeException {
+        Model model = ModelUtils.createJenaModel(
+                "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+                        "result:this result:listItem <uri:a> . \n" +
+                        "result:this result:listItem <uri:b> . \n" +
+                        "result:this result:listItem <uri:c> . \n" +
+                        "result:this result:listItem <uri:d> . \n" +
+                        "result:this result:orderByPredicate <uri:p> . \n" +
+                        "result:this result:sortOrder result:DescendingOrder . \n" +
+                        "<uri:a> <uri:p> \"ccc\" . \n" +
+                        "<uri:b> <uri:s> \"bbb\" . \n" +
+                        "<uri:c> <uri:p> \"zzz\" . \n" +
+                        "<uri:d> <uri:s> \"aaa\" .");
+        RdfTree rdfTree = generator.generateRdfTree(model);
+        System.out.println(rdfTree.asJson());
+        assertEquals(
+                "{\n" +
+                        "  \"results\": [\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:c\",\n" +
+                        "      \"uri:p\": \"zzz\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:a\",\n" +
+                        "      \"uri:p\": \"ccc\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:b\",\n" +
+                        "      \"uri:s\": \"bbb\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:d\",\n" +
+                        "      \"uri:s\": \"aaa\"\n" +
+                        "    }\n" +
+                        "  ],\n" +
+                        "  \"@context\": {\n" +
+                        "    \"results\": {\n" +
+                        "      \"@id\": \"@graph\"\n" +
+                        "    }\n" +
+                        "  }\n" +
+                        "}",
+                rdfTree.asJson());
+    }
+
+    @Test
+    public void resources_without_sorting_predicate_are_sorted_first_in_ascending_order() throws RdfTreeException {
+        Model model = ModelUtils.createJenaModel(
+                "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+                        "result:this result:listItem <uri:a> . \n" +
+                        "result:this result:listItem <uri:b> . \n" +
+                        "result:this result:listItem <uri:c> . \n" +
+                        "result:this result:listItem <uri:d> . \n" +
+                        "result:this result:orderByPredicate <uri:p> . \n" +
+                        "result:this result:sortOrder result:AscendingOrder . \n" +
+                        "<uri:a> <uri:p> \"ccc\" . \n" +
+                        "<uri:b> <uri:s> \"bbb\" . \n" +
+                        "<uri:c> <uri:p> \"zzz\" . \n" +
+                        "<uri:d> <uri:s> \"aaa\" .");
+        RdfTree rdfTree = generator.generateRdfTree(model);
+        System.out.println(rdfTree.asJson());
+        assertEquals(
+                "{\n" +
+                        "  \"results\": [\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:d\",\n" +
+                        "      \"uri:s\": \"aaa\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:b\",\n" +
+                        "      \"uri:s\": \"bbb\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:a\",\n" +
+                        "      \"uri:p\": \"ccc\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:c\",\n" +
+                        "      \"uri:p\": \"zzz\"\n" +
+                        "    }\n" +
+                        "  ],\n" +
+                        "  \"@context\": {\n" +
+                        "    \"results\": {\n" +
+                        "      \"@id\": \"@graph\"\n" +
+                        "    }\n" +
+                        "  }\n" +
+                        "}",
+                rdfTree.asJson());
+    }
 	
 	@Test
 	public void aListOfDatesDescribedAsASetOfItemsWithAnOrderByPredicateIsRenderedAsAJsonTree() throws RdfTreeException {

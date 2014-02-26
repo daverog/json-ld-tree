@@ -122,6 +122,12 @@ public class RdfTreeGenerator {
             public int compare(Resource first, Resource second) {
                 List<RDFNode> firstValues = getAllValuesForSubjectAndPredicate(model, first, orderingPredicate);
                 List<RDFNode> secondValues = getAllValuesForSubjectAndPredicate(model, second, orderingPredicate);
+
+                // Resources without any values for the ordering predicate are sorted in the same way as sparql would
+                // which is that they are treated as having the lowest possible value.
+                if (firstValues.isEmpty()) return -1;
+                if (secondValues.isEmpty()) return 1;
+
                 return RdfTreeUtils.compareTwoListsOfValues(firstValues, secondValues, new Comparator<RDFNode>() {
                     public int compare(RDFNode node1, RDFNode node2) {
                         //The following describes the ordering preference when sorting
