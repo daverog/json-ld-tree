@@ -1,0 +1,2240 @@
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix pol: <http://www.bbc.co.uk/ontologies/politics/> .
+@prefix geo-pol: <http://www.bbc.co.uk/ontologies/geopolitical/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix core: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix result: <http://purl.org/ontology/rdf-result/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix luc: <http://www.ontotext.com/owlim/lucene#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geoname: <http://www.geonames.org/ontology#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix biz: <http://www.bbc.co.uk/ontologies/business/> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix nsl: <http://purl.org/ontology/storyline/> .
+@prefix news: <http://www.bbc.co.uk/ontologies/news/> .
+
+
+result:this result:listItem <http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> ;
+	result:orderByPredicate cwork:dateModified ;
+	result:sortOrder result:DescendingOrder .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-13T12:04:36+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "New primary schools planned for Cardiff to meet demand" ;
+	cwork:shortTitle "New primary schools planned for city" ;
+	cwork:description "Two new primary schools could be built in Cardiff to meet rising pupil demand." ;
+	cms:locator <urn:bbc:cps:asset:26526380> , <urn:asset:50f790dd-5629-2d47-93f8-9d65249627a9> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:about <http://www.bbc.co.uk/things/146fa96a-5ca9-400b-9006-df1125aff428#id> .
+
+<http://www.bbc.co.uk/things/146fa96a-5ca9-400b-9006-df1125aff428#id> a geoname:GeoTagConcept ;
+	rdfs:label "Butetown"@en-gb ;
+	core:preferredLabel "Butetown"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2654164/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:about <http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> .
+
+<http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> a core:Organisation ;
+	rdfs:label "BBC South East Wales"@en-gb ;
+	core:preferredLabel "BBC South East Wales"@en-gb ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:about <http://www.bbc.co.uk/things/5ffcc00a-d72f-4a49-bf05-44d9e61f3a40#id> .
+
+<http://www.bbc.co.uk/things/5ffcc00a-d72f-4a49-bf05-44d9e61f3a40#id> a news:Theme ;
+	rdfs:label "Wales Education"@en-gb ;
+	core:preferredLabel "Wales Education"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Education_in_Wales> ;
+	core:slug "Wales_Education"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:about <http://www.bbc.co.uk/things/8b6fcd30-6542-4f03-8dcd-0017e10c39bc#id> .
+
+<http://www.bbc.co.uk/things/8b6fcd30-6542-4f03-8dcd-0017e10c39bc#id> a news:Theme ;
+	rdfs:label "Wales Culture"@en-gb ;
+	core:preferredLabel "Wales Culture"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Culture_of_Wales> ;
+	core:slug "Wales_Culture"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:dateCreated "2014-03-13T12:04:36+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26526380> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26526380> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26526380> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26526380> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26526380> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26526380> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26526380> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26526380> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73508000/jpg/_73508398_73507639.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73508000/jpg/_73508398_73507639.jpg> a cwork:Thumbnail ;
+	cwork:altText "primary school pupils" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73507000/jpg/_73507642_73507639.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73507000/jpg/_73507642_73507639.jpg> a cwork:Thumbnail ;
+	cwork:altText "primary school pupils" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73507000/jpg/_73507640_73507639.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73507000/jpg/_73507640_73507639.jpg> a cwork:Thumbnail ;
+	cwork:altText "primary school pupils" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73508000/jpg/_73508399_73507639.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73508000/jpg/_73508399_73507639.jpg> a cwork:Thumbnail ;
+	cwork:altText "primary school pupils" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73507000/jpg/_73507646_73507639.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73507000/jpg/_73507646_73507639.jpg> a cwork:Thumbnail ;
+	cwork:altText "primary school pupils" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/8802d13f-9aa6-41e9-889c-50ac3d3c1b0a#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73508000/jpg/_73508400_73507639.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73508000/jpg/_73508400_73507639.jpg> a cwork:Thumbnail ;
+	cwork:altText "primary school pupils" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-12T12:35:15+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Jealous husband Kelvin Newton gets life for wife's murder" ;
+	cwork:shortTitle "Jealous husband jailed for murder" ;
+	cwork:description "A jealous husband is jailed for life and must serve a minimum sentence of 18 years for murdering his wife over her holiday romance." ;
+	cms:locator <urn:asset:7774713f-3a31-d347-8b9a-7f3604d5cd19> , <urn:bbc:cps:asset:26545149> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:about <http://www.bbc.co.uk/things/6c561a25-8557-42f3-8fc2-d1f2f6731421#id> .
+
+<http://www.bbc.co.uk/things/6c561a25-8557-42f3-8fc2-d1f2f6731421#id> a geoname:GeoTagConcept ;
+	rdfs:label "Bridgend"@en-gb ;
+	core:preferredLabel "Bridgend"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2654755/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:dateCreated "2014-03-12T12:35:15+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26545149> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26545149> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26545149> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26545149> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26545149> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26545149> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26545149> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26545149> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527350_murder2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527350_murder2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Mother-of-four Assia Newton" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527980_murder2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527980_murder2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Mother-of-four Assia Newton" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527352_murder2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527352_murder2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Mother-of-four Assia Newton" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527981_murder2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73527000/jpg/_73527981_murder2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Mother-of-four Assia Newton" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73530000/jpg/_73530435_murder2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73530000/jpg/_73530435_murder2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Mother-of-four Assia Newton" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/e0dbc820-48a5-41cf-be00-8725ec58220b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73530000/jpg/_73530434_murder2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73530000/jpg/_73530434_murder2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Mother-of-four Assia Newton" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-12T12:02:40+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Idris Ali 'body in carpet' conviction could be appealed" ;
+	cwork:shortTitle "New 'body in carpet' appeal possible" ;
+	cwork:description "A man who admitted killing a Cardiff teenager whose remains were found wrapped in carpet 25 years ago is invited to appeal his conviction by the Criminal Cases Review Commission." ;
+	cms:locator <urn:bbc:cps:asset:26541328> , <urn:asset:fe26fe51-47f3-e64d-9be3-e6b2aa6f2cf4> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:about <http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> .
+
+<http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> a core:Organisation ;
+	rdfs:label "South Wales Police"@en-gb ;
+	core:preferredLabel "South Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/south-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:about <http://www.bbc.co.uk/things/d88e0f2d-8906-4996-a1a7-ea08773bcd84#id> .
+
+<http://www.bbc.co.uk/things/d88e0f2d-8906-4996-a1a7-ea08773bcd84#id> a core:Organisation ;
+	rdfs:label "IPCC"@en-gb ;
+	core:preferredLabel "IPCC"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Independent_Police_Complaints_Commission> ;
+	core:slug "IPCC"^^xsd:string ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:mentions <http://www.bbc.co.uk/things/1493824b-d55d-4f8e-8a33-c67ea061ca1b#id> .
+
+<http://www.bbc.co.uk/things/1493824b-d55d-4f8e-8a33-c67ea061ca1b#id> a core:Place ;
+	rdfs:label "Bridgwater"@en-gb ;
+	core:preferredLabel "Bridgwater"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2654730/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:dateCreated "2014-03-12T12:02:40+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26541328> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26541328> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26541328> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26541328> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26541328> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26541328> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26541328> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26541328> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73228000/jpg/_73228850_karen.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73228000/jpg/_73228850_karen.jpg> a cwork:Thumbnail ;
+	cwork:altText "Karen Price" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528542_karen.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528542_karen.jpg> a cwork:Thumbnail ;
+	cwork:altText "Karen Price" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528920__48347437_idrisali226.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528920__48347437_idrisali226.jpg> a cwork:Thumbnail ;
+	cwork:altText "Idris Ali" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528541_karen.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528541_karen.jpg> a cwork:Thumbnail ;
+	cwork:altText "Karen Price" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/48367000/jpg/_48367259__48347437_idrisali226.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/48367000/jpg/_48367259__48347437_idrisali226.jpg> a cwork:Thumbnail ;
+	cwork:altText "Idris Ali" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/657757ab-7ad4-4508-b534-ad5131857f7f#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528919__48347437_idrisali226.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73528000/jpg/_73528919__48347437_idrisali226.jpg> a cwork:Thumbnail ;
+	cwork:altText "Idris Ali" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-12T10:09:19+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Pioneering 3D printing reshapes patient's face in Wales" ;
+	cwork:shortTitle "Patient has pioneering 3D face op" ;
+	cwork:description "A survivor of a serious motorbike accident has pioneering surgery to reconstruct his face using a series of 3D printed parts." ;
+	cms:locator <urn:bbc:cps:asset:26534408> , <urn:asset:877c5e82-7753-d946-a383-aa45a8261fa9> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:about <http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id> .
+
+<http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id> a news:Theme ;
+	rdfs:label "Health"@en-gb ;
+	core:preferredLabel "Health"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Health> ;
+	core:slug "health"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:about <http://www.bbc.co.uk/things/dd1295bb-0fd4-47d1-9aa7-6b5200fcccf0#id> .
+
+<http://www.bbc.co.uk/things/dd1295bb-0fd4-47d1-9aa7-6b5200fcccf0#id> a news:Organisation ;
+	rdfs:label "NHS Wales"@en-gb ;
+	core:preferredLabel "NHS Wales"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/NHS_Wales> ;
+	core:slug "NHS_Wales"^^xsd:string ;
+	a core:Organisation , core:Thing .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:mentions <http://www.bbc.co.uk/things/e68c5b82-50e8-47d8-953c-bf61a2de0a85#id> .
+
+<http://www.bbc.co.uk/things/e68c5b82-50e8-47d8-953c-bf61a2de0a85#id> a core:Place ;
+	rdfs:label "Kingdom of Belgium"@en-gb ;
+	core:preferredLabel "Kingdom of Belgium"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2802361/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:mentions <http://www.bbc.co.uk/things/0e6ec727-73f1-48c8-8b80-b5d82666aa29#id> .
+
+<http://www.bbc.co.uk/things/0e6ec727-73f1-48c8-8b80-b5d82666aa29#id> a core:Place ;
+	rdfs:label "Swansea"@en-gb ;
+	core:preferredLabel "Swansea"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2636432/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:mentions <http://www.bbc.co.uk/things/878c00b2-26b2-4a0b-baa9-9c845e8339d4#id> .
+
+<http://www.bbc.co.uk/things/878c00b2-26b2-4a0b-baa9-9c845e8339d4#id> a core:Place ;
+	rdfs:label "Morriston"@en-gb ;
+	core:preferredLabel "Morriston"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2642180/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:dateCreated "2014-03-12T10:09:19+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26534408> .
+
+<http://www.bbc.co.uk/news/uk-wales-26534408> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26534408> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26534408> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26534408> .
+
+<http://www.bbc.co.uk/news/uk-wales-26534408> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26534408> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26534408> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522958_facecomp.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522958_facecomp.jpg> a cwork:Thumbnail ;
+	cwork:altText "Before and after: Stephen Power" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522959_facecomp.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522959_facecomp.jpg> a cwork:Thumbnail ;
+	cwork:altText "Before and after: Stephen Power" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522956_facecomp.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522956_facecomp.jpg> a cwork:Thumbnail ;
+	cwork:altText "Before and after: Stephen Power" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522852_facecomp.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522852_facecomp.jpg> a cwork:Thumbnail ;
+	cwork:altText "Before and after: Stephen Power" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522854_facecomp.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522854_facecomp.jpg> a cwork:Thumbnail ;
+	cwork:altText "Before and after: Stephen Power" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/65692517-4b82-4f9b-8903-206902bb9f94#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522957_facecomp.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73522000/jpg/_73522957_facecomp.jpg> a cwork:Thumbnail ;
+	cwork:altText "Before and after: Stephen Power" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-11T07:10:23+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Lung cancer drugs trials start at Cardiff University" ;
+	cwork:shortTitle "New lung cancer drugs trials start" ;
+	cwork:description "A new clinical drugs trial is being coordinated by experts in Cardiff to try to help people with lung cancer." ;
+	cms:locator <urn:asset:a46b8f49-7273-4a4e-9929-5bc8875911a5> , <urn:bbc:cps:asset:26518679> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/00eb010f-568a-4b89-bbfe-799d5b812bed#id> .
+
+<http://www.bbc.co.uk/things/00eb010f-568a-4b89-bbfe-799d5b812bed#id> a news:Place ;
+	rdfs:label "Wales"@en-gb ;
+	core:preferredLabel "Wales"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2634895/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:about <http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id> .
+
+<http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id> a news:Theme ;
+	rdfs:label "Cancer" ;
+	core:preferredLabel "Cancer" ;
+	core:sameAs <http://dbpedia.org/resource/Cancer> ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:about <http://www.bbc.co.uk/things/a1a2d012-fab3-405d-8b40-05d90b7f4761#id> .
+
+<http://www.bbc.co.uk/things/a1a2d012-fab3-405d-8b40-05d90b7f4761#id> a core:Organisation ;
+	rdfs:label "Cardiff University"@en-gb ;
+	core:preferredLabel "Cardiff University"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Cardiff_University> ;
+	core:slug "Cardiff_University"^^xsd:string ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:dateCreated "2014-03-11T07:10:23+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26518679> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26518679> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26518679> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26518679> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26518679> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26518679> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26518679> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26518679> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73486000/jpg/_73486659_spl2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73486000/jpg/_73486659_spl2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Lung cancer seen in colour X-ray" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489148_spl2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489148_spl2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Lung cancer seen in colour X-ray" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489150_spl2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489150_spl2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Lung cancer seen in colour X-ray" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489151_spl2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489151_spl2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Lung cancer seen in colour X-ray" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489149_spl2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73489000/jpg/_73489149_spl2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Lung cancer seen in colour X-ray" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/a4266281-e7c8-429a-91b3-c3e5d7cbc59b#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73486000/jpg/_73486657_spl2.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73486000/jpg/_73486657_spl2.jpg> a cwork:Thumbnail ;
+	cwork:altText "Lung cancer seen in colour X-ray" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-10T14:13:50+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Cancer support centre plan for Cardiff's Velindre site" ;
+	cwork:shortTitle "Charity's bid for new support centre" ;
+	cwork:description "A centre to provide emotional and practical support services to people with cancer could be built in Cardiff." ;
+	cms:locator <urn:bbc:cps:asset:26512021> , <urn:asset:e159572b-afee-fd48-a5af-a05f98872855> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/81c40339-f8dd-4fbf-aa6b-3d588a0ef8cb#id> .
+
+<http://www.bbc.co.uk/things/81c40339-f8dd-4fbf-aa6b-3d588a0ef8cb#id> a geoname:GeoTagConcept ;
+	rdfs:label "Whitchurch"@en-gb ;
+	core:preferredLabel "Whitchurch"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2634127/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:about <http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> .
+
+<http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> a core:Organisation ;
+	rdfs:label "BBC South East Wales"@en-gb ;
+	core:preferredLabel "BBC South East Wales"@en-gb ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:about <http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id> .
+
+<http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id> a news:Theme ;
+	rdfs:label "Cancer" ;
+	core:preferredLabel "Cancer" ;
+	core:sameAs <http://dbpedia.org/resource/Cancer> ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:about <http://www.bbc.co.uk/things/dd1295bb-0fd4-47d1-9aa7-6b5200fcccf0#id> .
+
+<http://www.bbc.co.uk/things/dd1295bb-0fd4-47d1-9aa7-6b5200fcccf0#id> a news:Organisation ;
+	rdfs:label "NHS Wales"@en-gb ;
+	core:preferredLabel "NHS Wales"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/NHS_Wales> ;
+	core:slug "NHS_Wales"^^xsd:string ;
+	a core:Organisation , core:Thing .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:dateCreated "2014-03-10T14:13:50+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26512021> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26512021> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26512021> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26512021> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26512021> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26512021> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26512021> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26512021> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73481000/jpg/_73481507_maggie's.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73481000/jpg/_73481507_maggie's.jpg> a cwork:Thumbnail ;
+	cwork:altText "Maggie's Centre" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483093_maggie's.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483093_maggie's.jpg> a cwork:Thumbnail ;
+	cwork:altText "Maggie's Centre" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73474000/jpg/_73474093_maggie's.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73474000/jpg/_73474093_maggie's.jpg> a cwork:Thumbnail ;
+	cwork:altText "Maggie's Centre" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483092_maggie's.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483092_maggie's.jpg> a cwork:Thumbnail ;
+	cwork:altText "Maggie's Centre" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483091_maggie's.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483091_maggie's.jpg> a cwork:Thumbnail ;
+	cwork:altText "Maggie's Centre" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/3cd68878-b516-49fe-b004-16e3fb98e105#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483090_maggie's.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73483000/jpg/_73483090_maggie's.jpg> a cwork:Thumbnail ;
+	cwork:altText "Maggie's Centre" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-10T13:27:39+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Poverty-hit areas in Cardiff to share £5.9m handout" ;
+	cwork:shortTitle "£5.9m invested to tackle poverty" ;
+	cwork:description "Poverty-stricken areas in Cardiff are sharing nearly £6m over the next two years." ;
+	cms:locator <urn:bbc:cps:asset:26513777> , <urn:asset:89fe6e13-a687-9848-babe-dadbb70280f2> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:about <http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> .
+
+<http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> a core:Organisation ;
+	rdfs:label "BBC South East Wales"@en-gb ;
+	core:preferredLabel "BBC South East Wales"@en-gb ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:dateCreated "2014-03-10T13:27:39+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26513777> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26513777> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26513777> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26513777> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26513777> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26513777> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26513777> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26513777> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480456_010770599-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480456_010770599-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Children playing by boarded-up houses" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480458_010770599-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480458_010770599-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Children playing by boarded-up houses" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/62687000/jpg/_62687816_010770599-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/62687000/jpg/_62687816_010770599-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Children playing by boarded-up houses" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/62687000/jpg/_62687815_010770599-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/62687000/jpg/_62687815_010770599-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Children playing by boarded-up houses" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480457_010770599-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480457_010770599-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Children playing by boarded-up houses" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/435181c4-5eae-41cf-b574-4f37dde83937#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480455_010770599-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73480000/jpg/_73480455_010770599-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Children playing by boarded-up houses" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-10T07:21:49+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "What is happening in your area?" ;
+	cwork:description "What kind of steps is your local authority taking to meet the budget cuts it faces?" ;
+	cms:locator <urn:asset:ecd52d40-0bec-0440-bb96-a2b754fcb73d> , <urn:bbc:cps:asset:26483463> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/f254344f-3a00-4f50-bde4-9abd176a32c3#id> .
+
+<http://www.bbc.co.uk/things/f254344f-3a00-4f50-bde4-9abd176a32c3#id> a core:Organisation ;
+	rdfs:label "Isle of Anglesey County Council" ;
+	core:preferredLabel "Isle of Anglesey County Council" ;
+	core:sameAs <http://dbpedia.org/resource/Isle_of_Anglesey_County_Council> ;
+	core:slug "isle_of_anglesey_county_council" ;
+	a core:Thing , pol:Council , core:Organisation ;
+	core:sameAs <http://www.wikidata.org/entity/Q6083890> ;
+	a core:Thing , pol:Council .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/5f30422e-949c-4b3a-969d-20944b33aa88#id> .
+
+<http://www.bbc.co.uk/things/5f30422e-949c-4b3a-969d-20944b33aa88#id> a geoname:GeoTagConcept ;
+	rdfs:label "Wrexham"@en-gb ;
+	core:preferredLabel "Wrexham"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2633485/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/0e6ec727-73f1-48c8-8b80-b5d82666aa29#id> .
+
+<http://www.bbc.co.uk/things/0e6ec727-73f1-48c8-8b80-b5d82666aa29#id> a geoname:GeoTagConcept ;
+	rdfs:label "Swansea"@en-gb ;
+	core:preferredLabel "Swansea"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2636432/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/84b00c42-38fe-48b1-83d9-c37ae8f70b1a#id> .
+
+<http://www.bbc.co.uk/things/84b00c42-38fe-48b1-83d9-c37ae8f70b1a#id> a geoname:GeoTagConcept ;
+	rdfs:label "Rhondda"@en-gb ;
+	core:preferredLabel "Rhondda"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2639447/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/cac42080-b220-43d1-9af4-6bed2fb49dac#id> .
+
+<http://www.bbc.co.uk/things/cac42080-b220-43d1-9af4-6bed2fb49dac#id> a geoname:GeoTagConcept ;
+	rdfs:label "Port Talbot"@en-gb ;
+	core:preferredLabel "Port Talbot"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2639989/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/e983dcb9-7f03-4c8f-b2b9-7061874856f4#id> .
+
+<http://www.bbc.co.uk/things/e983dcb9-7f03-4c8f-b2b9-7061874856f4#id> a geoname:GeoTagConcept ;
+	rdfs:label "Pembroke"@en-gb ;
+	core:preferredLabel "Pembroke"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2640503/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/11375715-c09b-4dd9-8b61-0af0b045e32c#id> .
+
+<http://www.bbc.co.uk/things/11375715-c09b-4dd9-8b61-0af0b045e32c#id> a geoname:GeoTagConcept ;
+	rdfs:label "Newport"@en-gb ;
+	core:preferredLabel "Newport"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2641598/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/d2faca13-174e-4fe1-af64-f6573c6701eb#id> .
+
+<http://www.bbc.co.uk/things/d2faca13-174e-4fe1-af64-f6573c6701eb#id> a geoname:GeoTagConcept ;
+	rdfs:label "Neath"@en-gb ;
+	core:preferredLabel "Neath"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2641843/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/385733cb-b9e8-4a36-a8fd-1dac749212b5#id> .
+
+<http://www.bbc.co.uk/things/385733cb-b9e8-4a36-a8fd-1dac749212b5#id> a geoname:GeoTagConcept ;
+	rdfs:label "Merthyr Tydfil"@en-gb ;
+	core:preferredLabel "Merthyr Tydfil"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2642705/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/b1527f52-4cd6-499a-829d-7e7ba164cd60#id> .
+
+<http://www.bbc.co.uk/things/b1527f52-4cd6-499a-829d-7e7ba164cd60#id> a geoname:GeoTagConcept ;
+	rdfs:label "Flint"@en-gb ;
+	core:preferredLabel "Flint"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2649301/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/4b0e572d-8241-41ef-a205-932f8426559c#id> .
+
+<http://www.bbc.co.uk/things/4b0e572d-8241-41ef-a205-932f8426559c#id> a geoname:GeoTagConcept ;
+	rdfs:label "Denbigh"@en-gb ;
+	core:preferredLabel "Denbigh"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2651386/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/ccae42a3-2548-4647-9d4b-0f68fa4cd285#id> .
+
+<http://www.bbc.co.uk/things/ccae42a3-2548-4647-9d4b-0f68fa4cd285#id> a geoname:GeoTagConcept ;
+	rdfs:label "Conwy"@en-gb ;
+	core:preferredLabel "Conwy"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2652426/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/baab790a-f0f9-40d2-abe8-0e6c4dd5b64c#id> .
+
+<http://www.bbc.co.uk/things/baab790a-f0f9-40d2-abe8-0e6c4dd5b64c#id> a geoname:GeoTagConcept ;
+	rdfs:label "Carmarthen"@en-gb ;
+	core:preferredLabel "Carmarthen"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653755/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/9f04b257-1fd7-43cd-9374-31f6bb0c553f#id> .
+
+<http://www.bbc.co.uk/things/9f04b257-1fd7-43cd-9374-31f6bb0c553f#id> a geoname:GeoTagConcept ;
+	rdfs:label "Caerphilly"@en-gb ;
+	core:preferredLabel "Caerphilly"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2654089/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/6c561a25-8557-42f3-8fc2-d1f2f6731421#id> .
+
+<http://www.bbc.co.uk/things/6c561a25-8557-42f3-8fc2-d1f2f6731421#id> a geoname:GeoTagConcept ;
+	rdfs:label "Bridgend"@en-gb ;
+	core:preferredLabel "Bridgend"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2654755/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/c0518660-5132-4057-8bae-305fc75c9237#id> .
+
+<http://www.bbc.co.uk/things/c0518660-5132-4057-8bae-305fc75c9237#id> a geoname:GeoTagConcept ;
+	rdfs:label "Monmouth"@en-gb ;
+	core:preferredLabel "Monmouth"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2642313/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/553020dc-64bd-438d-8b4a-cfb6520f6a7b#id> .
+
+<http://www.bbc.co.uk/things/553020dc-64bd-438d-8b4a-cfb6520f6a7b#id> a core:Place ;
+	rdfs:label "Wrexham"@en-gb ;
+	core:shortLabel "Wrexham"@en-gb ;
+	core:preferredLabel "Wrexham"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2633484/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/9a3c3ff4-de71-4308-a67a-3ced380f6bda#id> .
+
+<http://www.bbc.co.uk/things/9a3c3ff4-de71-4308-a67a-3ced380f6bda#id> a news:Theme ;
+	rdfs:label "Wales Economy"@en-gb ;
+	core:preferredLabel "Wales Economy"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Economy_of_Wales> ;
+	core:slug "Wales_Economy"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:about <http://www.bbc.co.uk/things/ce8c5152-47b9-415d-9ffa-5fa46140a39a#id> .
+
+<http://www.bbc.co.uk/things/ce8c5152-47b9-415d-9ffa-5fa46140a39a#id> a news:Theme ;
+	rdfs:label "Wales Business"@en-gb ;
+	core:preferredLabel "Wales Business"@en-gb ;
+	core:sameAs <http://business.wales.gov.uk/about-us-1#resource> ;
+	core:slug "Wales_Business"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:dateCreated "2014-03-10T07:21:49+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26483463> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26483463> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26483463> .
+
+<http://www.bbc.co.uk/news/uk-wales-26483463> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26483463> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26483463> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26483463> .
+
+<http://www.bbc.co.uk/news/uk-wales-26483463> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434678_money_afpgetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434678_money_afpgetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Bank notes" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434676_money_afpgetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434676_money_afpgetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Bank notes" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434682_money_afpgetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434682_money_afpgetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Bank notes" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434683_money_afpgetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434683_money_afpgetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Bank notes" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434715_money_afpgetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434715_money_afpgetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Bank notes" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/93d5c839-ab11-4eac-afb0-ba4829b4a5a6#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434684_money_afpgetty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73434000/jpg/_73434684_money_afpgetty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Bank notes" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-08T13:34:00+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Reopening plan for Victorian toilets in Cardiff's centre" ;
+	cwork:shortTitle "Reopening plan for Victorian toilets" ;
+	cwork:description "Victorian underground toilets which were closed by Cardiff council last year to save money, could soon reopen." ;
+	cms:locator <urn:asset:0ec19aea-a58d-db49-adac-6a6a83afe83b> , <urn:bbc:cps:asset:26496780> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:dateCreated "2014-03-08T13:34:00+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26496780> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26496780> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26496780> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26496780> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26496780> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26496780> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26496780> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26496780> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454156_toilets_bbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454156_toilets_bbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Toilets sign" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73453000/jpg/_73453588_toilets_bbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73453000/jpg/_73453588_toilets_bbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Toilets sign" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454155_toilets_bbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454155_toilets_bbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Toilets sign" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73453000/jpg/_73453586_hayes226bbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73453000/jpg/_73453586_hayes226bbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "The Hayes toilets" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454153_hayes226bbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454153_hayes226bbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "The Hayes toilets" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/53f66f02-2b33-47d7-b827-e7eee2c339ca#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454154_hayes226bbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73454000/jpg/_73454154_hayes226bbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "The Hayes toilets" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-07T20:39:24+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Cardiff prison death: Inmate charged with murder" ;
+	cwork:shortTitle "Murder charge after prisoner death" ;
+	cwork:description "A 22-year-old prisoner is charged with murder following the death of an inmate at Cardiff prison." ;
+	cms:locator <urn:bbc:cps:asset:26484071> , <urn:asset:5ccda163-49de-f94f-b4fc-59e1bd6e868a> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:dateCreated "2014-03-07T20:39:24+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26484071> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26484071> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26484071> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26484071> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26484071> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26484071> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26484071> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26484071> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447589_darrenthomas.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447589_darrenthomas.jpg> a cwork:Thumbnail ;
+	cwork:altText "Darren Thomas" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447497_darrenthomas.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447497_darrenthomas.jpg> a cwork:Thumbnail ;
+	cwork:altText "Darren Thomas" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447590_darrenthomas.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447590_darrenthomas.jpg> a cwork:Thumbnail ;
+	cwork:altText "Darren Thomas" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447499_darrenthomas.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447499_darrenthomas.jpg> a cwork:Thumbnail ;
+	cwork:altText "Darren Thomas" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447505_darrenthomas.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447505_darrenthomas.jpg> a cwork:Thumbnail ;
+	cwork:altText "Darren Thomas" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/faabaa00-c180-4a70-bc61-e2bb8ee6f82e#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447588_darrenthomas.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73447000/jpg/_73447588_darrenthomas.jpg> a cwork:Thumbnail ;
+	cwork:altText "Darren Thomas" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-05T20:32:06+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Macob: 145 Cardiff staff lose jobs at construction firm" ;
+	cwork:shortTitle "Surprise at Macob's 145 job losses" ;
+	cwork:description "About 145 staff at property and construction group Macob in Cardiff are made redundant." ;
+	cms:locator <urn:bbc:cps:asset:26457249> , <urn:asset:05f79384-35b8-ca40-8f55-5e317df6cf75> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/b116ca43-aaca-42eb-9351-85e77750654d#id> .
+
+<http://www.bbc.co.uk/things/b116ca43-aaca-42eb-9351-85e77750654d#id> a geoname:GeoTagConcept ;
+	rdfs:label "Chichester"@en-gb ;
+	core:preferredLabel "Chichester"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653192/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:about <http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> .
+
+<http://www.bbc.co.uk/things/86e5bbc2-fa0a-414b-a9e2-15b1ab655192#id> a core:Organisation ;
+	rdfs:label "BBC South East Wales"@en-gb ;
+	core:preferredLabel "BBC South East Wales"@en-gb ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:about <http://www.bbc.co.uk/things/9a3c3ff4-de71-4308-a67a-3ced380f6bda#id> .
+
+<http://www.bbc.co.uk/things/9a3c3ff4-de71-4308-a67a-3ced380f6bda#id> a news:Theme ;
+	rdfs:label "Wales Economy"@en-gb ;
+	core:preferredLabel "Wales Economy"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Economy_of_Wales> ;
+	core:slug "Wales_Economy"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:about <http://www.bbc.co.uk/things/ce8c5152-47b9-415d-9ffa-5fa46140a39a#id> .
+
+<http://www.bbc.co.uk/things/ce8c5152-47b9-415d-9ffa-5fa46140a39a#id> a news:Theme ;
+	rdfs:label "Wales Business"@en-gb ;
+	core:preferredLabel "Wales Business"@en-gb ;
+	core:sameAs <http://business.wales.gov.uk/about-us-1#resource> ;
+	core:slug "Wales_Business"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:dateCreated "2014-03-05T20:32:06+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:VideoFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26457249> .
+
+<http://www.bbc.co.uk/news/uk-wales-26457249> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397994_73397821.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397994_73397821.jpg> a cwork:Thumbnail ;
+	cwork:altText "Keith Jones" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397824_73397821.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397824_73397821.jpg> a cwork:Thumbnail ;
+	cwork:altText "Keith Jones" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397828_73397821.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397828_73397821.jpg> a cwork:Thumbnail ;
+	cwork:altText "Keith Jones" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397993_73397821.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397993_73397821.jpg> a cwork:Thumbnail ;
+	cwork:altText "Keith Jones" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397822_73397821.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397822_73397821.jpg> a cwork:Thumbnail ;
+	cwork:altText "Keith Jones" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/1fabb0fc-d128-4e35-a6f2-37cb79b345d7#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397829_73397821.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73397000/jpg/_73397829_73397821.jpg> a cwork:Thumbnail ;
+	cwork:altText "Keith Jones" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-05T16:59:54+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Protest over Withybush Hospital baby unit plan" ;
+	cwork:shortTitle "Protest over baby care shake-up" ;
+	cwork:description "Campaigners against changes to specialist baby care services in west Wales take their fight to the Senedd in Cardiff Bay." ;
+	cms:locator <urn:bbc:cps:asset:26454444> , <urn:asset:e9498562-ae62-ee49-a56e-fba05d6c9fa3> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/00eb010f-568a-4b89-bbfe-799d5b812bed#id> .
+
+<http://www.bbc.co.uk/things/00eb010f-568a-4b89-bbfe-799d5b812bed#id> a news:Place ;
+	rdfs:label "Wales"@en-gb ;
+	core:preferredLabel "Wales"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2634895/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:about <http://www.bbc.co.uk/things/9ec5872f-cad6-4eb6-ac14-9104ed3e54e8#id> .
+
+<http://www.bbc.co.uk/things/9ec5872f-cad6-4eb6-ac14-9104ed3e54e8#id> a geoname:GeoTagConcept ;
+	rdfs:label "Haverfordwest"@en-gb ;
+	core:preferredLabel "Haverfordwest"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2647311/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:about <http://www.bbc.co.uk/things/dd1295bb-0fd4-47d1-9aa7-6b5200fcccf0#id> .
+
+<http://www.bbc.co.uk/things/dd1295bb-0fd4-47d1-9aa7-6b5200fcccf0#id> a news:Organisation ;
+	rdfs:label "NHS Wales"@en-gb ;
+	core:preferredLabel "NHS Wales"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/NHS_Wales> ;
+	core:slug "NHS_Wales"^^xsd:string ;
+	a core:Organisation , core:Thing .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:about <http://www.bbc.co.uk/things/c33a31f3-3ea1-49a8-915f-5951e101c568#id> .
+
+<http://www.bbc.co.uk/things/c33a31f3-3ea1-49a8-915f-5951e101c568#id> a core:Person ;
+	rdfs:label "Mark Drakeford"@en-gb ;
+	core:preferredLabel "Mark Drakeford"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Mark_Drakeford> ;
+	core:slug "Mark_Drakeford"^^xsd:string ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:dateCreated "2014-03-05T16:59:54+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:VideoFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26454444> .
+
+<http://www.bbc.co.uk/news/uk-wales-26454444> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73390000/jpg/_73390717_73390713.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73390000/jpg/_73390717_73390713.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391366_73390713.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391366_73390713.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391369_73390713.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391369_73390713.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391362_73390713.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391362_73390713.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391367_73390713.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391367_73390713.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/d1dc1526-bbfa-4b07-bf0a-656582e207ba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391368_73390713.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73391000/jpg/_73391368_73390713.jpg> a cwork:Thumbnail ;
+	cwork:altText "BBC" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-04T19:53:56+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "500 ex-civil service jobs 'to go', PCS union warns" ;
+	cwork:shortTitle "500 ex-civil service jobs 'to go'" ;
+	cwork:description "Up to 500 former civil servants across Wales and England are to be made redundant as their new employer shifts their work overseas, claims PCS union." ;
+	cms:locator <urn:bbc:cps:asset:26439737> , <urn:asset:d649eaa9-a055-6042-bdf8-94f5cc4e2014> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b#id> .
+
+<http://www.bbc.co.uk/things/dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b#id> a geoname:GeoTagConcept ;
+	rdfs:label "York"@en-gb ;
+	core:preferredLabel "York"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2633352/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/2f9868d2-2bc4-47d0-b6fd-17b13fa6aafe#id> .
+
+<http://www.bbc.co.uk/things/2f9868d2-2bc4-47d0-b6fd-17b13fa6aafe#id> a geoname:GeoTagConcept ;
+	rdfs:label "Sheffield"@en-gb ;
+	core:preferredLabel "Sheffield"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2638077/> ;
+	a core:Place , core:Thing , nsl:Topic .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/b17c9187-c602-4471-8f4c-a069c58dd8fb#id> .
+
+<http://www.bbc.co.uk/things/b17c9187-c602-4471-8f4c-a069c58dd8fb#id> a geoname:GeoTagConcept ;
+	rdfs:label "Peterborough"@en-gb ;
+	core:preferredLabel "Peterborough"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2640354/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/cb2a69f1-75f4-436b-96cf-79f0115d3d64#id> .
+
+<http://www.bbc.co.uk/things/cb2a69f1-75f4-436b-96cf-79f0115d3d64#id> a geoname:GeoTagConcept ;
+	rdfs:label "Newcastle upon Tyne"@en-gb ;
+	core:preferredLabel "Newcastle upon Tyne"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2641673/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/c23a7f2f-8d78-490f-9e2e-66729c0a5889#id> .
+
+<http://www.bbc.co.uk/things/c23a7f2f-8d78-490f-9e2e-66729c0a5889#id> a geoname:GeoTagConcept ;
+	rdfs:label "Leeds"@en-gb ;
+	core:preferredLabel "Leeds"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2644688/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/b112cc7d-6beb-414b-ba2e-c801c601f4c1#id> .
+
+<http://www.bbc.co.uk/things/b112cc7d-6beb-414b-ba2e-c801c601f4c1#id> a geoname:GeoTagConcept ;
+	rdfs:label "Blackpool"@en-gb ;
+	core:preferredLabel "Blackpool"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2655459/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:about <http://www.bbc.co.uk/things/54e77cfe-b1ba-42c3-b66a-b2efadee0acb#id> .
+
+<http://www.bbc.co.uk/things/54e77cfe-b1ba-42c3-b66a-b2efadee0acb#id> a core:Organisation ;
+	rdfs:label "PCS"@en-gb ;
+	core:preferredLabel "PCS"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Public_and_Commercial_Services_Union> ;
+	core:slug "PCS"^^xsd:string ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:dateCreated "2014-03-04T19:53:56+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26439737> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26439737> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26439737> .
+
+<http://www.bbc.co.uk/news/uk-wales-26439737> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26439737> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26439737> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26439737> .
+
+<http://www.bbc.co.uk/news/uk-wales-26439737> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73368000/jpg/_73368414_73367818.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73368000/jpg/_73368414_73367818.jpg> a cwork:Thumbnail ;
+	cwork:altText "Office workers" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73368000/jpg/_73368415_73367818.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73368000/jpg/_73368415_73367818.jpg> a cwork:Thumbnail ;
+	cwork:altText "Office workers" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73368000/jpg/_73368413_73367818.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73368000/jpg/_73368413_73367818.jpg> a cwork:Thumbnail ;
+	cwork:altText "Office workers" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73367000/jpg/_73367821_73367818.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73367000/jpg/_73367821_73367818.jpg> a cwork:Thumbnail ;
+	cwork:altText "Office workers" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73367000/jpg/_73367827_73367818.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73367000/jpg/_73367827_73367818.jpg> a cwork:Thumbnail ;
+	cwork:altText "Office workers" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/09b05a4b-3cd7-4e8d-b795-97b55fa0d8fc#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73367000/jpg/_73367819_73367818.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73367000/jpg/_73367819_73367818.jpg> a cwork:Thumbnail ;
+	cwork:altText "Office workers" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-04T09:05:07+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Wales' foreign-born population rises by 82% in 10 years" ;
+	cwork:shortTitle "Wales' migrant population up by 82%" ;
+	cwork:description "Wales' foreign-born population increases by 82% in the last decade, new figures show." ;
+	cms:locator <urn:asset:f89724c6-eaa1-2943-b5da-6d19db836e64> , <urn:bbc:cps:asset:26423124> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/0e6ec727-73f1-48c8-8b80-b5d82666aa29#id> .
+
+<http://www.bbc.co.uk/things/0e6ec727-73f1-48c8-8b80-b5d82666aa29#id> a geoname:GeoTagConcept ;
+	rdfs:label "Swansea"@en-gb ;
+	core:preferredLabel "Swansea"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2636432/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/11375715-c09b-4dd9-8b61-0af0b045e32c#id> .
+
+<http://www.bbc.co.uk/things/11375715-c09b-4dd9-8b61-0af0b045e32c#id> a geoname:GeoTagConcept ;
+	rdfs:label "Newport"@en-gb ;
+	core:preferredLabel "Newport"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2641598/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/385733cb-b9e8-4a36-a8fd-1dac749212b5#id> .
+
+<http://www.bbc.co.uk/things/385733cb-b9e8-4a36-a8fd-1dac749212b5#id> a geoname:GeoTagConcept ;
+	rdfs:label "Merthyr Tydfil"@en-gb ;
+	core:preferredLabel "Merthyr Tydfil"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2642705/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/553020dc-64bd-438d-8b4a-cfb6520f6a7b#id> .
+
+<http://www.bbc.co.uk/things/553020dc-64bd-438d-8b4a-cfb6520f6a7b#id> a core:Place ;
+	rdfs:label "Wrexham"@en-gb ;
+	core:shortLabel "Wrexham"@en-gb ;
+	core:preferredLabel "Wrexham"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2633484/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/5784428d-a30a-4091-82f2-3f4d9b336f75#id> .
+
+<http://www.bbc.co.uk/things/5784428d-a30a-4091-82f2-3f4d9b336f75#id> a news:Theme ;
+	rdfs:label "UK Immigration"@en-gb ;
+	core:preferredLabel "UK Immigration"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Immigration_to_the_United_Kingdom_since_1922> ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id> .
+
+<http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id> a news:Theme ;
+	rdfs:label "Migration"@en-gb ;
+	core:preferredLabel "Migration"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Human_migration> ;
+	core:slug "Migration"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:about <http://www.bbc.co.uk/things/e741c3c1-42c4-402e-83dc-064370b955ba#id> .
+
+<http://www.bbc.co.uk/things/e741c3c1-42c4-402e-83dc-064370b955ba#id> a core:Organisation ;
+	rdfs:label "University of Oxford"@en-gb ;
+	core:preferredLabel "University of Oxford"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/University_of_Oxford> ;
+	core:slug "University_of_Oxford"^^xsd:string ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:dateCreated "2014-03-04T09:05:07+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26423124> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26423124> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26423124> .
+
+<http://www.bbc.co.uk/news/uk-wales-26423124> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-26423124> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-26423124> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26423124> .
+
+<http://www.bbc.co.uk/news/uk-wales-26423124> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73336000/jpg/_73336716_polishsigns_getty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73336000/jpg/_73336716_polishsigns_getty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Polish shop signs" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340475_polishshopsigns.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340475_polishshopsigns.jpg> a cwork:Thumbnail ;
+	cwork:altText "Polish shop signs" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340477_polishsigns_getty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340477_polishsigns_getty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Polish shop signs" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340474_polishshopsigns.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340474_polishshopsigns.jpg> a cwork:Thumbnail ;
+	cwork:altText "Polish shop signs" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/60876000/jpg/_60876537_polishshopsigns.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/60876000/jpg/_60876537_polishshopsigns.jpg> a cwork:Thumbnail ;
+	cwork:altText "Polish shop signs" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/a802af32-83b1-4902-9f0d-469da30e0004#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340476_polishsigns_getty.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73340000/jpg/_73340476_polishsigns_getty.jpg> a cwork:Thumbnail ;
+	cwork:altText "Polish shop signs" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-03T14:12:48+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Silk Commission: Youth justice should be devolved" ;
+	cwork:shortTitle "Silk report to 'simplify' devolution" ;
+	cwork:description "Control over youth justice and policing should be devolved to Wales and the number of assembly members increased, says an influential report into assembly powers." ;
+	cms:locator <urn:bbc:cps:asset:26421684> , <urn:asset:e5e9ac13-b584-d446-bc02-1788afaf4b18> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:about <http://www.bbc.co.uk/things/043fb497-9deb-4007-b71f-d6adca6f5c5f#id> .
+
+<http://www.bbc.co.uk/things/043fb497-9deb-4007-b71f-d6adca6f5c5f#id> a news:Person ;
+	rdfs:label "Carwyn Jones"@en-gb ;
+	core:preferredLabel "Carwyn Jones"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Carwyn_Jones> ;
+	core:primaryTopicOf <http://en.wikipedia.org/wiki/Carwyn_Jones> ;
+	a core:Person , core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:about <http://www.bbc.co.uk/things/d3388312-648e-4c82-9fb3-2ebe39e0d772#id> .
+
+<http://www.bbc.co.uk/things/d3388312-648e-4c82-9fb3-2ebe39e0d772#id> a core:Organisation ;
+	rdfs:label "Dyfed-Powys Police"@en-gb ;
+	core:preferredLabel "Dyfed-Powys Police"@en-gb ;
+	core:sameAs <http://www.police.uk/dyfed-powys/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:about <http://www.bbc.co.uk/things/fc3c3fe4-3815-4ab2-b41f-afe998a5e70a#id> .
+
+<http://www.bbc.co.uk/things/fc3c3fe4-3815-4ab2-b41f-afe998a5e70a#id> a core:Organisation ;
+	rdfs:label "North Wales Police"@en-gb ;
+	core:preferredLabel "North Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/north-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:mentions <http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> .
+
+<http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> a core:Organisation ;
+	rdfs:label "South Wales Police"@en-gb ;
+	core:preferredLabel "South Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/south-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:mentions <http://www.bbc.co.uk/things/d9379ad0-f337-4721-9989-71a6f1177d99#id> .
+
+<http://www.bbc.co.uk/things/d9379ad0-f337-4721-9989-71a6f1177d99#id> a core:Organisation ;
+	rdfs:label "Gwent Police"@en-gb ;
+	core:preferredLabel "Gwent Police"@en-gb ;
+	core:sameAs <http://www.police.uk/gwent/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:dateCreated "2014-03-03T14:12:48+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:VideoFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26421684> .
+
+<http://www.bbc.co.uk/news/uk-wales-26421684> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335960_silk.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335960_silk.jpg> a cwork:Thumbnail ;
+	cwork:altText "police on the beat" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335959_silk.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335959_silk.jpg> a cwork:Thumbnail ;
+	cwork:altText "police on the beat" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335917_silk.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335917_silk.jpg> a cwork:Thumbnail ;
+	cwork:altText "police on the beat" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335962_silk.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335962_silk.jpg> a cwork:Thumbnail ;
+	cwork:altText "police on the beat" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335919_silk.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335919_silk.jpg> a cwork:Thumbnail ;
+	cwork:altText "police on the beat" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/fb3b2e91-d758-4eeb-81b9-e496d8288f82#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335961_silk.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73335000/jpg/_73335961_silk.jpg> a cwork:Thumbnail ;
+	cwork:altText "police on the beat" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-03T07:34:18+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Storms knock out Flat Holm weather station web feed" ;
+	cwork:shortTitle "Storms knock out weather station" ;
+	cwork:description "The weather station web feed from Flat Holm island is another victim of the winter storms, it emerges." ;
+	cms:locator <urn:bbc:cps:asset:26354543> , <urn:asset:a2b0e9d5-13bf-3243-80e8-6307d0f3bda4> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/18ad2344-0bdf-4878-9f75-558de9e1a0f3#id> .
+
+<http://www.bbc.co.uk/things/18ad2344-0bdf-4878-9f75-558de9e1a0f3#id> a geoname:GeoTagConcept ;
+	rdfs:label "Penarth"@en-gb ;
+	core:preferredLabel "Penarth"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2640496/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:mentions <http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id> .
+
+<http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id> a news:Theme ;
+	rdfs:label "Severe weather"@en-gb ;
+	core:preferredLabel "Severe weather"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Extreme_weather> ;
+	core:slug "Severe_weather"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:mentions <http://www.bbc.co.uk/things/9be8dfc1-e132-43e6-beb0-c17e88962f12#id> .
+
+<http://www.bbc.co.uk/things/9be8dfc1-e132-43e6-beb0-c17e88962f12#id> a news:Theme ;
+	rdfs:label "UK Storms"@en-gb ;
+	core:preferredLabel "UK Storms"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Storm> ;
+	core:slug "UK_Storms"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:dateCreated "2014-03-03T07:34:18+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26354543> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26354543> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26354543> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26354543> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26354543> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26354543> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26354543> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26354543> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240387_093826_087a6a3c-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240387_093826_087a6a3c-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Flatholm Island" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/70989000/jpg/_70989027_093826_087a6a3c-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/70989000/jpg/_70989027_093826_087a6a3c-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Flatholm Island" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240305_flat.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240305_flat.jpg> a cwork:Thumbnail ;
+	cwork:altText "Flat Holm (Pic: Hywel Williams)" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240306_flat.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240306_flat.jpg> a cwork:Thumbnail ;
+	cwork:altText "Flat Holm (Pic: Hywel Williams)" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240388_093826_087a6a3c-1.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73240000/jpg/_73240388_093826_087a6a3c-1.jpg> a cwork:Thumbnail ;
+	cwork:altText "Flatholm Island" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/a99914dc-5623-4281-96a4-8dd682a5f396#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/71006000/jpg/_71006901_flat.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/71006000/jpg/_71006901_flat.jpg> a cwork:Thumbnail ;
+	cwork:altText "Flat Holm (Pic: Hywel Williams)" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-02T13:13:52+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Policing powers: PCCs opposed on expected Silk proposals" ;
+	cwork:shortTitle "PCCs opposed on policing powers" ;
+	cwork:description "Two of Wales' four police and crime commissioners (PCC) take opposing views on whether policing powers should be devolved." ;
+	cms:locator <urn:bbc:cps:asset:26406665> , <urn:asset:7f7bd2b7-423a-1e4c-ae74-13509dd58549> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:about <http://www.bbc.co.uk/things/d3388312-648e-4c82-9fb3-2ebe39e0d772#id> .
+
+<http://www.bbc.co.uk/things/d3388312-648e-4c82-9fb3-2ebe39e0d772#id> a core:Organisation ;
+	rdfs:label "Dyfed-Powys Police"@en-gb ;
+	core:preferredLabel "Dyfed-Powys Police"@en-gb ;
+	core:sameAs <http://www.police.uk/dyfed-powys/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:about <http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> .
+
+<http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> a core:Organisation ;
+	rdfs:label "South Wales Police"@en-gb ;
+	core:preferredLabel "South Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/south-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:about <http://www.bbc.co.uk/things/fc3c3fe4-3815-4ab2-b41f-afe998a5e70a#id> .
+
+<http://www.bbc.co.uk/things/fc3c3fe4-3815-4ab2-b41f-afe998a5e70a#id> a core:Organisation ;
+	rdfs:label "North Wales Police"@en-gb ;
+	core:preferredLabel "North Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/north-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:about <http://www.bbc.co.uk/things/d9379ad0-f337-4721-9989-71a6f1177d99#id> .
+
+<http://www.bbc.co.uk/things/d9379ad0-f337-4721-9989-71a6f1177d99#id> a core:Organisation ;
+	rdfs:label "Gwent Police"@en-gb ;
+	core:preferredLabel "Gwent Police"@en-gb ;
+	core:sameAs <http://www.police.uk/gwent/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:dateCreated "2014-03-02T13:13:52+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-politics-26406665> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-politics-26406665> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-politics-26406665> .
+
+<http://www.bbc.co.uk/news/uk-wales-politics-26406665> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-politics-26406665> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-politics-26406665> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-politics-26406665> .
+
+<http://www.bbc.co.uk/news/uk-wales-politics-26406665> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312531_policeman_woman.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312531_policeman_woman.jpg> a cwork:Thumbnail ;
+	cwork:altText "Policeman and woman in Wales" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312367_policeman_woman.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312367_policeman_woman.jpg> a cwork:Thumbnail ;
+	cwork:altText "Policeman and woman in Wales" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312532_policeman_woman.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312532_policeman_woman.jpg> a cwork:Thumbnail ;
+	cwork:altText "Policeman and woman in Wales" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312361_policeman_woman.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312361_policeman_woman.jpg> a cwork:Thumbnail ;
+	cwork:altText "Policeman and woman in Wales" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312533_policeman_woman.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73312000/jpg/_73312533_policeman_woman.jpg> a cwork:Thumbnail ;
+	cwork:altText "Policeman and woman in Wales" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/1caba79a-4bbd-4538-a7d8-44b02dcb52fd#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73306000/jpg/_73306472_policeman_woman.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73306000/jpg/_73306472_policeman_woman.jpg> a cwork:Thumbnail ;
+	cwork:altText "Policeman and woman in Wales" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-02T13:12:28+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Police commissioners divided on devolving powers to Wales" ;
+	cwork:shortTitle "Commissioners split over police powers" ;
+	cwork:description "Two of Wales' four police and crime commissioners (PCC) take opposing views on whether policing powers should be devolved to the Welsh assembly." ;
+	cms:locator <urn:asset:6edaa6eb-8279-5047-b53b-ac51a72f30a6> , <urn:bbc:cps:asset:26407370> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:about <http://www.bbc.co.uk/things/d3388312-648e-4c82-9fb3-2ebe39e0d772#id> .
+
+<http://www.bbc.co.uk/things/d3388312-648e-4c82-9fb3-2ebe39e0d772#id> a core:Organisation ;
+	rdfs:label "Dyfed-Powys Police"@en-gb ;
+	core:preferredLabel "Dyfed-Powys Police"@en-gb ;
+	core:sameAs <http://www.police.uk/dyfed-powys/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:about <http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> .
+
+<http://www.bbc.co.uk/things/ec5e3279-c5a2-4f65-a326-124cbfdf3619#id> a core:Organisation ;
+	rdfs:label "South Wales Police"@en-gb ;
+	core:preferredLabel "South Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/south-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:about <http://www.bbc.co.uk/things/fc3c3fe4-3815-4ab2-b41f-afe998a5e70a#id> .
+
+<http://www.bbc.co.uk/things/fc3c3fe4-3815-4ab2-b41f-afe998a5e70a#id> a core:Organisation ;
+	rdfs:label "North Wales Police"@en-gb ;
+	core:preferredLabel "North Wales Police"@en-gb ;
+	core:sameAs <http://www.police.uk/north-wales/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:about <http://www.bbc.co.uk/things/d9379ad0-f337-4721-9989-71a6f1177d99#id> .
+
+<http://www.bbc.co.uk/things/d9379ad0-f337-4721-9989-71a6f1177d99#id> a core:Organisation ;
+	rdfs:label "Gwent Police"@en-gb ;
+	core:preferredLabel "Gwent Police"@en-gb ;
+	core:sameAs <http://www.police.uk/gwent/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:dateCreated "2014-03-02T13:12:28+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:AudioFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-26407370> .
+
+<http://www.bbc.co.uk/news/uk-wales-26407370> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/58040000/jpg/_58040772_bluelights_grid.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/58040000/jpg/_58040772_bluelights_grid.jpg> a cwork:Thumbnail ;
+	cwork:altText "Police car" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313633_bluelights_grid.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313633_bluelights_grid.jpg> a cwork:Thumbnail ;
+	cwork:altText "Police car" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313635_bluelights_grid.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313635_bluelights_grid.jpg> a cwork:Thumbnail ;
+	cwork:altText "Police car" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313632_bluelights_grid.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313632_bluelights_grid.jpg> a cwork:Thumbnail ;
+	cwork:altText "Police car" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313634_bluelights_grid.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313634_bluelights_grid.jpg> a cwork:Thumbnail ;
+	cwork:altText "Police car" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/77fbd3db-bdb4-4af8-b3a9-77a095756993#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313358_bluelights_grid.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73313000/jpg/_73313358_bluelights_grid.jpg> a cwork:Thumbnail ;
+	cwork:altText "Police car" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-01T18:31:36+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Policing powers 'should be devolved,' Silk report to say" ;
+	cwork:shortTitle "Policing powers 'should be devolved'" ;
+	cwork:description "The Welsh government should have powers over policing, an influential report into the future of devolution is expected to say on Monday." ;
+	cms:locator <urn:bbc:cps:asset:26399148> , <urn:asset:727d988b-f3cb-f24f-a4ef-c9d88fd1378a> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/ed9d1ef3-eded-4f81-b158-be49cfc1ea8f#id> .
+
+<http://www.bbc.co.uk/things/ed9d1ef3-eded-4f81-b158-be49cfc1ea8f#id> a news:Person ;
+	rdfs:label "David Cameron"@en-gb ;
+	core:preferredLabel "David Cameron"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/David_Cameron> ;
+	core:primaryTopicOf <http://en.wikipedia.org/wiki/David_Cameron> ;
+	a core:Person , core:Thing , nsl:Topic , news:Person ;
+	core:sameAs <http://rdf.freebase.com/ns/m.0266lb> ;
+	a core:Person , core:Thing , nsl:Topic , news:Person ;
+	core:sameAs <http://www.wikidata.org/entity/Q192> ;
+	a core:Person , core:Thing , nsl:Topic .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:about <http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> .
+
+<http://www.bbc.co.uk/things/a9e7b0b9-b8c0-469b-b8dd-1acd4b7ec254#id> a news:Theme ;
+	rdfs:label "Wales Politics"@en-gb ;
+	core:preferredLabel "Wales Politics"@en-gb ;
+	core:sameAs <http://dbpedia.org/resource/Politics_of_Wales> ;
+	core:slug "Wales_Politics"^^xsd:string ;
+	a core:Theme , core:Thing .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:dateCreated "2014-03-01T18:31:36+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-politics-26399148> .
+
+<http://www.bbc.co.uk/news/uk-wales-politics-26399148> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-politics-26399148> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-politics-26399148> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-politics-26399148> .
+
+<http://www.bbc.co.uk/news/uk-wales-politics-26399148> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-politics-26399148> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-politics-26399148> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300385_73299754.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300385_73299754.jpg> a cwork:Thumbnail ;
+	cwork:altText "Two police on patrol" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300384_73299754.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300384_73299754.jpg> a cwork:Thumbnail ;
+	cwork:altText "Two police on patrol" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73299000/jpg/_73299756_73299754.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73299000/jpg/_73299756_73299754.jpg> a cwork:Thumbnail ;
+	cwork:altText "Two police on patrol" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300249_73299754.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300249_73299754.jpg> a cwork:Thumbnail ;
+	cwork:altText "Two police on patrol" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300442_73299754.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300442_73299754.jpg> a cwork:Thumbnail ;
+	cwork:altText "Two police on patrol" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/6ecb4d0a-bbd9-4faa-8058-8cede8365bba#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300441_73299754.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73300000/jpg/_73300441_73299754.jpg> a cwork:Thumbnail ;
+	cwork:altText "Two police on patrol" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+result:this result:listItem <http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> a cwork:CreativeWork ;
+	cwork:dateModified "2014-03-01T17:00:43+00:00"^^xsd:dateTime ;
+	a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Llandaff Cathedral marks £1.5m organ work with recital" ;
+	cwork:shortTitle "Recital marks cathedral organ work" ;
+	cwork:description "The end of six year's work to replace the organ at Llandaff Cathedral is marked with a free recital." ;
+	cms:locator <urn:bbc:cps:asset:26391632> , <urn:asset:e352d488-60d7-574d-8377-2257e3ef0bb1> ;
+	cwork:category <http://www.bbc.co.uk/ontologies/applicationlogic-news/News> ;
+	cwork:about <http://www.bbc.co.uk/things/00eb010f-568a-4b89-bbfe-799d5b812bed#id> .
+
+<http://www.bbc.co.uk/things/00eb010f-568a-4b89-bbfe-799d5b812bed#id> a news:Place ;
+	rdfs:label "Wales"@en-gb ;
+	core:preferredLabel "Wales"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2634895/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:about <http://www.bbc.co.uk/things/27094cb6-a61c-4236-ba93-f8ca99921444#id> .
+
+<http://www.bbc.co.uk/things/27094cb6-a61c-4236-ba93-f8ca99921444#id> a geoname:GeoTagConcept ;
+	rdfs:label "Llandaff"@en-gb ;
+	core:preferredLabel "Llandaff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2644160/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:about <http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> .
+
+<http://www.bbc.co.uk/things/ede5b66b-64b5-4cbb-b9b0-06f10550dfbd#id> a geoname:GeoTagConcept ;
+	rdfs:label "Cardiff"@en-gb ;
+	core:preferredLabel "Cardiff"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2653822/> ;
+	a core:Place , core:Thing .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:mentions <http://www.bbc.co.uk/things/26bf0f8a-543c-425a-9260-f046f924d7d6#id> .
+
+<http://www.bbc.co.uk/things/26bf0f8a-543c-425a-9260-f046f924d7d6#id> a core:Place ;
+	rdfs:label "Coventry"@en-gb ;
+	core:preferredLabel "Coventry"@en-gb ;
+	core:sameAs <http://sws.geonames.org/2652221/> ;
+	a core:Thing .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:dateCreated "2014-03-01T17:00:43+00:00"^^xsd:dateTime ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26391632> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26391632> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26391632> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26391632> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26391632> .
+
+<http://www.bbc.co.uk/news/mobile/uk-wales-south-east-wales-26391632> bbc:platform bbc:Mobile ;
+	bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> bbc:primaryContentOf <http://www.bbc.co.uk/news/uk-wales-south-east-wales-26391632> .
+
+<http://www.bbc.co.uk/news/uk-wales-south-east-wales-26391632> bbc:platform bbc:HighWeb ;
+	bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73294000/jpg/_73294752_organbbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73294000/jpg/_73294752_organbbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Organ and embroidered standard flag in interior of Llandaff Cathedral" ;
+	cwork:thumbnailType cwork:StandardThumbnail .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295060_organbbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295060_organbbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Organ and embroidered standard flag in interior of Llandaff Cathedral" ;
+	cwork:thumbnailType cwork:FixedSize464Thumbnail .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295059_organbbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295059_organbbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Organ and embroidered standard flag in interior of Llandaff Cathedral" ;
+	cwork:thumbnailType cwork:FixedSize144Thumbnail .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295058_organbbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295058_organbbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Organ and embroidered standard flag in interior of Llandaff Cathedral" ;
+	cwork:thumbnailType cwork:FixedSize66Thumbnail .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295072_organbbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73295000/jpg/_73295072_organbbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Organ and embroidered standard flag in interior of Llandaff Cathedral" ;
+	cwork:thumbnailType cwork:FixedSize224Thumbnail .
+
+<http://www.bbc.co.uk/things/0d68ab42-9f3a-448f-8f95-408b19501567#id> cwork:thumbnail <http://news.bbcimg.co.uk/media/images/73294000/jpg/_73294754_organbbc.jpg> .
+
+<http://news.bbcimg.co.uk/media/images/73294000/jpg/_73294754_organbbc.jpg> a cwork:Thumbnail ;
+	cwork:altText "Organ and embroidered standard flag in interior of Llandaff Cathedral" ;
+	cwork:thumbnailType cwork:CloseUpThumbnail .

@@ -9,13 +9,15 @@ import java.util.*;
 public class RdfTreeGenerator {
 
     private final String rdfResultOntologyPrefix;
+    private HashMap<RDFNode, Integer> mapFromChildToDepth = null;
 
     enum TreeType {
         UNKNOWN,
         ITEM,
         LIST,
         LIST_WITH_ORDER_BY_PREDICATE
-    } 
+    }
+
     public RdfTreeGenerator() {
         rdfResultOntologyPrefix = RdfTree.DEFAULT_RESULT_ONTOLOGY_URI_PREFIX;
     }
@@ -37,25 +39,22 @@ public class RdfTreeGenerator {
     }
 
     public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces, Map<String, String> nameOverrides) throws RdfTreeException {
-
         NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, nameOverrides, rdfResultOntologyPrefix);
-
+        mapFromChildToDepth = new HashMap<RDFNode, Integer>();
         TreeType treeType = TreeType.UNKNOWN;
 
         if (model.isEmpty())
-            return new RdfTree(model, nameResolver, null);
+            return new RdfTree(model, nameResolver, null, mapFromChildToDepth);
 
         List<Statement> results = getSomeStatements(model, new SimpleSelector(
-            model.getResource(rdfResultOntologyPrefix + "this"),
-            null,
-            (RDFNode) null),
-            "result:this is not present as the subject of a statement, so an RDF tree cannot be generated");
-
+                model.getResource(rdfResultOntologyPrefix + "this"),
+                null,
+                (RDFNode) null),
+                "result:this is not present as the subject of a statement, so an RDF tree cannot be generated");
         Statement firstResult = results.get(0);
         Resource orderingPredicate = null;
         boolean sortAscending = true;
         List<Resource> listItems = Lists.newArrayList();
-
         for (Statement result : results) {
             if (!result.getObject().isResource())
                 throw new RdfTreeException("result:this statement contained a non-resource object");
@@ -103,9 +102,8 @@ public class RdfTreeGenerator {
                 }
             }
         }
-
         if (treeType == TreeType.ITEM) {
-            return buildRdfTree(model, new RdfTree(model, nameResolver, firstResult.getObject()));
+            return buildRdfTree(model, new RdfTree(model, nameResolver, firstResult.getObject(), mapFromChildToDepth));
         } else if (treeType == TreeType.LIST) {
             return buildRdfList(model, nameResolver, generateListItemsUsingResultNext(model, firstResult.getObject().asResource()));
         } else if (treeType == TreeType.LIST_WITH_ORDER_BY_PREDICATE) {
@@ -117,7 +115,7 @@ public class RdfTreeGenerator {
     }
 
     private List<Resource> sortListAccordingToOrderingPredicate(
-        List<Resource> listItems, final Resource orderingPredicate, final boolean sortAscending, final Model model) {
+            List<Resource> listItems, final Resource orderingPredicate, final boolean sortAscending, final Model model) {
         Collections.sort(listItems, new Comparator<Resource>() {
             public int compare(Resource first, Resource second) {
                 List<RDFNode> firstValues = getAllValuesForSubjectAndPredicate(model, first, orderingPredicate);
@@ -152,8 +150,8 @@ public class RdfTreeGenerator {
                             if (!(value1 instanceof String) && value2 instanceof String) return 1;
 
                             return RdfTreeUtils.compareObjects(
-                                node1.asLiteral().getValue(),
-                                node2.asLiteral().getValue());
+                                    node1.asLiteral().getValue(),
+                                    node2.asLiteral().getValue());
                         }
                         return RdfTreeUtils.compareObjects(node1, node2);
                     }
@@ -172,10 +170,10 @@ public class RdfTreeGenerator {
         Property property = predicate == null ? null : model.getProperty(predicate.getURI());
 
         List<Statement> statements = model.listStatements(
-            new SimpleSelector(
-                subject,
-                property,
-                (RDFNode) null)).toList();
+                new SimpleSelector(
+                        subject,
+                        property,
+                        (RDFNode) null)).toList();
 
         return Lists.transform(statements, new Function<Statement, RDFNode>() {
             public RDFNode apply(Statement statement) {
@@ -186,9 +184,9 @@ public class RdfTreeGenerator {
 
     private List<Resource> generateListItemsUsingResultNext(Model model, Resource firstItem) throws RdfTreeException {
         Statement next = getNoneOrSingleStatement(model, new SimpleSelector(
-            firstItem,
-            model.getProperty(rdfResultOntologyPrefix + "next"),
-            (RDFNode) null), "too many result:next predicates assigned to " + firstItem.toString());
+                firstItem,
+                model.getProperty(rdfResultOntologyPrefix + "next"),
+                (RDFNode) null), "too many result:next predicates assigned to " + firstItem.toString());
 
         if (next != null) {
             if (!next.getObject().isResource()) {
@@ -203,14 +201,15 @@ public class RdfTreeGenerator {
 
     private RdfTree buildRdfTree(Model model, RdfTree root) {
         while (!root.isFullyConstructed()) {
-            expandRdfTree(model, null, root);
+            expandRdfTree(model, root);
         }
 
         return root;
     }
 
     private RdfTree buildRdfList(Model model, NameResolver nameResolver, List<Resource> listItems) throws RdfTreeException {
-        RdfTree list = new RdfTree(model, nameResolver);
+        RdfTree list = new RdfTree(model, nameResolver, mapFromChildToDepth);
+
 
         for (Resource listItem : listItems) {
             list.addListItem(listItem);
@@ -218,55 +217,62 @@ public class RdfTreeGenerator {
 
         while (!list.isFullyConstructed()) {
             for (RdfTree childTree : list.getChildren()) {
-                expandRdfTree(model, list, childTree);
+                expandRdfTree(model, childTree);
             }
         }
 
         return list;
     }
 
-    private RdfTree expandRdfTree(Model model, RdfTree root, RdfTree current) {
+    private RdfTree expandRdfTree(Model model, RdfTree current) {
         if (!current.isConstructed()) {
+
+            // If this is a URI;
             if (current.getNode().isResource()) {
-                if (root == null) root = current;
 
+                // Find all statements in which this resource is the subject.
                 List<Statement> statements = model.listStatements(new SimpleSelector(
-                    current.getNode().asResource(),
-                    null,
-                    (RDFNode) null)).toList();
+                        current.getNode().asResource(),
+                        null,
+                        (RDFNode) null)).toList();
 
+                // Find all statements in which this resource is the object.
                 List<Statement> inverseStatements = model.listStatements(new SimpleSelector(
-                    null,
-                    null,
-                    (RDFNode) current.getNode())).toList();
+                        null,
+                        null,
+                        (RDFNode) current.getNode())).toList();
 
                 inverseStatements.removeAll(statements);
 
+                // If this URI is RDF `type', then mark it as so.
                 List<Statement> types = model.listStatements(new SimpleSelector(
-                    current.getNode().asResource(),
-                    model.getProperty(RdfTree.RDF_TYPE),
-                    (RDFNode) null)).toList();
+                        current.getNode().asResource(),
+                        model.getProperty(RdfTree.RDF_TYPE),
+                        (RDFNode) null)).toList();
 
                 if (types.size() == 1) {
                     current.setType(types.get(0).getObject().asResource());
                 }
 
-                handleStatements(model, current, statements, false);
-                handleStatements(model, current, inverseStatements, true);
+                // Add statements as children of `current'
+                handleStatements(current, statements);
+                handleStatements(current, inverseStatements);
             }
 
             current.markAsConstructed();
+
         } else {
-            for (RdfTree childTree : current.getChildren()) {
-                expandRdfTree(model, root, childTree);
+            if (current.getNode().isResource()) {
+                for (RdfTree childTree : current.getChildren()) {
+                    expandRdfTree(model, childTree);
+                }
             }
         }
 
         return current;
     }
 
-    private void handleStatements(Model model, RdfTree current, List<Statement> statements,
-                                  boolean inverse) {
+    private void handleStatements(RdfTree current, List<Statement> statements) {
         for (Statement statement : statements) {
             if (!statement.getPredicate().getNameSpace().equals(rdfResultOntologyPrefix)) {
                 current.addChild(statement);

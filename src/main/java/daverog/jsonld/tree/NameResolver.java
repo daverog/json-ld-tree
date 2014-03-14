@@ -20,7 +20,6 @@ public class NameResolver {
     private final String rdfResultOntologyPrefix;
 
 	public NameResolver(Model model, List<String> prioritisedNamespaces, Map<String,String> nameOverrides, String rdfResultOntologyPrefix) {
-
 		checkDuplicateNameOverrides(nameOverrides);
 
 		this.model = model;
@@ -40,7 +39,8 @@ public class NameResolver {
 			ResourceType type = ResourceType.NONE;
 			if (statement.getObject().isResource())	{
 				Resource objectResource = statement.getObject().asResource();
-				if (objectResource.getNameSpace() != null && model.getNsURIPrefix(objectResource.getNameSpace()) != null) {
+        String nameSpace = objectResource.getNameSpace();
+				if (nameSpace != null && model.getNsURIPrefix(nameSpace) != null) {
 					type = ResourceType.VOCAB;
 				} else {
 					type = ResourceType.ID;
@@ -61,8 +61,10 @@ public class NameResolver {
 	}
 
     private void registerResource(TypedResource resource) {
-		if (resource.getResource().getNameSpace() != null && !resource.getResource().getNameSpace().equals(rdfResultOntologyPrefix)) {
-			String currentNamespace = resource.getResource().getNameSpace();
+      String nameSpace = resource.getResource().getNameSpace();
+
+      if (nameSpace != null && !nameSpace.equals(rdfResultOntologyPrefix)) {
+			String currentNamespace = nameSpace;
 			String prefix = model.getNsURIPrefix(currentNamespace);
 			if (prefix != null && currentNamespace != null) {
 				TypedResource existingResource = mappedResources.get(resource.getResource().getLocalName());
@@ -129,11 +131,13 @@ public class NameResolver {
     }
 
 	public String getPrefixForResourceUri(Resource resource) {
-		if (resource.getNameSpace().equals(RdfTree.RDF_PREFIX)) return "rdf";
-		if (resource.getNameSpace().equals(RdfTree.OWL_PREFIX)) return "owl";
+		String nameSpace = resource.getNameSpace();
+
+    if (nameSpace.equals(RdfTree.RDF_PREFIX)) return "rdf";
+		if (nameSpace.equals(RdfTree.OWL_PREFIX)) return "owl";
         if (nameOverrides.containsKey(resource.getURI())) return null;
 
-		return model.getNsURIPrefix(resource.getNameSpace());
+		return model.getNsURIPrefix(nameSpace);
 	}
 
 	public int compareNames(Resource resource, Resource otherResource) {
