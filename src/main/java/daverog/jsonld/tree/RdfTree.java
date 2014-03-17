@@ -99,8 +99,16 @@ public class RdfTree implements Comparable<RdfTree> {
 		}
 
 		RdfTree rdfTree = new RdfTree(model, nameResolver, this, childNode, statement.getPredicate(), inverse, mapFromChildToDepth);
-		children.add(rdfTree);
-		mapFromChildToDepth.put(rdfTree.getNode(), getDepth());
+		addChildNode(rdfTree);
+	}
+
+	private void addChildNode(RdfTree child) {
+		children.add(child);
+		int existingDepth = getDepthInTree(node);
+		int depth = getDepth();
+		if (existingDepth == -1 || existingDepth < depth) {
+				mapFromChildToDepth.put(child.getNode(), depth); // not +1 because we measure root node as 0 depth.
+		}
 	}
 
 	public void addListItem(Resource listItem) {
