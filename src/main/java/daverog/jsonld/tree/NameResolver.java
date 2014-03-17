@@ -12,34 +12,34 @@ import java.util.Map;
 import java.util.SortedMap;
 
 public class NameResolver {
-	
+
 	private final Model model;
 	private final SortedMap<String, TypedResource> mappedResources;
 	private final List<String> prioritisedNamespaces;
-    private Map<String, String> nameOverrides;
-    private final String rdfResultOntologyPrefix;
+	private Map<String, String> nameOverrides;
+	private final String rdfResultOntologyPrefix;
 
 	public NameResolver(Model model, List<String> prioritisedNamespaces, Map<String,String> nameOverrides, String rdfResultOntologyPrefix) {
 		checkDuplicateNameOverrides(nameOverrides);
 
 		this.model = model;
-        this.nameOverrides = nameOverrides;
-        this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
+		this.nameOverrides = nameOverrides;
+		this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
 		this.prioritisedNamespaces = Lists.newArrayList(RdfTree.RDF_PREFIX, RdfTree.OWL_PREFIX);
 		this.prioritisedNamespaces.addAll(prioritisedNamespaces);
 
 		mappedResources = Maps.newTreeMap();
-		
+
 		StmtIterator statements = model.listStatements();
 		while(statements.hasNext()) {
 			Statement statement = statements.next();
-			
+
 			registerResource(new TypedResource(statement.getSubject(), ResourceType.NONE));
 
 			ResourceType type = ResourceType.NONE;
 			if (statement.getObject().isResource())	{
 				Resource objectResource = statement.getObject().asResource();
-        String nameSpace = objectResource.getNameSpace();
+				String nameSpace = objectResource.getNameSpace();
 				if (nameSpace != null && model.getNsURIPrefix(nameSpace) != null) {
 					type = ResourceType.VOCAB;
 				} else {
@@ -47,7 +47,7 @@ public class NameResolver {
 				}
 				registerResource(new TypedResource(objectResource, ResourceType.NONE));
 			}
-			
+
 			registerResource(new TypedResource(statement.getPredicate(), type));
 		}
 	}
@@ -60,10 +60,10 @@ public class NameResolver {
 		}
 	}
 
-    private void registerResource(TypedResource resource) {
-      String nameSpace = resource.getResource().getNameSpace();
+	private void registerResource(TypedResource resource) {
+		String nameSpace = resource.getResource().getNameSpace();
 
-      if (nameSpace != null && !nameSpace.equals(rdfResultOntologyPrefix)) {
+		if (nameSpace != null && !nameSpace.equals(rdfResultOntologyPrefix)) {
 			String currentNamespace = nameSpace;
 			String prefix = model.getNsURIPrefix(currentNamespace);
 			if (prefix != null && currentNamespace != null) {
@@ -108,7 +108,7 @@ public class NameResolver {
 		if (mappedResource != null && mappedResource.getResource().equals(resource)) {
 			return resource.getLocalName();
 		}
-		
+
 		String prefix = getPrefixForResourceUri(resource);
 		if (prefix != null) {
 			return prefix + "_" + resource.getLocalName();
@@ -117,25 +117,25 @@ public class NameResolver {
 		}
 	}
 
-    public String getPrefixedName(Resource resource) {
-        if (resource.isAnon()) return "@blank";
-        if (resource.getURI().equals(RdfTree.RDF_TYPE)) return "type";
-        if (nameOverrides.containsKey(resource.getURI())) return nameOverrides.get(resource.getURI());
+	public String getPrefixedName(Resource resource) {
+		if (resource.isAnon()) return "@blank";
+		if (resource.getURI().equals(RdfTree.RDF_TYPE)) return "type";
+		if (nameOverrides.containsKey(resource.getURI())) return nameOverrides.get(resource.getURI());
 
-        String prefix = getPrefixForResourceUri(resource);
-        if (prefix != null) {
-            return prefix + ":" + resource.getLocalName();
-        } else {
-            return resource.getURI();
-        }
-    }
+		String prefix = getPrefixForResourceUri(resource);
+		if (prefix != null) {
+			return prefix + ":" + resource.getLocalName();
+		} else {
+			return resource.getURI();
+		}
+	}
 
 	public String getPrefixForResourceUri(Resource resource) {
 		String nameSpace = resource.getNameSpace();
 
-    if (nameSpace.equals(RdfTree.RDF_PREFIX)) return "rdf";
+		if (nameSpace.equals(RdfTree.RDF_PREFIX)) return "rdf";
 		if (nameSpace.equals(RdfTree.OWL_PREFIX)) return "owl";
-        if (nameOverrides.containsKey(resource.getURI())) return null;
+		if (nameOverrides.containsKey(resource.getURI())) return null;
 
 		return model.getNsURIPrefix(nameSpace);
 	}
@@ -154,7 +154,7 @@ public class NameResolver {
 		return mappedResources;
 	}
 
-    protected class TypedResource {
+	protected class TypedResource {
 		private final Resource resource;
 		private final ResourceType type;
 
@@ -171,7 +171,7 @@ public class NameResolver {
 			return type;
 		}
 	}
-	
+
 	protected enum ResourceType {
 		NONE,
 		VOCAB,
