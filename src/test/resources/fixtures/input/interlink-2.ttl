@@ -1,0 +1,27 @@
+@prefix result: <http://purl.org/ontology/rdf-result/> .
+
+result:this result:next <urn:a> .
+<urn:a> result:next <urn:b> .
+<urn:b> result:next <urn:c> .
+
+<urn:a> <urn:p1> <urn:1> .
+
+<urn:1> <urn:p2> <urn:a> .
+<urn:1> <urn:p3> <urn:2> .
+
+<urn:2> <urn:p4> <urn:c> .
+<urn:2> <urn:p5> <urn:1> .
+<urn:2> <urn:p6> <urn:a> .
+
+<urn:b> <urn:p7> <urn:5> .
+<urn:b> <urn:p8> <urn:1> .
+
+<urn:5> <urn:p9> <urn:b> .
+
+<urn:6> <urn:p10> <urn:2> .
+<urn:6> <urn:p12> <urn:5> .
+
+<urn:c> <urn:p13> <urn:6> .
+<urn:c> <urn:p14> <urn:3> .
+
+<urn:3> <urn:p15> <urn:4> .
