@@ -9,7 +9,6 @@ import java.util.*;
 public class RdfTreeGenerator {
 
     private final String rdfResultOntologyPrefix;
-    private HashMap<RDFNode, Integer> mapFromChildToDepth = null;
 
     enum TreeType {
         UNKNOWN,
@@ -40,8 +39,8 @@ public class RdfTreeGenerator {
 
     public RdfTree generateRdfTree(Model model, List<String> prioritisedNamespaces, Map<String, String> nameOverrides) throws RdfTreeException {
         NameResolver nameResolver = new NameResolver(model, prioritisedNamespaces, nameOverrides, rdfResultOntologyPrefix);
-        mapFromChildToDepth = new HashMap<RDFNode, Integer>();
         TreeType treeType = TreeType.UNKNOWN;
+        HashMap<RDFNode, Integer> mapFromChildToDepth = new HashMap<RDFNode, Integer>();
 
         if (model.isEmpty())
             return new RdfTree(model, nameResolver, null, mapFromChildToDepth);
@@ -208,7 +207,7 @@ public class RdfTreeGenerator {
     }
 
     private RdfTree buildRdfList(Model model, NameResolver nameResolver, List<Resource> listItems) throws RdfTreeException {
-        RdfTree list = new RdfTree(model, nameResolver, mapFromChildToDepth);
+        RdfTree list = new RdfTree(model, nameResolver, new HashMap<RDFNode, Integer>());
 
 
         for (Resource listItem : listItems) {
