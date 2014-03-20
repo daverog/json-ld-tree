@@ -1,0 +1,102 @@
+{
+  "@id": "urn:a",
+  "urn:p1": [
+    {
+      "@id": "urn:1",
+      "urn:p3": [
+        {
+          "@id": "urn:2",
+          "urn:p4": [
+            {
+              "@id": "urn:c",
+              "urn:p13": [
+                {
+                  "@id": "urn:6",
+                  "urn:p12": [
+                    {
+                      "@id": "urn:5",
+                      "urn:p9": "urn:b"
+                    }
+                  ]
+                }
+              ],
+              "urn:p14": [
+                {
+                  "@id": "urn:3",
+                  "urn:p15": "urn:4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "@reverse": {
+    "urn:p2": [
+      {
+        "@id": "urn:1",
+        "urn:p3": [
+          {
+            "@id": "urn:2",
+            "urn:p4": [
+              {
+                "@id": "urn:c",
+                "urn:p13": [
+                  {
+                    "@id": "urn:6",
+                    "urn:p12": [
+                      {
+                        "@id": "urn:5",
+                        "urn:p9": "urn:b"
+                      }
+                    ]
+                  }
+                ],
+                "urn:p14": [
+                  {
+                    "@id": "urn:3",
+                    "urn:p15": "urn:4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "urn:p6": [
+      {
+        "@id": "urn:2",
+        "urn:p5": "urn:1",
+        "urn:p4": [
+          {
+            "@id": "urn:c",
+            "urn:p13": [
+              {
+                "@id": "urn:6",
+                "urn:p12": [
+                  {
+                    "@id": "urn:5",
+                    "urn:p9": [
+                      {
+                        "@id": "urn:b",
+                        "urn:p8": "urn:1"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "urn:p14": [
+              {
+                "@id": "urn:3",
+                "urn:p15": "urn:4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

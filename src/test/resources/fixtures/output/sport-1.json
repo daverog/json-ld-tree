@@ -1,0 +1,477 @@
+{
+  "results": [
+    {
+      "@id": "http://www.bbc.co.uk/things/c4fd9b4b-134f-4b30-989c-e90281d43dfc#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Tetley\u0027s Challenge Cup",
+      "core:preferredLabel": "Rugby League Challenge Cup",
+      "core:shortLabel": "Challenge Cup",
+      "core:slug": "challenge-cup",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735437439",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ],
+      "@reverse": {
+        "sport:recurringCompetition": [
+          {
+            "@id": "http://www.bbc.co.uk/things/0191fba6-29a5-4df0-96de-ff471a65c804#id",
+            "@type": [
+              "sport:Competition"
+            ],
+            "event:time": [
+              {
+                "@id": "http://www.bbc.co.uk/things/20eefd64-cd6d-4f87-8948-d1af809c5ce6#id",
+                "@type": [
+                  "time:TemporalEntity"
+                ],
+                "tl:hasBeginning": "2014-01-01",
+                "tl:hasEnd": "2014-12-31"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/5d39512a-4f39-42bb-bb1c-3c5c8c9fdb94#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Alitalia European Cup",
+      "core:preferredLabel": "Rugby League European Cup",
+      "core:shortLabel": "European Cup",
+      "core:slug": "european-cup",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/international",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735441348",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/8febf904-b4a8-4f3c-a33c-879c7b1dead6#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "First Utility Super League",
+      "core:preferredLabel": "Rugby League First Utility Super League",
+      "core:shortLabel": "Super League",
+      "core:slug": "super-league",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735435517",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ],
+      "@reverse": {
+        "sport:recurringCompetition": [
+          {
+            "@id": "http://www.bbc.co.uk/things/1b57833d-613a-4031-b71e-73206e8434bf#id",
+            "@type": [
+              "sport:Competition"
+            ],
+            "event:time": [
+              {
+                "@id": "http://www.bbc.co.uk/things/fd044703-cb56-4403-a22f-1114ff2a68bb#id",
+                "@type": [
+                  "time:TemporalEntity"
+                ],
+                "tl:hasBeginning": "2014-01-01",
+                "tl:hasEnd": "2014-12-31"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/679d38ad-593c-42eb-b164-1d64baab3cf2#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Gillette Four Nations",
+      "core:preferredLabel": "Rugby League Four Nations",
+      "core:shortLabel": "Four Nations",
+      "core:slug": "four-nations",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/international",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735441346",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/ca4e3d49-b446-4bd2-8c46-6190d349b26b#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Kingstone Press Championship",
+      "core:preferredLabel": "Rugby League Kingstone Press Championship",
+      "core:shortLabel": "Championship",
+      "core:slug": "championship",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735435549",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/ad086ea3-6356-4586-abe5-5194bfa077f8#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Kingstone Press Championship One",
+      "core:preferredLabel": "Rugby League Kingstone Press Championship One",
+      "core:shortLabel": "Championship One",
+      "core:slug": "championship-one",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735435550",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/29371609-8a68-4fce-b828-247e01fba3ed#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "NRL Telstra Premiership",
+      "core:preferredLabel": "Rugby League NRL Premiership",
+      "core:shortLabel": "NRL Premiership",
+      "core:slug": "nrl-premiership",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/international",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735441320",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/1eb04a32-b464-48a3-a5f6-146ee9408f6c#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "National Conference Division One",
+      "core:preferredLabel": "Rugby League National Conference Division One",
+      "core:shortLabel": "National Conference Division One",
+      "core:slug": "national-conference-division-one",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735435580",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/03d21def-442b-4312-9df1-eeca2098bdff#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "National Conference Division Two",
+      "core:preferredLabel": "Rugby League National Conference Division Two",
+      "core:shortLabel": "National Conference Division Two",
+      "core:slug": "national-conference-division-two",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735435581",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/b0702cb7-4191-4f79-af20-46f5a8892f29#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "National Conference Premier",
+      "core:preferredLabel": "Rugby League National Conference Premier",
+      "core:shortLabel": "National Conference Premier",
+      "core:slug": "national-conference-premier",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-league",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735435579",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/b06c0ba7-42c4-471c-9e19-8691b9d579b4#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Northern Rail Cup",
+      "core:preferredLabel": "Rugby League Northern Rail Cup",
+      "core:shortLabel": "Championship Cup",
+      "core:slug": "championship-cup",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/domestic-cup",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735437441",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://www.bbc.co.uk/things/37b00783-82e7-47e7-adbd-ff37b417d7bb#id",
+      "@type": [
+        "sport:RecurringCompetition"
+      ],
+      "core:disambiguationHint": "Rugby League competition",
+      "sal:name": "Rugby League World Cup",
+      "core:preferredLabel": "Rugby League World Cup",
+      "core:shortLabel": "World Cup",
+      "core:slug": "world-cup",
+      "sport:competitionType": "http://www.bbc.co.uk/things/competition-types/international",
+      "sport:discipline": [
+        {
+          "@id": "http://www.bbc.co.uk/things/2ff39a77-e085-41bd-90f5-8a81f0312e9a#id",
+          "@type": [
+            "sport:SportsDiscipline"
+          ],
+          "core:slug": "rugby-league"
+        }
+      ],
+      "cms:locator": [
+        {
+          "@id": "urn:sports-stats:735441283",
+          "@type": [
+            "cms:Sports-StatsLocator"
+          ]
+        }
+      ],
+      "@reverse": {
+        "sport:recurringCompetition": [
+          {
+            "@id": "http://www.bbc.co.uk/things/6d03c37b-bdb7-4d30-8fa3-f3f5705eafe8#id",
+            "@type": [
+              "sport:Competition"
+            ],
+            "event:time": [
+              {
+                "@id": "http://www.bbc.co.uk/things/cc47e0f1-f987-429e-91d1-1c879dc4655f#id",
+                "@type": [
+                  "time:TemporalEntity"
+                ],
+                "tl:hasBeginning": "2014-01-01",
+                "tl:hasEnd": "2014-12-31"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "@context": {
+    "cms:Sports-StatsLocator": {
+      "@id": "http://www.bbc.co.uk/ontologies/cms/Sports-StatsLocator"
+    },
+    "cms:locator": {
+      "@id": "http://www.bbc.co.uk/ontologies/cms/locator",
+      "@type": "@id"
+    },
+    "core:disambiguationHint": {
+      "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/disambiguationHint"
+    },
+    "core:preferredLabel": {
+      "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/preferredLabel"
+    },
+    "core:shortLabel": {
+      "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/shortLabel"
+    },
+    "core:slug": {
+      "@id": "http://www.bbc.co.uk/ontologies/coreconcepts/slug"
+    },
+    "event:time": {
+      "@id": "http://purl.org/NET/c4dm/event.owl#time",
+      "@type": "@id"
+    },
+    "results": {
+      "@id": "@graph"
+    },
+    "sal:name": {
+      "@id": "http://www.bbc.co.uk/ontologies/applicationlogic-sport/name"
+    },
+    "sport:Competition": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/Competition"
+    },
+    "sport:RecurringCompetition": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/RecurringCompetition"
+    },
+    "sport:SportsDiscipline": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/SportsDiscipline"
+    },
+    "sport:competitionType": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/competitionType",
+      "@type": "@id"
+    },
+    "sport:discipline": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/discipline",
+      "@type": "@id"
+    },
+    "sport:recurringCompetition": {
+      "@id": "http://www.bbc.co.uk/ontologies/sport/recurringCompetition",
+      "@type": "@id"
+    },
+    "time:TemporalEntity": {
+      "@id": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    "tl:hasBeginning": {
+      "@id": "http://purl.org/NET/c4dm/timeline.owl#hasBeginning"
+    },
+    "tl:hasEnd": {
+      "@id": "http://purl.org/NET/c4dm/timeline.owl#hasEnd"
+    },
+    "type": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type": "@vocab"
+    }
+  }
+}

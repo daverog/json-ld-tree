@@ -1,17 +1,16 @@
 package daverog.jsonld.tree;
 
+import com.google.common.collect.ImmutableMap;
+import com.hp.hpl.jena.rdf.model.Model;
+import org.apache.commons.io.IOUtils;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-
-import com.google.common.collect.ImmutableMap;
-
-import org.junit.rules.ExpectedException;
-import org.junit.*;
-
-import daverog.jsonld.tree.ModelUtils;
-import daverog.jsonld.tree.TestResourceLoader;
-
-import com.hp.hpl.jena.rdf.model.Model;
 
 public class RdfTreeGeneratorTest {
 
@@ -909,5 +908,20 @@ public class RdfTreeGeneratorTest {
             "    }\n" +
             "  }\n" +
             "}", rdfTree.asJson());
+    }
+
+    @Test
+    public void testAllGraphInputs() throws RdfTreeException, IOException {
+        List<String> files = IOUtils.readLines(ClassLoader.getSystemResourceAsStream("fixtures/input"), "UTF-8");
+        for (String fn : files) {
+            int dot = fn.lastIndexOf('.');
+            assert(dot > 0);
+            String basename = fn.substring(0, dot);
+            Model model = ModelUtils.createJenaModel(TestResourceLoader.loadClasspathResourceAsString("fixtures/input/" + fn));
+            RdfTree tree = generator.generateRdfTree(model);
+            String json = tree.asJson();
+            String expected = TestResourceLoader.loadClasspathResourceAsString("fixtures/output/" + basename + ".json");
+            assertEquals(expected.trim(), json);
+        }
     }
 }
