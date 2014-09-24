@@ -31,6 +31,7 @@ public class RdfTree implements Comparable<RdfTree> {
 	private Resource type;
 	HashMap<RDFNode, Integer> mapFromChildToDepth = null;
 	private boolean constructed = false;
+    private Integer totalResults = null;
 
 	public RdfTree(Model model, NameResolver nameResolver, RdfTree parent, RDFNode node, Property predicate, boolean inverse, HashMap<RDFNode, Integer> mapFromChildToDepth) {
 		this.model = model;
@@ -54,7 +55,7 @@ public class RdfTree implements Comparable<RdfTree> {
 		parent = null;
 	}
 
-	public RdfTree(Model model, NameResolver nameResolver, HashMap<RDFNode, Integer> mapFromChildToDepth) {
+	public RdfTree(Model model, NameResolver nameResolver, HashMap<RDFNode, Integer> mapFromChildToDepth, Integer totalResults) {
 		this.model = model;
 		this.nameResolver = nameResolver;
 		this.mapFromChildToDepth = mapFromChildToDepth;
@@ -63,6 +64,7 @@ public class RdfTree implements Comparable<RdfTree> {
 		inverse = false;
 		parent = null;
 		node = null;
+        this.totalResults = totalResults;
 	}
 
 	public void addChild(Statement statement) {
@@ -205,6 +207,7 @@ public class RdfTree implements Comparable<RdfTree> {
 	public Resource getType() {
 		return type;
 	}
+    public Integer getTotalResults() {return this.totalResults;}
 
 	@Override
 	public int compareTo(RdfTree tree) {

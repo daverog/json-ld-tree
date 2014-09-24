@@ -29,6 +29,7 @@ public class RdfTreeJsonWriter {
 			
 			List<Object> list = Lists.newArrayList();
 			populateJsonArray(tree, list);
+            json.put("totalResults", tree.getTotalResults());
 			json.put("results", list);
 			
             SortedMap<String, SortedMap<String, String>> nameUriMap = Maps.newTreeMap(getPrefixedNameUriMap(tree));

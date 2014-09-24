@@ -924,4 +924,37 @@ public class RdfTreeGeneratorTest {
             assertEquals(expected.trim(), json);
         }
     }
+
+    @Test
+    public void totalResultsCountIsRenderedCorrectly() throws RdfTreeException {
+        Model model = ModelUtils.createJenaModel(
+                "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+                 "@prefix xsd: <http://www.w3.org/2001/XMLSchema#> ." +
+                 "result:this result:next <uri:a> . \n" +
+                 "<uri:a> result:next <uri:b> . \n" +
+                 "result:meta result:totalResults \"11\"^^xsd:integer ." +
+                 "<uri:a> <uri:p> \"value1\" . \n" +
+                 "<uri:b> <uri:p> \"value2\" .");
+        RdfTree rdfTree = generator.generateRdfTree(model);
+        assertEquals(
+                "{\n" +
+                "  \"totalResults\": 11,\n" +
+                "  \"results\": [\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:a\",\n" +
+                "      \"uri:p\": \"value1\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"@id\": \"uri:b\",\n" +
+                "      \"uri:p\": \"value2\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"@context\": {\n" +
+                "    \"results\": {\n" +
+                "      \"@id\": \"@graph\"\n" +
+                "    }\n" +
+                "  }\n" +
+                "}",
+                rdfTree.asJson());
+    }
 }

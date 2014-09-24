@@ -54,7 +54,7 @@ public class RdfTreeGenerator {
         Resource orderingPredicate = null;
         boolean sortAscending = true;
         List<Resource> listItems = Lists.newArrayList();
-        for (Statement result : results) {
+            for (Statement result : results) {
             if (!result.getObject().isResource())
                 throw new RdfTreeException("result:this statement contained a non-resource object");
             if (result.getPredicate().getURI().equals(rdfResultOntologyPrefix + "item")) {
@@ -101,16 +101,23 @@ public class RdfTreeGenerator {
                 }
             }
         }
+
         if (treeType == TreeType.ITEM) {
             return buildRdfTree(model, new RdfTree(model, nameResolver, firstResult.getObject(), mapFromChildToDepth));
         } else if (treeType == TreeType.LIST) {
-            return buildRdfList(model, nameResolver, generateListItemsUsingResultNext(model, firstResult.getObject().asResource()));
+            return buildRdfList(model, nameResolver, generateListItemsUsingResultNext(model, firstResult.getObject().asResource()), getTotalResults(model));
         } else if (treeType == TreeType.LIST_WITH_ORDER_BY_PREDICATE) {
             listItems = sortListAccordingToOrderingPredicate(listItems, orderingPredicate, sortAscending, model);
-            return buildRdfList(model, nameResolver, listItems);
+            return buildRdfList(model, nameResolver, listItems, getTotalResults(model));
         }
 
         throw new RdfTreeException("The tree type could not be identified, the necessary result:this statements were not present");
+    }
+
+    private Integer getTotalResults(Model model) {
+        List<RDFNode> totalResultsList = model.listObjectsOfProperty(model.createResource(rdfResultOntologyPrefix + "meta"), model.createProperty(rdfResultOntologyPrefix + "totalResults")).toList();
+        if (totalResultsList.size() > 0) return totalResultsList.get(0).asLiteral().getInt();
+        return null;
     }
 
     private List<Resource> sortListAccordingToOrderingPredicate(
@@ -206,9 +213,8 @@ public class RdfTreeGenerator {
         return root;
     }
 
-    private RdfTree buildRdfList(Model model, NameResolver nameResolver, List<Resource> listItems) throws RdfTreeException {
-        RdfTree list = new RdfTree(model, nameResolver, new HashMap<RDFNode, Integer>());
-
+    private RdfTree buildRdfList(Model model, NameResolver nameResolver, List<Resource> listItems, Integer totalResults) throws RdfTreeException {
+        RdfTree list = new RdfTree(model, nameResolver, new HashMap<RDFNode, Integer>(), totalResults);
 
         for (Resource listItem : listItems) {
             list.addListItem(listItem);
