@@ -740,12 +740,12 @@ public class RdfTreeGeneratorTest {
                         "      \"uri:p\": \"ccc\"\n" +
                         "    },\n" +
                         "    {\n" +
-                        "      \"@id\": \"uri:b\",\n" +
-                        "      \"uri:s\": \"bbb\"\n" +
-                        "    },\n" +
-                        "    {\n" +
                         "      \"@id\": \"uri:d\",\n" +
                         "      \"uri:s\": \"aaa\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:b\",\n" +
+                        "      \"uri:s\": \"bbb\"\n" +
                         "    }\n" +
                         "  ],\n" +
                         "  \"@context\": {\n" +
@@ -777,12 +777,12 @@ public class RdfTreeGeneratorTest {
                 "{\n" +
                         "  \"results\": [\n" +
                         "    {\n" +
-                        "      \"@id\": \"uri:d\",\n" +
-                        "      \"uri:s\": \"aaa\"\n" +
-                        "    },\n" +
-                        "    {\n" +
                         "      \"@id\": \"uri:b\",\n" +
                         "      \"uri:s\": \"bbb\"\n" +
+                        "    },\n" +
+                        "    {\n" +
+                        "      \"@id\": \"uri:d\",\n" +
+                        "      \"uri:s\": \"aaa\"\n" +
                         "    },\n" +
                         "    {\n" +
                         "      \"@id\": \"uri:a\",\n" +
