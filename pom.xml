@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daverog</groupId>
 	<artifactId>json-ld-tree</artifactId>
-	<version>1.0.14</version>
+	<version>1.0.15-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>JSON-LD Tree</name>
 	<description>Developer-friendly serialisation of RDF into a structurally-stable JSON-LD representation.</description>
@@ -27,7 +27,7 @@
 		<connection>scm:git:https://github.com/daverog/json-ld-tree.git</connection>
 		<developerConnection>scm:git:git@github.com:daverog/json-ld-tree.git</developerConnection>
 		<url>http://github.com/daverog/json-ld-tree</url>
-	  <tag>json-ld-tree-1.0.14</tag>
+	  <tag>HEAD</tag>
   </scm>
 	
 	<licenses>
