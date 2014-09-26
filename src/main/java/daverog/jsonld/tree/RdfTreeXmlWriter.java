@@ -41,6 +41,19 @@ public class RdfTreeXmlWriter {
 		
 		Element html = document.addElement(new QName("html"));
 		Element body = html.addElement(new QName("body"));
+
+        if (tree.getTotalResults() != null) {
+            Element div = body.addElement("div");
+
+            Element a = div.addElement("a");
+            a.addAttribute("href", createRelativeLinkToResource("http://purl.org/ontology/rdf-result/totalResults", relativeUrlBase));
+            a.addAttribute("title", "totalResults");
+            a.addAttribute("style", "font-weight: bold;");
+            a.addText("totalResults:");
+
+            Element span = div.addElement("span");
+            span.addText(tree.getTotalResults().toString());
+        }
 		
 		if (tree.isList()) {
 			populateHtmlList(tree, document, body, relativeUrlBase);
