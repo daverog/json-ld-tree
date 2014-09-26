@@ -39,11 +39,6 @@ public class RdfTreeGeneratorTest {
 	}
 	
 	@Test
-	public void anEntirelyEmptyModelResultsInEmptyXml() throws RdfTreeException {
-		assertEquals("<List/>", generator.generateRdfTree(ModelUtils.createJenaModel("")).asXml());
-	}
-	
-	@Test
 	public void ifMoreThanOneResultThisIsPresentAnErrorIsThrown() {
 		try {
 			Model model = ModelUtils.createJenaModel(
@@ -57,33 +52,7 @@ public class RdfTreeGeneratorTest {
 			assertEquals("More than one result:this subject was found for a single item result", e.getMessage());
 		}
 	}
-	
-	@Test
-	public void resourceTripleIsRenderedInTree() throws RdfTreeException {
-		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
-			"result:this result:item <uri:a> . \n" +
-			"<uri:a> <uri:b> <uri:c> .");
-		assertEquals(
-				"<Thing id=\"uri:a\">\n" +
-				"  <uri:b id=\"uri:c\"/>\n" +
-				"</Thing>", 
-			generator.generateRdfTree(model).asXml());
-	}
-	
-	@Test
-	public void literalWithNonXmlCharactersTripleIsRenderedInXmlTree() throws RdfTreeException {
-		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
-			"result:this result:item <uri:a> . \n" +
-			"<uri:a> <uri:b> \"'string & - string'\" .");
-		assertEquals(
-				"<Thing id=\"uri:a\">\n" +
-				"  <uri:b>'string &amp; - string'</uri:b>\n" +
-				"</Thing>", 
-			generator.generateRdfTree(model).asXml());
-	}
-	
+
 	@Test
 	public void literalWithDatatypeStringIsIgnored() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
@@ -113,19 +82,6 @@ public class RdfTreeGeneratorTest {
 	}
 	
 	@Test
-	public void loopTripleIsRenderedInTree() throws RdfTreeException {
-		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
-			"result:this result:item <uri:a> . \n" +
-			"<uri:a> <uri:b> <uri:a> .");
-		assertEquals(
-			"<Thing id=\"uri:a\">\n" +
-			"  <uri:b id=\"uri:a\"/>\n" +
-			"</Thing>", 
-		generator.generateRdfTree(model).asXml());
-	}
-	
-	@Test
 	public void typeIsNotFollowedAsAnInverseProperty() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
 			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
@@ -149,20 +105,6 @@ public class RdfTreeGeneratorTest {
 				"  <uri:b id=\"uri:c\"/>\n" +
 				"</Thing>", 
 			generator.generateRdfTree(model).asXml());
-	}
-	
-	@Test
-	public void resourceTripleOverInversePropertyIsRenderedInTree() throws RdfTreeException {
-		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
-			"result:this result:item <uri:c> . \n" +
-			"<uri:a> <uri:b> <uri:c> .");
-		RdfTree rdfTree = generator.generateRdfTree(model);
-		assertEquals(
-				"<Thing id=\"uri:c\">\n" +
-				"  <uri:b inverse=\"true\" id=\"uri:a\"/>\n" +
-				"</Thing>", 
-			rdfTree.asXml());
 	}
 	
 	@Test
@@ -533,17 +475,6 @@ public class RdfTreeGeneratorTest {
 			"  ]\n" + 
 			"}", 
 			generator.generateRdfTree(model).asJson());
-	}
-	
-	
-	@Test
-	public void anAthleteIsRenderedAsATree() throws RdfTreeException {
-		Model model = ModelUtils.createJenaModel(
-			TestResourceLoader.loadClasspathResourceAsString("fixtures/ben-ainslie.ttl"));
-		RdfTree rdfTree = generator.generateRdfTree(model);
-		assertEquals(
-			TestResourceLoader.loadClasspathResourceAsString("fixtures/ben-ainslie.xml"), 
-		rdfTree.asXml());
 	}
 	
 	@Test
