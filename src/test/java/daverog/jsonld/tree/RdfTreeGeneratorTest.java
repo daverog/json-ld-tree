@@ -448,26 +448,6 @@ public class RdfTreeGeneratorTest {
 	}
 	
 	@Test
-	public void listsAreShownAsXmlLists() throws RdfTreeException {
-		Model model = ModelUtils.createJenaModel(
-			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
-			"result:this result:next <uri:a> . \n" +
-			"<uri:a> result:next <uri:b> . \n" +
-			"<uri:a> <uri:p> \"value1\" . \n" +
-			"<uri:b> <uri:p> \"value2\" .");
-		assertEquals(
-				"<List>\n" +
-				"  <Thing id=\"uri:a\">\n" +
-				"    <uri:p>value1</uri:p>\n" +
-				"  </Thing>\n" +
-				"  <Thing id=\"uri:b\">\n" +
-				"    <uri:p>value2</uri:p>\n" +
-				"  </Thing>\n" +
-				"</List>",
-			generator.generateRdfTree(model).asXml());
-	}
-	
-	@Test
 	public void predicateAreInAPredictableOrderWhichIsAlphabeticalExceptNonSingularPredicatesAndInversePredicates() throws RdfTreeException {
 		Model model = ModelUtils.createJenaModel(
 			"@prefix result: <http://purl.org/ontology/rdf-result/> ." +
@@ -564,7 +544,6 @@ public class RdfTreeGeneratorTest {
 		assertEquals(
 			TestResourceLoader.loadClasspathResourceAsString("fixtures/ben-ainslie.xml"), 
 		rdfTree.asXml());
-		System.out.println(rdfTree.asJson());
 	}
 	
 	@Test
@@ -727,7 +706,6 @@ public class RdfTreeGeneratorTest {
                         "<uri:c> <uri:p> \"zzz\" . \n" +
                         "<uri:d> <uri:s> \"aaa\" .");
         RdfTree rdfTree = generator.generateRdfTree(model);
-        System.out.println(rdfTree.asJson());
         assertEquals(
                 "{\n" +
                         "  \"results\": [\n" +
@@ -772,7 +750,6 @@ public class RdfTreeGeneratorTest {
                         "<uri:c> <uri:p> \"zzz\" . \n" +
                         "<uri:d> <uri:s> \"aaa\" .");
         RdfTree rdfTree = generator.generateRdfTree(model);
-        System.out.println(rdfTree.asJson());
         assertEquals(
                 "{\n" +
                         "  \"results\": [\n" +

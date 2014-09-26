@@ -70,6 +70,11 @@ public class RdfTreeXmlWriter {
 	
 	private void populateXmlList(RdfTree tree, Document document) {
 		Element list = document.addElement(new QName("List"));
+
+        Integer totalResults = tree.getTotalResults();
+        if (totalResults != null) {
+            list.addAttribute("totalResults", totalResults.toString());
+        }
 		
 		for (RdfTree childTree: tree.getChildren()) {
 			populateXml(childTree, document, list);
