@@ -4,6 +4,9 @@ import com.hp.hpl.jena.rdf.model.Model;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.assertEquals;
 
 public class RdfTreeGeneratorXmlTest {
@@ -43,6 +46,65 @@ public class RdfTreeGeneratorXmlTest {
                         "  <uri:b>'string &amp; - string'</uri:b>\n" +
                         "</Thing>",
                 generator.generateRdfTree(model).asXml());
+    }
+
+    @Test
+    public void literalsWithIdenticalLocalNamesAreRenderedInXmlTree() throws RdfTreeException {
+        Model model = ModelUtils.createJenaModel(
+                "" +
+                        "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+                        "@prefix skos: <http://www.w3.org/2004/02/skos/core#> ." +
+                        "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ." +
+                        "result:this result:item <uri:a> . \n" +
+                        "<uri:a> rdfs:label \"RDFS label\" . \n" +
+                        "<uri:a> skos:label \"SKOS label\" .");
+        assertEquals(
+                "<Thing id=\"uri:a\">\n" +
+                        "  <label>RDFS label</label>\n" +
+                        "  <skos_label>SKOS label</skos_label>\n" +
+                        "</Thing>",
+                generator.generateRdfTree(model).asXml());
+    }
+
+    @Test
+    public void literalsWithIdenticalLocalNamesOneInNameOverridesAreRenderedInXmlTree() throws RdfTreeException {
+        Map<String,String> nameOverrides = new HashMap<String,String>();
+        nameOverrides.put("http://www.w3.org/2000/01/rdf-schema#label", "label");
+
+        Model model = ModelUtils.createJenaModel(
+                "" +
+                        "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+                        "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ." +
+                        "@prefix core: <http://www.bbc.co.uk/ontologies/coreconcepts/> ." +
+                        "result:this result:item <uri:a> . \n" +
+                        "<uri:a> rdfs:label \"RDFS label\" . \n" +
+                        "<uri:a> core:label \"Core label\" . \n");
+        assertEquals(
+                "" +
+                        "<Thing id=\"uri:a\">\n" +
+                        "  <core_label>Core label</core_label>\n" +
+                        "  <label>RDFS label</label>\n" +
+                        "</Thing>",
+                generator.generateRdfTree(model, nameOverrides).asXml());
+    }
+
+    @Test
+    public void nameOverridesAreReservedInXmlTree() throws RdfTreeException {
+        Map<String,String> nameOverrides = new HashMap<String,String>();
+        nameOverrides.put("http://www.w3.org/2000/01/rdf-schema#label", "label");
+
+        Model model = ModelUtils.createJenaModel(
+                "" +
+                        "@prefix result: <http://purl.org/ontology/rdf-result/> ." +
+                        "@prefix core: <http://www.bbc.co.uk/ontologies/coreconcepts/> ." +
+                        "result:this result:item <uri:a> . \n" +
+                        "<uri:a> core:label \"Core label\" . \n");
+        assertEquals(
+                ""+
+                        "<Thing id=\"uri:a\">\n" +
+                        "  <core_label>Core label</core_label>\n" +
+                        "</Thing>",
+                generator.generateRdfTree(model, nameOverrides).asXml());
     }
 
     @Test

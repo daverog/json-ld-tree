@@ -16,20 +16,34 @@ public class NameResolver {
 	private final Model model;
 	private final SortedMap<String, TypedResource> mappedResources;
 	private final List<String> prioritisedNamespaces;
-	private Map<String, String> nameOverrides;
+	private final BiMap<String, String> nameOverrides;
+	private final Map<String, String> inverseNameOverrides;
 	private final String rdfResultOntologyPrefix;
 
 	public NameResolver(Model model, List<String> prioritisedNamespaces, Map<String,String> nameOverrides, String rdfResultOntologyPrefix) {
 		checkDuplicateNameOverrides(nameOverrides);
 
 		this.model = model;
-		this.nameOverrides = nameOverrides;
+		this.nameOverrides = HashBiMap.create(nameOverrides);
+		this.inverseNameOverrides = this.nameOverrides.inverse();
 		this.rdfResultOntologyPrefix = rdfResultOntologyPrefix;
 		this.prioritisedNamespaces = Lists.newArrayList(RdfTree.RDF_PREFIX, RdfTree.OWL_PREFIX);
 		this.prioritisedNamespaces.addAll(prioritisedNamespaces);
 
 		mappedResources = Maps.newTreeMap();
 
+		registerResources(model);
+	}
+
+	private void checkDuplicateNameOverrides(Map<String, String> nameOverrides) {
+		Map<String, Collection<String>> inverse = Multimaps.invertFrom(Multimaps.forMap(nameOverrides), HashMultimap.<String, String>create()).asMap();
+		for (Collection collection : inverse.values()) {
+			if (collection.size() > 1)
+				throw new IllegalArgumentException("A name override cannot map to multiple URIs: " + collection);
+		}
+	}
+
+	private void registerResources(Model model) {
 		StmtIterator statements = model.listStatements();
 		while(statements.hasNext()) {
 			Statement statement = statements.next();
@@ -52,52 +66,80 @@ public class NameResolver {
 		}
 	}
 
-	private void checkDuplicateNameOverrides(Map<String, String> nameOverrides) {
-		Map<String, Collection<String>> inverse = Multimaps.invertFrom(Multimaps.forMap(nameOverrides), HashMultimap.<String, String>create()).asMap();
-		for (Collection collection : inverse.values()) {
-			if (collection.size() > 1)
-				throw new IllegalArgumentException("A name override cannot map to multiple URIs: " + collection);
-		}
-	}
-
 	private void registerResource(TypedResource resource) {
 		String nameSpace = resource.getResource().getNameSpace();
 
-		if (nameSpace != null && !nameSpace.equals(rdfResultOntologyPrefix)) {
-			String currentNamespace = nameSpace;
-			String prefix = model.getNsURIPrefix(currentNamespace);
-			if (prefix != null && currentNamespace != null) {
-				TypedResource existingResource = mappedResources.get(resource.getResource().getLocalName());
-				if (existingResource == null) {
-					mappedResources.put(resource.getResource().getLocalName(), resource);
-				} else {
-					if (!resource.getResource().equals(existingResource.getResource())) {
-						boolean existingIsHigherPriorityThanCurrent= false;
-						String existingNamespace = existingResource.getResource().getNameSpace();
-						int priorityOfExistingResource = prioritisedNamespaces.indexOf(existingNamespace);
-						int priorityOfCurrentResource = prioritisedNamespaces.indexOf(currentNamespace);
+		if (shouldRegisterNameSpaceResources(nameSpace) && isPrefixed(resource)) {
+			String localName = resource.getResource().getLocalName();
+			TypedResource existingResource = mappedResources.get(localName);
 
-						if (priorityOfExistingResource == -1 && priorityOfCurrentResource == -1) {
-							existingIsHigherPriorityThanCurrent = existingNamespace.compareTo(currentNamespace) < 0;
-						} else if (priorityOfExistingResource == -1 && priorityOfCurrentResource != -1) {
-							existingIsHigherPriorityThanCurrent = false;
-						} else if (priorityOfExistingResource != -1 && priorityOfCurrentResource == -1) {
-							existingIsHigherPriorityThanCurrent = true;
-						} else {
-							existingIsHigherPriorityThanCurrent = priorityOfExistingResource < priorityOfCurrentResource;
-						}
-
-						if(existingIsHigherPriorityThanCurrent) {
-							mappedResources.put(prefix + "_" + resource.getResource().getLocalName(), resource);
-						} else {
-							String currentPrefix = model.getNsURIPrefix(existingNamespace);
-							mappedResources.put(currentPrefix + "_" + existingResource.getResource().getLocalName(), existingResource);
-							mappedResources.put(resource.getResource().getLocalName(), resource);
-						}
-					}
-				}
+			if (existingResource == null) {
+				registerNewResource(resource);
+			} else if (!resource.getResource().equals(existingResource.getResource())) {
+				registerConflictingResources(resource, existingResource);
 			}
 		}
+	}
+
+	private void registerNewResource(TypedResource resource) {
+		String localName = resource.getResource().getLocalName();
+		String nameOverrideUri = inverseNameOverrides.get(localName);
+
+		if (nameOverrideUri == null || resource.getResource().getURI().equals(nameOverrideUri)) {
+            mappedResources.put(localName, resource);
+        } else {
+            String currentPrefix = getPrefixFromModel(resource);
+            mappedResources.put(currentPrefix + "_" + localName, resource);
+        }
+	}
+
+	private boolean shouldRegisterNameSpaceResources(String nameSpace) {
+		return nameSpace != null && !nameSpace.equals(rdfResultOntologyPrefix);
+	}
+
+	private boolean isPrefixed(TypedResource resource) {
+		return null != getPrefixFromModel(resource);
+	}
+
+	private String getPrefixFromModel(TypedResource resource) {
+		Resource wrappedResource = resource.getResource();
+		return getPrefixFromModel(wrappedResource);
+	}
+
+	private String getPrefixFromModel(Resource resource) {
+		String nameSpace = resource.getNameSpace();
+		return model.getNsURIPrefix(nameSpace);
+	}
+
+	private void registerConflictingResources(TypedResource resource, TypedResource existingResource) {
+		String nameSpace = resource.getResource().getNameSpace();
+		String existingNamespace = existingResource.getResource().getNameSpace();
+
+		if(isFirstHigherPriorityNameSpace(existingNamespace, nameSpace)) {
+			String prefix = getPrefixFromModel(resource);
+			mappedResources.put(prefix + "_" + resource.getResource().getLocalName(), resource);
+        } else {
+            String currentPrefix = getPrefixFromModel(existingResource);
+            mappedResources.put(currentPrefix + "_" + existingResource.getResource().getLocalName(), existingResource);
+            mappedResources.put(resource.getResource().getLocalName(), resource);
+        }
+	}
+
+	private boolean isFirstHigherPriorityNameSpace(String firstNameSpace, String secondNameSpace) {
+		boolean firstIsHigherPriority;
+		int priorityOfFirstNameSpace = prioritisedNamespaces.indexOf(firstNameSpace);
+		int priorityOfSecondNameSpace = prioritisedNamespaces.indexOf(secondNameSpace);
+
+		if (priorityOfFirstNameSpace == -1 && priorityOfSecondNameSpace == -1) {
+            firstIsHigherPriority = firstNameSpace.compareTo(secondNameSpace) < 0;
+        } else if (priorityOfFirstNameSpace == -1) {
+            firstIsHigherPriority = false;
+        } else if (priorityOfSecondNameSpace == -1) {
+            firstIsHigherPriority = true;
+        } else {
+            firstIsHigherPriority = priorityOfFirstNameSpace < priorityOfSecondNameSpace;
+        }
+		return firstIsHigherPriority;
 	}
 
 	public String getName(Resource resource) {
@@ -137,7 +179,7 @@ public class NameResolver {
 		if (nameSpace.equals(RdfTree.OWL_PREFIX)) return "owl";
 		if (nameOverrides.containsKey(resource.getURI())) return null;
 
-		return model.getNsURIPrefix(nameSpace);
+		return getPrefixFromModel(resource);
 	}
 
 	public int compareNames(Resource resource, Resource otherResource) {
